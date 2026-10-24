@@ -559,6 +559,7 @@ CHANGELOG.md                          更新记录
 ## 社区
 
 - **贡献**：复现或质疑结论、标注新语料、验证即兴层的切片偏差，这是眼下最重要的开放问题。也欢迎新增语言翻译。见[贡献指南](CONTRIBUTING.md)，行为准则见 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+- **外部评审**：[同行评审与红队报告（2026-10-24）](reviews/2026-10-24-同行评审与红队报告.md)，逐条复算了词频、检测器和引证，列出待修问题；复算脚本 `python reviews/scripts/recheck.py`
 - **CI**：每次推送自动跑工具编译和检测器语料回归，真人语料的 AI 味指数必须低于 20
 - **姊妹仓库**：[wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1)，第一版，原始配方，蓝图工作流
 
