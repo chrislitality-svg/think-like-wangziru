@@ -4,7 +4,7 @@
 
 > Learn the structure, not the accent.
 
-![Version](https://img.shields.io/badge/Edition-2%20%EF%BD%9C%20v1.4-blue) ![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey) ![Agent Skill](https://img.shields.io/badge/Agent%20Skill-Claude%20Code%20%7C%20Codex%20%7C%20Cursor-blue) ![AI-flavor%20Check](https://img.shields.io/badge/AI--flavor%20check-zero--dependency-green)
+![Version](https://img.shields.io/badge/Edition-2%20%EF%BD%9C%20v1.5-blue) ![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey) ![Agent Skill](https://img.shields.io/badge/Agent%20Skill-Claude%20Code%20%7C%20Codex%20%7C%20Cursor-blue) ![AI-flavor%20Check](https://img.shields.io/badge/AI--flavor%20check-zero--dependency-green)
 
 > **This is Edition 2 (V2, v1.4 of the original repo) — the data-enhanced edition**: iterated on top of Edition 1 (the original recipe) with more video data — closer to the man himself, but possibly overfitted to the original sample. The entry now works **directly from your own words** — give a topic and it writes a readable script; paste an old draft and it rewrites; ask how to think and it walks the order. For the more general-purpose original recipe, use [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1). Try both.
 >
@@ -24,6 +24,9 @@ An **Agent Skill** for AI coding assistants (Claude Code / Codex / Cursor, etc.)
 Argumentative devices are not quotas. If framing, half-step concession, elimination, or metaphor reclaim don't fit this topic, write "none" — never invent targets or numbers just to sound like him. See `SKILL.md` and `references/logic-checks.md`.
 
 The frequency base remains the "Wang Ziru AI" Bilibili corpus of **71 videos** (~**50 hours** of speech). Body text after stripping titles is **864,937 characters**, with "对吧" appearing **1,660 times**. Ignore the earlier figures (796,821 chars, 732k chars, "对吧 1491, 那么 973"). v1.4 additionally read 32 unscripted short monologues, used only to patch social topics and improvised phrasings — not merged into the frequency base.
+
+**Since v1.5 the corpus is open**: the `corpus/` directory ships **32 full transcripts** (with timestamps) — 7 long-form videos from the official channel (Apr–Oct 2026, incl. two brand-new ones) + 25 unscripted improvised shorts from the clip channel JACHZHU (Sep–Oct 2026). The discourse-logic sample grew from 4 videos to 11 long-form + 25 clips. **Anyone can reproduce this repo's numbers or run new quantitative analyses on them**; copyright and usage bounds are in `corpus/README.md` (research/analysis only; no commercial use; no persona mimicry).
+**v1.5 起语料开源**：`corpus/` 发布 32 条完整转写（官方号 7 条长片 + JACHZHU 切片 25 条即兴短讲，带时间戳），篇章逻辑样本扩到 11 条正片 + 25 条切片，任何人可复现本仓库的量化分析；版权与使用边界见 `corpus/README.md`。
 
 From [2. Expression Logic](#2-expression-logic) onward, this is the v1.3 research write-up — still valid, but no longer the default workflow. The default entry is `SKILL.md`.
 
