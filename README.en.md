@@ -4,7 +4,7 @@
 
 # Wang Ziru-Style Expression Deconstruction (Edition 2) · wangziru-analysis · V2
 
-**Learn the structure, not the accent — study how his mind runs, not his catchphrases.**
+**Learn the structure, not the accent. Study how his mind runs, not his catchphrases.**
 
 [![Version](https://img.shields.io/badge/version-v1.7-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
@@ -13,30 +13,29 @@
 [![Corpus](https://img.shields.io/badge/corpus-103%20videos%20%C2%B71.04M%20chars-8b5cf6)](corpus/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 
-[![Stars](https://img.shields.io/github/stars/chrislitality-svg/wangziru-analysis-skill-v2?style=social)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/stargazers)
-[![Forks](https://img.shields.io/github/forks/chrislitality-svg/wangziru-analysis-skill-v2?style=social)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/network/members)
-[![Issues](https://img.shields.io/github/issues/chrislitality-svg/wangziru-analysis-skill-v2?style=social)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/issues)
 [![Last Commit](https://img.shields.io/github/last-commit/chrislitality-svg/wangziru-analysis-skill-v2)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/commits/main)
 
 [简体中文](README.md) · **English** · [한국어](README.ko.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
 
 </div>
 
-> **This is Edition 2 (V2) — the data-enhanced edition**: iterated on top of Edition 1 (the original recipe) with more video data — closer to the man himself, but possibly overfitted to the original sample. For the more general-purpose original recipe (blueprint-first workflow: deconstruct → 13 quality gates → write), use [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1). Try both.
+> **This is Edition 2, the data-enhanced edition.** It was iterated on top of Edition 1 with more video data, so it comes closer to the man himself, with the risk of overfitting to the original sample. If you want the more general-purpose original recipe, the blueprint-first workflow that deconstructs a topic and passes it through quality gates before writing, use [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1). Try both.
 
 ---
 
 ## What This Is
 
-**This repo is first a research project: how Wang Ziru's thinking actually operates, and what his real expression habits are.** The Agent Skill for AI coding assistants (`SKILL.md` — write / rewrite / coach) is the executable digest of that research — the product layer. Read the two layers separately: the research entry is [`references/thinking-思维运转.md`](references/thinking-思维运转.md) (every claim cited to corpus file + timestamp), the product entry is `SKILL.md`; which conclusions are measured facts and which are translated writing gates is graded in [`METHODOLOGY.md`](METHODOLOGY.md) §9.
+**This repo is first a research project. It studies how Wang Ziru's thinking actually operates and what his real expression habits are.** The Agent Skill for AI coding assistants is the executable digest of that research, and it belongs to the product layer. Read the two layers separately. The research entry is [`references/thinking-思维运转.md`](references/thinking-思维运转.md), where every claim is cited back to the corpus with file names and timestamps. The product entry is `SKILL.md`. Which conclusions are measured facts and which are translated writing gates is laid out in the evidence-grading table of [`METHODOLOGY.md`](METHODOLOGY.md) §9.
 
-### Core Findings: how his mind runs (full version in [thinking-思维运转.md](references/thinking-思维运转.md))
+### Core Findings: how his mind runs
 
-1. **Judgment precedes language.** Asked improvised, the verdict lands on beat one with zero delay ("Is there still room in the phone industry? — No more."), and what language adds afterward is always a mechanism, never adjectives. In scripted videos the order flips (evidence first, judgment after). One mind, two output modes — the judgments are **pre-built**, not reasoned on the spot.
-2. **Rulers are inventory.** Judgments draw on a long-held library of standards invoked across videos (the Huawei video directly reuses the iPhone18 three-cell ruler); a standard often appears as a rhetorical question.
-3. **Concessions are explicit.** Hesitation branches are spoken out loud, one is picked, and ownership is marked ("我觉得" 6.5 per 10k chars; hedging words outnumber certainty words ~2.7:1 — certainty comes from definitions and numbering, not from "definitely/absolutely").
-4. **Closers are the storage format.** Every reasoning chain ends with the judgment cast into a single quotable line ("No company ever drowned in saliva").
-5. **Verbal tics are fading.** "对吧" dropped from 20.8 per 10k chars in the 71-video base to 3.7 in the 2026 corpus — imitating his catchphrases means imitating parts he is discarding. His continuity lies in the operating order, not in any single word.
+The full write-up is in [thinking-思维运转.md](references/thinking-思维运转.md). The five headlines:
+
+1. **Judgment precedes language.** Asked improvised, the verdict lands on beat one with zero delay. "Is there still room in the phone industry? No more." What language adds afterward is always a mechanism, never adjectives. In scripted videos the order flips to evidence first, judgment after. One mind, two output modes. The judgments are pre-built, not reasoned on the spot.
+2. **Rulers are inventory.** Judgments draw on a long-held library of standards invoked across videos. The Huawei video directly reuses the iPhone18 three-cell ruler. A standard often appears as a rhetorical question.
+3. **Concessions are explicit.** Hesitation branches are spoken out loud, one is picked, and ownership is marked. "我觉得" runs 6.5 per 10k chars, and hedging words outnumber certainty words about 2.7 to 1. His certainty comes from definitions and numbering, never from "definitely" or "absolutely".
+4. **Closers are the storage format.** Every reasoning chain ends with the judgment cast into a single quotable line, such as "No company ever drowned in saliva".
+5. **Verbal tics are fading.** "对吧" dropped from 20.8 per 10k chars in the 71-video base to 3.7 in the 2026 corpus. Imitating his catchphrases means imitating parts he is discarding. His continuity lies in the operating order, not in any single word.
 
 <div align="center">
 <img src="assets/mindflow.svg" width="820" alt="One mind, two orders — scripted videos run evidence→judgment; improvised answers run judgment→mechanism"/>
@@ -53,20 +52,20 @@
 
 ## Quick Start (30 seconds)
 
-Zero dependencies — feel the AI-flavor checker on his real speech first. It's the only executable entry in the repo; everything else is Markdown:
+Zero dependencies. Feel the AI-flavor checker on his real speech first. It is the only executable entry in the repo, everything else is Markdown.
 
 ```bash
 git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git
 cd wangziru-analysis-skill-v2
 
-# Run the checker on his real speech (Sep 2026 livestream clip): expect AI-flavor ≈ 11 (human-grade)
+# His real speech, a livestream clip from Sep 2026. Expect an AI-flavor score of 11, human-grade
 python tools/ai_flavor_check.py "corpus/clips-jachzhu/2026-09-22-聊西贝事件的根源-1m11s.txt"
 
-# Then feed it an AI-generated draft — the score jumps to 70+. That gap is what this research explains.
+# Feed it an AI-generated draft and the score jumps above 70. That gap is what this research explains
 python tools/ai_flavor_check.py draft.txt --json
 ```
 
-Install the skill for AI coding assistants (Claude Code / Codex / Cursor, etc.):
+Install the skill for Claude Code, Codex, Cursor and other AI coding assistants to write, rewrite or coach directly:
 
 ```bash
 git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git ~/.claude/skills/wangziru-analysis
@@ -509,17 +508,9 @@ CHANGELOG.md                          Release notes
 
 ## Community
 
-- **Contributing**: reproduce/challenge conclusions, annotate new corpus, verify the improv-layer sampling bias (highest-priority open problem), add translations — see the [Contributing Guide](CONTRIBUTING.md); code of conduct in [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
-- **CI**: tool compilation + detector corpus regression (real human speech must stay under AI-flavor 20) runs on every push
-- **Sister repo**: [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1) (Edition 1 · original recipe · blueprint-first workflow)
-
-<div align="center">
-
-[![Star History Chart](https://api.star-history.com/svg?repos=chrislitality-svg/wangziru-analysis-skill-v2&type=Date)](https://star-history.com/#chrislitality-svg/wangziru-analysis-skill-v2&Date)
-
-If this research helps you, a star is appreciated ⭐
-
-</div>
+- **Contributing**: reproduce or challenge the conclusions, annotate new corpus, verify the sampling bias of the improv layer. That is the most important open problem right now, and translations are welcome too. See the [Contributing Guide](CONTRIBUTING.md); code of conduct in [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+- **CI**: every push runs tool compilation and the detector corpus regression, and real human speech must stay under an AI-flavor score of 20
+- **Sister repo**: [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1), Edition 1, the original recipe with the blueprint-first workflow
 
 ## About Quotations
 

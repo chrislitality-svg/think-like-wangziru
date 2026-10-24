@@ -4,7 +4,7 @@
 
 # 王自如式表达拆解（第二版）· wangziru-analysis · V2
 
-**学结构，不学腔调 —— 研究他的思维怎么运转，而不是模仿他的口头禅。**
+**学结构，不学腔调。研究他的思维怎么运转，不模仿他的口头禅。**
 
 [![Version](https://img.shields.io/badge/version-v1.7-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
@@ -13,30 +13,29 @@
 [![Corpus](https://img.shields.io/badge/%E8%AF%AD%E6%96%99-103%E6%9D%A1%E8%A7%86%E9%A2%91%C2%B71.04M%20%E5%AD%97-8b5cf6)](corpus/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 
-[![Stars](https://img.shields.io/github/stars/chrislitality-svg/wangziru-analysis-skill-v2?style=social)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/stargazers)
-[![Forks](https://img.shields.io/github/forks/chrislitality-svg/wangziru-analysis-skill-v2?style=social)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/network/members)
-[![Issues](https://img.shields.io/github/issues/chrislitality-svg/wangziru-analysis-skill-v2?style=social)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/issues)
 [![Last Commit](https://img.shields.io/github/last-commit/chrislitality-svg/wangziru-analysis-skill-v2)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/commits/main)
 
 **简体中文** · [English](README.en.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
 
 </div>
 
-> **这是第二版（V2）——数据加强版**：在第一版（原始配方）的基础上，用更多视频数据迭代而成——更像他本人，但对原样本可能过拟合。想要更通用的原始配方（蓝图工作流：先拆解、过 13 道质量门、再成稿），用 [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1)；两版建议都试试。
+> **这是第二版，数据加强版。** 它在第一版的基础上用更多视频数据迭代而成，更像他本人，但对原样本可能过拟合。想要更通用的原始配方，也就是先拆解、过质量门、再成稿的蓝图工作流，用 [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1)。两版建议都试试。
 
 ---
 
 ## 这是什么
 
-**这个仓库首先是一项研究：王自如的思维怎么运转、表达上有什么真实习惯**；给 AI 编程助手用的 Agent Skill（`SKILL.md`，写稿 / 改稿 / 辅导）是研究结论的可执行摘要，属于产品层。两层分开读：研究的入口是 [`references/thinking-思维运转.md`](references/thinking-思维运转.md)（每条结论带语料出处和时间戳），产品的入口是 `SKILL.md`；哪些结论是量出来的事实、哪些是转译出来的写稿门槛，见 [`METHODOLOGY.md`](METHODOLOGY.md) §九的证据分级表。
+**这个仓库首先是一项研究，研究王自如的思维怎么运转、表达上有什么真实习惯。** 给 AI 编程助手用的 Agent Skill 是研究结论的可执行摘要，属于产品层。两层分开读。研究的入口是 [`references/thinking-思维运转.md`](references/thinking-思维运转.md)，每条结论都能对回语料原文和时间戳。产品的入口是 `SKILL.md`。哪些结论是量出来的事实，哪些是转译出来的写稿门槛，[`METHODOLOGY.md`](METHODOLOGY.md) §九的证据分级表里分得清清楚楚。
 
-### 核心发现：他的思维怎么运转（详见[思维运转](references/thinking-思维运转.md)）
+### 核心发现：他的思维怎么运转
 
-1. **判断先于语言**——即兴被问，第一拍判断零延迟落下（「手机行业还有发展吗？没了」），语言随后补的永远是机制不是形容词；有脚本的正片把顺序反过来（先证据后判断）。同一头脑两种输出，说明判断是**预制**的，不是现场推理。
-2. **尺子是库存**——判断来自一个跨视频调用的长期标准库（华为条直接引用 iPhone18 条的三格尺），标准常以反问形态出现。
-3. **让步显式**——犹豫分支说出口、选一个、标明是自己的判断（「我觉得」6.5 次/万字；模糊词恒多于确定词约 2.7 倍，笃定靠定义和编号，不靠"一定/绝对"）。
-4. **收口是存储格式**——每个推理链终点把判断铸成可单独引用的一句话（「没有一家企业是被口水淹死的」）。
-5. **口癖在衰减**——「对吧」从 71 篇底座的 20.8 次/万字降到 2026 语料的 3.7；学他的口头禅，学的是他正在丢弃的零件。他的连续性在运转顺序，不在任何单个词上。
+完整版见[思维运转](references/thinking-思维运转.md)，下面五条是摘要。
+
+1. **判断先于语言**。即兴被问，第一拍判断零延迟落下。「手机行业还有发展吗？没了。」语言随后补的永远是机制，不是形容词。有脚本的正片把顺序反过来，先证据后判断。同一头脑两种输出，判断是预制的，不是现场推理。
+2. **尺子是库存**。判断来自跨视频调用的长期标准库，华为条直接引用 iPhone18 条的三格尺；标准常以反问形态出现。
+3. **让步显式**。犹豫分支说出口，选一个，标明是自己的判断。「我觉得」每万字 6.5 次，模糊词恒多于确定词约 2.7 倍。笃定靠定义和编号，不靠「一定」「绝对」。
+4. **收口是存储格式**。每个推理链的终点，判断被铸成可单独引用的一句话，比如「没有一家企业是被口水淹死的」。
+5. **口癖在衰减**。「对吧」从 71 篇底座的每万字 20.8 次降到 2026 语料的 3.7 次。学他的口头禅，学的是他正在丢弃的零件。他的连续性在运转顺序，不在任何单个词上。
 
 <div align="center">
 <img src="assets/mindflow.svg" width="820" alt="同一个头脑，两种输出顺序：正片先证据后判断，即兴先判断后补证据"/>
@@ -47,32 +46,32 @@
 | 优先级 | 模型 | 说明 |
 |---|---|---|
 | 🥇 **首选 / Primary** | **Gemini 3.8 Flash** | 本 skill 推荐的第一模型：长上下文能一次读完全部 references，逻辑链排得稳、改稿保留人称与事实做得好，性价比最高 / First choice: holds all reference files in one context, stable logic chains, faithful to your wording and facts when rewriting, best value |
-| 🥈 **次选 / Secondary** | **DeepSeek V4 Flash** | 首选不可用时的替代：中文语感接近口播基准，短口播（2–3 分钟）表现稳定，跑 `tools/` 检测脚本不飘 / Fallback: native-feel Chinese close to the spoken baseline, stable on 2–3 min shorts, solid with the `tools/` checkers |
+| 🥈 **次选 / Secondary** | **DeepSeek V4 Flash** | 首选不可用时的替代：中文语感接近口播基准，2 到 3 分钟的短口播表现稳定，跑 `tools/` 检测脚本不飘 / Fallback: native-feel Chinese close to the spoken baseline, stable on 2–3 min shorts, solid with the `tools/` checkers |
 
 > skill 是一份说明书，真正执行它的是你接的模型。换了模型，请拿同一个选题跑一遍对比，再用逻辑五问和 `tools/ai_flavor_check.py` 给输出做体检。/ The skill is a manual; the model you plug in executes it. After switching models, re-run the same topic and audit the output with the five logic questions and `tools/ai_flavor_check.py`.
 
 ## 30 秒上手
 
-不需要任何依赖，先用他的真语料感受一下「AI 味检测器」——这是全仓库唯一可执行入口，其余都是 Markdown：
+不需要任何依赖，先用他的真语料感受一下 AI 味检测器。这是全仓库唯一的可执行入口，其余都是 Markdown。
 
 ```bash
 git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git
 cd wangziru-analysis-skill-v2
 
-# 用他的真口播（2026-09 直播切片）跑检测：预期 AI 味 ≈ 11（人话级）
+# 他的真口播，2026 年 9 月的直播切片，预期 AI 味 11 分，人话级
 python tools/ai_flavor_check.py "corpus/clips-jachzhu/2026-09-22-聊西贝事件的根源-1m11s.txt"
 
-# 再拿一篇 AI 稿试试，分数会跳到 70+——差距就是这套研究要解释的东西
+# 再拿一篇 AI 稿试试，分数会跳到 70 以上，这个差距就是这套研究要解释的东西
 python tools/ai_flavor_check.py 稿子.txt --json
 ```
 
-给 AI 编程助手（Claude Code / Codex / Cursor 等）装上 skill 直接写稿/改稿/辅导：
+给 Claude Code、Codex、Cursor 这类 AI 编程助手装上 skill，就能直接写稿、改稿、辅导：
 
 ```bash
 git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git ~/.claude/skills/wangziru-analysis
 ```
 
-Windows PowerShell：`git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git "$env:USERPROFILE\.claude\skills\wangziru-analysis"`。其他工具（Codex、Cursor、ZCode 等）：把仓库放进项目，对它说「先读 `wangziru-analysis/SKILL.md` 再干活」。
+Windows 下面这样装：`git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git "$env:USERPROFILE\.claude\skills\wangziru-analysis"`。Codex、Cursor、ZCode 同样能用，把仓库放进项目，对它说「先读 `wangziru-analysis/SKILL.md` 再干活」。
 
 > **非官方** · 这是一份表达方法研究，与王自如本人及其团队无关；不使用其声音与肖像，产出的稿子也不应署他的名或冒充本人。
 
@@ -516,17 +515,9 @@ CHANGELOG.md                          更新记录
 
 ## 社区
 
-- **贡献**：复现/质疑结论、标注新语料、验证即兴层偏差（最高优先级开放问题）、新增语言翻译——见[贡献指南](CONTRIBUTING.md)，行为准则见 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
-- **CI**：工具编译 + 检测器语料回归（真人语料 AI 味指数必须 < 20），每次推送自动跑
-- **姊妹仓库**：[wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1)（第一版 · 原始配方 · 蓝图工作流）
-
-<div align="center">
-
-[![Star History Chart](https://api.star-history.com/svg?repos=chrislitality-svg/wangziru-analysis-skill-v2&type=Date)](https://star-history.com/#chrislitality-svg/wangziru-analysis-skill-v2&Date)
-
-如果这个研究对你有用，欢迎 Star 支持一下 ⭐
-
-</div>
+- **贡献**：复现或质疑结论、标注新语料、验证即兴层的切片偏差，这是眼下最重要的开放问题。也欢迎新增语言翻译。见[贡献指南](CONTRIBUTING.md)，行为准则见 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+- **CI**：每次推送自动跑工具编译和检测器语料回归，真人语料的 AI 味指数必须低于 20
+- **姊妹仓库**：[wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1)，第一版，原始配方，蓝图工作流
 
 ## 关于引用与语料
 
