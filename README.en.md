@@ -41,6 +41,49 @@ The full write-up is in [thinking-思维运转.md](references/thinking-思维运
 <img src="assets/mindflow.svg" width="820" alt="One mind, two orders — scripted videos run evidence→judgment; improvised answers run judgment→mechanism"/>
 </div>
 
+## What It Gives You
+
+This section was written with the skill stored in this very repo. The six-line pre-check comes first, then the prose. The prose scores **0** on the repo's own AI-flavor checker, human-grade. Watch it swap the ruler, eliminate the alternatives and land the closer. That is the skill in use.
+
+| Six-line pre-check | Filled in for this topic |
+|---|---|
+| Type | Set a rule: is this repo worth your time |
+| Proposition | Catchphrases are the shell, order is the mainboard |
+| Ruler swap | Don't measure bookmarks, measure timestamp-traceability and reproducibility |
+| Eliminated | Catchphrase imitator, auto ghostwriter, word-frequency toy, each with its cause of death |
+| Master metaphor | The teardown: he took phones apart for a decade, this time the man himself is the phone, reclaimed twice in the text |
+| Closer | The shell changes yearly, the mainboard never moves |
+
+Conclusion first: this repo will not turn you into Wang Ziru, and it does not intend to. What it hands you is the part of him that remains, the order he thinks problems in, plus a million characters of his own spoken words.
+
+You have probably heard him take phones apart. He has done it for over a decade. This repo takes the man himself apart as if he were one of those phones. The catchphrases are the shell, the operating order is the mainboard. The shell gets a new color every year, because "对吧" fell from 20.8 to 3.7 per 10k characters and he is deleting it himself. The mainboard never moves, because judgment before language and ruler before judgment have been present from the four signature videos all the way to the 32 transcripts.
+
+You probably hold a ruler of your own, the one that says "prompt templates you bookmark and never use". That ruler is half right, because most repos are exactly that. But worth is not measured in bookmarks. It is measured by two things: whether every claim traces back to a timestamp, and whether every number can be reproduced by you. This repo hands over both. A frequency base of 71 videos and 860k characters, 32 open transcripts with timestamps, and a zero-dependency checker that runs in 30 seconds.
+
+What is it not? Let me answer that for you.
+
+First, it is not a catchphrase imitator. The strongest version of that claim says learning "对吧" and "所谓的" makes you sound like him. The data kills it, because the syntactic devices are low-frequency inventory. "Not A but B" appears twice across the seven new long videos. What you copy is the shell he is deleting.
+
+Second, it is not an auto ghostwriter. The strongest version says installing the skill produces scripts endlessly. That fails too, because the skill is a manual and the model you plug in does the work, while his credibility comes from visiting thousands of stores in person and a rulebook accumulated over a decade. The structure can be moved. The track record cannot.
+
+Third, it is not a word-frequency toy. Frequency counts in this repo verify, they never discover. The load-bearing work is paragraph-by-paragraph question-chain coding. We also ran multiple-comparison correction over 140 correlation tests, none survived, and numbers that fail testing do not get told as stories.
+
+So what does it give you? Four things, pick by what you want.
+
+The first is a ruler, the six logic-check questions. Before you write, ask what debt the opening owes, whether the ruler is up, which paragraph is load-bearing. Hollow paragraphs show up on the spot.
+
+The second is a scale, the AI-flavor checker. Run it for 30 seconds before you deliver. His real speech scores 11, AI drafts start at 70. The scale is transparent, every formula sits in the code.
+
+The third is a library, 32 timestamped transcripts with the full methodology. When you want to challenge a claim, the source opens at the minute and second.
+
+The fourth is a copilot, SKILL.md itself. Hook up Gemini 3.8 Flash or DeepSeek V4 Flash, give a topic and it writes, paste an old draft and it rewrites, ask how to think and it walks the order.
+
+The same scale is not the same thing to different people. For you it is a pre-delivery check, for a researcher it is a distance meter, for someone tuning a model it is a regression guard. Judgments are given in layers, not one-size-fits-all.
+
+To be fair, the personal mileage, the industry standing and the cross-video rulebook are three things no tool can hand you. Install a skill and gain his credibility? That does not happen.
+
+The shell changes every year. The mainboard never moves. If you want the mainboard, start from [the thinking document](references/thinking-思维运转.md).
+
 ### Recommended Models · 推荐模型
 
 | Priority | Model | Notes |
@@ -99,7 +142,7 @@ flowchart LR
     L --> OUT([Deliver])
 ```
 
-**Contents** · [What This Is](#what-this-is) · [Quick Start](#quick-start-30-seconds) · [1. Usage](#1-usage) · [2. Expression Logic](#2-expression-logic) · [3. Content Quality](#3-content-quality) · [4. Content Dimensions](#4-content-dimensions) · [5. De-AI-ification](#5-de-ai-ification) · [6. Data Retrospective](#6-data-retrospective) · [Examples](#examples) · [Repo Layout](#repo-layout) · [Community](#community) · [Changelog](CHANGELOG.md) · [Methodology](METHODOLOGY.md) · [How His Mind Runs](references/thinking-思维运转.md)
+**Contents** · [What This Is](#what-this-is) · [What It Gives You](#what-it-gives-you) · [Quick Start](#quick-start-30-seconds) · [1. Usage](#1-usage) · [2. Expression Logic](#2-expression-logic) · [3. Content Quality](#3-content-quality) · [4. Content Dimensions](#4-content-dimensions) · [5. De-AI-ification](#5-de-ai-ification) · [6. Data Retrospective](#6-data-retrospective) · [Examples](#examples) · [Repo Layout](#repo-layout) · [Community](#community) · [Changelog](CHANGELOG.md) · [Methodology](METHODOLOGY.md) · [How His Mind Runs](references/thinking-思维运转.md)
 
 ---
 
