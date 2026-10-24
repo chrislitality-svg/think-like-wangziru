@@ -4,11 +4,21 @@
 
 > Learn the structure, not the accent.
 
-![Version](https://img.shields.io/badge/Edition-2%20%EF%BD%9C%20v1.5-blue) ![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey) ![Agent Skill](https://img.shields.io/badge/Agent%20Skill-Claude%20Code%20%7C%20Codex%20%7C%20Cursor-blue) ![AI-flavor%20Check](https://img.shields.io/badge/AI--flavor%20check-zero--dependency-green)
+![Version](https://img.shields.io/badge/Edition-2%20%EF%BD%9C%20v1.6-blue) ![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey) ![Agent Skill](https://img.shields.io/badge/Agent%20Skill-Claude%20Code%20%7C%20Codex%20%7C%20Cursor-blue) ![AI-flavor%20Check](https://img.shields.io/badge/AI--flavor%20check-zero--dependency-green)
 
 > **This is Edition 2 (V2, v1.4 of the original repo) — the data-enhanced edition**: iterated on top of Edition 1 (the original recipe) with more video data — closer to the man himself, but possibly overfitted to the original sample. The entry now works **directly from your own words** — give a topic and it writes a readable script; paste an old draft and it rewrites; ask how to think and it walks the order. For the more general-purpose original recipe, use [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1). Try both.
 >
 > **这是第二版（V2，对应原仓库 v1.4）——数据加强版**：在第一版（原始配方）的基础上用更多视频数据迭代而成，更像本人，但对原样本可能过拟合；入口改为按用户的话直接写稿、改稿、辅导。想要更通用的原始配方，用 [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1)。两版建议都试试。
+
+**This repo is first a research project: how Wang Ziru's thinking actually operates, and what his real expression habits are.** The Agent Skill for AI coding assistants (`SKILL.md` — write / rewrite / coach) is the executable digest of that research — the product layer. Read the two layers separately: the research entry is [`references/thinking-思维运转.md`](references/thinking-思维运转.md) (every claim cited to corpus file + timestamp), the product entry is `SKILL.md`; which conclusions are measured facts and which are translated writing gates is graded in [`METHODOLOGY.md`](METHODOLOGY.md) §9.
+
+### Core Findings: how his mind runs (full version in [thinking-思维运转.md](references/thinking-思维运转.md))
+
+1. **Judgment precedes language.** Asked improvised, the verdict lands on beat one with zero delay ("Is there still room in the phone industry? — No more."), and what language adds afterward is always a mechanism, never adjectives. In scripted videos the order flips (evidence first, judgment after). One mind, two output modes — the judgments are **pre-built**, not reasoned on the spot.
+2. **Rulers are inventory.** Judgments draw on a long-held library of standards invoked across videos (the Huawei video directly reuses the iPhone18 three-cell ruler); a standard often appears as a rhetorical question.
+3. **Concessions are explicit.** Hesitation branches are spoken out loud, one is picked, and ownership is marked ("我觉得" 6.5 per 10k chars; hedging words outnumber certainty words ~2.7:1 — certainty comes from definitions and numbering, not from "definitely/absolutely").
+4. **Closers are the storage format.** Every reasoning chain ends with the judgment cast into a single quotable line ("No company ever drowned in saliva").
+5. **Verbal tics are fading.** "对吧" dropped from 20.8 per 10k chars in the 71-video base to 3.7 in the 2026 corpus — imitating his catchphrases means imitating parts he is discarding. His continuity lies in the operating order, not in any single word.
 
 An **Agent Skill** for AI coding assistants (Claude Code / Codex / Cursor, etc.). Since v1.4, it does three things directly from your own words: give it a topic and it writes a script you can read aloud; paste an old draft and it rewrites; ask how to think and it explains the thinking order for that topic.
 
@@ -30,7 +40,7 @@ The frequency base remains the "Wang Ziru AI" Bilibili corpus of **71 videos** (
 **Since v1.5 the corpus is open**: the `corpus/` directory ships **32 full transcripts** (with timestamps) — 7 long-form videos from the official channel (Apr–Oct 2026, incl. two brand-new ones) + 25 unscripted improvised shorts from the clip channel JACHZHU (Sep–Oct 2026). The discourse-logic sample grew from 4 videos to 11 long-form + 25 clips. **Anyone can reproduce this repo's numbers or run new quantitative analyses on them**; copyright and usage bounds are in `corpus/README.md` (research/analysis only; no commercial use; no persona mimicry).
 **v1.5 起语料开源**：`corpus/` 发布 32 条完整转写（官方号 7 条长片 + JACHZHU 切片 25 条即兴短讲，带时间戳），篇章逻辑样本扩到 11 条正片 + 25 条切片，任何人可复现本仓库的量化分析；版权与使用边界见 `corpus/README.md`。
 
-From [2. Expression Logic](#2-expression-logic) onward, this is the v1.3 research write-up — still valid, but no longer the default workflow. The default entry is `SKILL.md`.
+From [2. Expression Logic](#2-expression-logic) onward, this is the research write-up (v1.3, expanded in v1.5) — still valid. For the research conclusions on "how he thinks", start at [`references/thinking-思维运转.md`](references/thinking-思维运转.md); to write scripts with it, the entry is `SKILL.md`.
 
 > **Unofficial** · This is an expression-method study, unrelated to Wang Ziru and his team; it does not use his voice or likeness, and scripts it produces must not be signed with his name or pass as his own.
 
@@ -46,7 +56,7 @@ flowchart LR
     L --> OUT([Deliver])
 ```
 
-**Contents** · [1. Usage](#1-usage) · [2. Expression Logic](#2-expression-logic) · [3. Content Quality](#3-content-quality) · [4. Content Dimensions](#4-content-dimensions) · [5. De-AI-ification](#5-de-ai-ification) · [6. Data Retrospective](#6-data-retrospective) · [Examples](#examples) · [Repo Layout](#repo-layout)
+**Contents** · [Core Findings](#core-findings-how-his-mind-runs-full-version-in-thinking-思维运转md) · [1. Usage](#1-usage) · [2. Expression Logic](#2-expression-logic) · [3. Content Quality](#3-content-quality) · [4. Content Dimensions](#4-content-dimensions) · [5. De-AI-ification](#5-de-ai-ification) · [6. Data Retrospective](#6-data-retrospective) · [Examples](#examples) · [Repo Layout](#repo-layout) · [Methodology](METHODOLOGY.md) · [How His Mind Runs](references/thinking-思维运转.md)
 
 ---
 
@@ -427,8 +437,9 @@ Two more leads (p < 0.05, uncorrected): **counterintuitive titles** (不再酷�
 ## Repo Layout
 
 ```
-SKILL.md                              Entry: write / rewrite / coach directly from your words, logic-checks, red lines
+SKILL.md                              Product-layer entry: write / rewrite / coach directly from your words, logic-checks, red lines
 references/
+  thinking-思维运转.md                 Research-layer master doc: how his mind runs + real habits, every claim cited to corpus & timestamps (read first)
   logic-checks.md                     Device checklist: use only what this topic needs; write "none" otherwise
   audit_and_rewrite.md                Rewrite: keep your person and facts, don't invent numbers
   coaching_framework.md               Coach: start with which steps this topic does NOT need

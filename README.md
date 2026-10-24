@@ -4,11 +4,21 @@
 
 > 学结构，不学腔调。
 
-![Version](https://img.shields.io/badge/%E7%89%88%E6%9C%AC-%E7%AC%AC%E4%BA%8C%E7%89%88%20V2%20%EF%BD%9C%20v1.4-blue) ![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey) ![Agent Skill](https://img.shields.io/badge/Agent%20Skill-Claude%20Code%20%7C%20Codex%20%7C%20Cursor-blue) ![AI 味检测](https://img.shields.io/badge/AI%E5%91%B3%E6%A3%80%E6%B5%8B-%E9%9B%B6%E4%BE%9D%E8%B5%96-green)
+![Version](https://img.shields.io/badge/%E7%89%88%E6%9C%AC-%E7%AC%AC%E4%BA%8C%E7%89%88%20V2%20%EF%BD%9C%20v1.6-blue) ![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey) ![Agent Skill](https://img.shields.io/badge/Agent%20Skill-Claude%20Code%20%7C%20Codex%20%7C%20Cursor-blue) ![AI 味检测](https://img.shields.io/badge/AI%E5%91%B3%E6%A3%80%E6%B5%8B-%E9%9B%B6%E4%BE%9D%E8%B5%96-green)
 
 > **这是第二版（V2，对应原仓库 v1.4）——数据加强版**：在第一版（原始配方）的基础上，用更多视频数据迭代而成——更像他本人，但对原样本可能过拟合。入口从「先交蓝图、过质量门」改成**按用户的话直接做**——给选题就写能念的口播，贴旧稿就改，问怎么想就讲思考顺序。想要更通用的原始配方，用 [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1)；两版建议都试试。
 >
 > **This is Edition 2 (V2, v1.4 of the original repo) — the data-enhanced edition**: iterated on top of Edition 1 (the original recipe) with more video data — closer to the man himself, but possibly overfitted to the original sample. The entry now works **directly from your own words** — give a topic and it writes a readable script; paste an old draft and it rewrites; ask how to think and it walks the order. For the more general-purpose original recipe, use [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1). Try both.
+
+**这个仓库首先是一项研究：王自如的思维怎么运转、表达上有什么真实习惯**；给 AI 编程助手用的 Agent Skill（`SKILL.md`，写稿 / 改稿 / 辅导）是研究结论的可执行摘要，属于产品层。两层分开读：研究的入口是 [`references/thinking-思维运转.md`](references/thinking-思维运转.md)（每条结论带语料出处和时间戳），产品的入口是 `SKILL.md`；哪些结论是量出来的事实、哪些是转译出来的写稿门槛，见 [`METHODOLOGY.md`](METHODOLOGY.md) §九的证据分级表。
+
+### 核心发现：他的思维怎么运转（详见[思维运转](references/thinking-思维运转.md)）
+
+1. **判断先于语言**——即兴被问，第一拍判断零延迟落下（「手机行业还有发展吗？没了」），语言随后补的永远是机制不是形容词；有脚本的正片把顺序反过来（先证据后判断）。同一头脑两种输出，说明判断是**预制**的，不是现场推理。
+2. **尺子是库存**——判断来自一个跨视频调用的长期标准库（华为条直接引用 iPhone18 条的三格尺），标准常以反问形态出现。
+3. **让步显式**——犹豫分支说出口、选一个、标明是自己的判断（「我觉得」6.5 次/万字；模糊词恒多于确定词约 2.7 倍，笃定靠定义和编号，不靠"一定/绝对"）。
+4. **收口是存储格式**——每个推理链终点把判断铸成可单独引用的一句话（「没有一家企业是被口水淹死的」）。
+5. **口癖在衰减**——「对吧」从 71 篇底座的 20.8 次/万字降到 2026 语料的 3.7；学他的口头禅，学的是他正在丢弃的零件。他的连续性在运转顺序，不在任何单个词上。
 
 一个给 AI 编程助手（Claude Code / Codex / Cursor 等）用的 **Agent Skill**。v1.4 起，按用户的话直接做三件事：给选题就写能念的口播，贴旧稿就改，问怎么想就把这题的思考顺序讲出来。
 
@@ -27,7 +37,7 @@
 
 **v1.5 起语料开源**：`corpus/` 目录发布 **32 条完整转写**（带时间戳）——官方号 7 条长片（2026-04 至 10，含 2 条全新视频）+ 切片账号 JACHZHU 的 25 条无脚本即兴短讲（2026-09 至 10）。篇章逻辑样本从 4 条扩到 11 条正片 + 25 条切片。**任何人都可以用这批语料复现本仓库的数字、做新的量化分析**；版权与使用边界见 `corpus/README.md`（仅限研究分析，禁止商用与人格模仿）。
 
-下面从[二、表达逻辑](#二表达逻辑)开始，是 v1.3 的研究说明，仍然有效，但不再是默认工作流。默认入口以 `SKILL.md` 为准。
+下面从[二、表达逻辑](#二表达逻辑)开始，是 v1.3 起的研究说明（v1.5 扩充），仍然有效。想直接看「他怎么想」的研究结论，从[`references/thinking-思维运转.md`](references/thinking-思维运转.md)进；要用它写稿，入口是 `SKILL.md`。
 
 > **非官方** · 这是一份表达方法研究，与王自如本人及其团队无关；不使用其声音与肖像，产出的稿子也不应署他的名或冒充本人。
 
@@ -43,7 +53,7 @@ flowchart LR
     L --> OUT([交付])
 ```
 
-**目录** · [一、使用方式](#一使用方式) · [二、表达逻辑](#二表达逻辑) · [三、内容质量](#三内容质量) · [四、内容维度](#四内容维度) · [五、去 AI 化](#五去-ai-化) · [六、数据复盘](#六数据复盘) · [案例](#案例) · [目录结构](#目录结构) · [更新记录](CHANGELOG.md) · **[研究方法论](METHODOLOGY.md)**
+**目录** · [核心发现](#核心发现他的思维怎么运转详见思维运转) · [一、使用方式](#一使用方式) · [二、表达逻辑](#二表达逻辑) · [三、内容质量](#三内容质量) · [四、内容维度](#四内容维度) · [五、去 AI 化](#五去-ai-化) · [六、数据复盘](#六数据复盘) · [案例](#案例) · [目录结构](#目录结构) · [更新记录](CHANGELOG.md) · **[研究方法论](METHODOLOGY.md)** · **[思维怎么运转](references/thinking-思维运转.md)**
 
 ---
 
@@ -430,14 +440,15 @@ python tools/bili_fingerprint.py BV1xxxx BV1yyyy ...    # 或 -f bvids.txt，读
 ## 目录结构
 
 ```
-SKILL.md                              入口：形态路由（含导览型）、即兴四步、13 道质量门（0 = 逻辑链）、红线
-METHODOLOGY.md                        研究思路与方法论：采样、采集与转写命令、编码规则、量化口径、复现指南
+SKILL.md                              产品层入口：形态路由（含导览型）、即兴四步、13 道质量门（0 = 逻辑链）、红线
+METHODOLOGY.md                        研究思路与方法论：采样、采集与转写命令、编码规则、量化口径、复现指南、证据分级总表（§九）
 corpus/                               32 条完整转写（开源，带时间戳）
   official/                           官方号 7 条长片（2026-04 至 10，含 2 条全新视频）
   clips-jachzhu/                      JACHZHU 切片 25 条：无脚本即兴短讲（2026-09 至 10）
 research/                             研究过程资料：33 条逐条拆解原始笔记、采集元数据、转写与统计脚本
 references/
-  logic-表达逻辑.md                    篇章层：四条公理、六种骨架、论点怎么立、论据怎么配、话题怎么转、即兴四步（先读）
+  thinking-思维运转.md                 研究层主文档：他的思维怎么运转、表达习惯的真实底色，全部带语料出处与时间戳（先读）
+  logic-表达逻辑.md                    篇章层：四条公理、六种骨架、论点怎么立、论据怎么配、话题怎么转、即兴四步
   syntax-长句逻辑.md                   句子层：一句可长、一口气要短，九种长句骨架，和 AI 翻译腔的区别
   blueprint-template.md               拆解蓝图格式、开场钩子库、形态路由、完整示例（每次拆解必读）
   playbook-句法手册.md                 十段脚本骨架、七武器句法、停连重音标注、词汇替换表、积木块、训练计划
