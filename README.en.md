@@ -21,6 +21,8 @@ An **Agent Skill** for AI coding assistants (Claude Code / Codex / Cursor, etc.)
 
 > The skill is a manual; the model you plug in executes it. After switching models, re-run the same topic and audit the output with the five logic questions and `tools/ai_flavor_check.py`.
 
+Full research methodology (sampling, collection & transcription commands, coding rules, quantitative audit, reproduction guide): see [`METHODOLOGY.md`](METHODOLOGY.md) · 完整研究方法论见 [METHODOLOGY.md](METHODOLOGY.md)
+
 Argumentative devices are not quotas. If framing, half-step concession, elimination, or metaphor reclaim don't fit this topic, write "none" — never invent targets or numbers just to sound like him. See `SKILL.md` and `references/logic-checks.md`.
 
 The frequency base remains the "Wang Ziru AI" Bilibili corpus of **71 videos** (~**50 hours** of speech). Body text after stripping titles is **864,937 characters**, with "对吧" appearing **1,660 times**. Ignore the earlier figures (796,821 chars, 732k chars, "对吧 1491, 那么 973"). v1.4 additionally read 32 unscripted short monologues, used only to patch social topics and improvised phrasings — not merged into the frequency base.
