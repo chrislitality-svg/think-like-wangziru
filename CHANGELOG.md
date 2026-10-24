@@ -4,8 +4,8 @@
 
 原仓库 `wangziru-analysis-skill` 拆成两个独立仓库：
 
-- **第二版（本仓库，`wangziru-analysis-skill-v2`）**：对应原仓库 v1.4，按用户的话直接写稿、改稿、辅导。
-- **第一版（[wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1)）**：对应原仓库 v1.0–v1.3，蓝图工作流（先交拆解蓝图、过 13 道质量门，再成稿）。
+- **第二版（本仓库，`wangziru-analysis-skill-v2`）——数据加强版**：对应原仓库 v1.4，基于更多视频数据迭代（补进 32 条无脚本短口播），更像本人，但对原样本可能过拟合；按用户的话直接写稿、改稿、辅导。
+- **第一版（[wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1)）——最初版本，原始配方**：对应原仓库 v1.0–v1.3，蓝图工作流；方法不贴样本、逻辑更通用，不少小伙伴反馈这版效果更好。
 
 同时：新增推荐模型（首选 Gemini 3.8 Flash，次选 DeepSeek V4 Flash），README 增加英文版（[README.en.md](README.en.md)）。
 The original repo was split into two standalone editions. This repo = Edition 2 (v1.4, direct write/rewrite/coach). Edition 1 (v1.0–v1.3, blueprint-first workflow) lives at wangziru-analysis-skill-v1. Recommended models added (primary Gemini 3.8 Flash, secondary DeepSeek V4 Flash); README now bilingual.

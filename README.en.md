@@ -6,9 +6,9 @@
 
 ![Version](https://img.shields.io/badge/Edition-2%20%EF%BD%9C%20v1.4-blue) ![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey) ![Agent Skill](https://img.shields.io/badge/Agent%20Skill-Claude%20Code%20%7C%20Codex%20%7C%20Cursor-blue) ![AI-flavor%20Check](https://img.shields.io/badge/AI--flavor%20check-zero--dependency-green)
 
-> **This is Edition 2 (V2, v1.4 of the original repo), updated on top of Edition 1**: the entry now works **directly from your own words** — give a topic and it writes a readable script; paste an old draft and it rewrites; ask how to think and it walks the order. For the blueprint-first workflow (deconstruct → 13 quality gates → write), use 👉 [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1).
+> **This is Edition 2 (V2, v1.4 of the original repo) — the data-enhanced edition**: iterated on top of Edition 1 (the original recipe) with more video data — closer to the man himself, but possibly overfitted to the original sample. The entry now works **directly from your own words** — give a topic and it writes a readable script; paste an old draft and it rewrites; ask how to think and it walks the order. For the more general-purpose original recipe, use [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1). Try both.
 >
-> **这是第二版（V2，对应原仓库 v1.4）**，在第一版的基础上更新：入口改为按用户的话直接写稿、改稿、辅导。蓝图工作流请用 [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1)。
+> **这是第二版（V2，对应原仓库 v1.4）——数据加强版**：在第一版（原始配方）的基础上用更多视频数据迭代而成，更像本人，但对原样本可能过拟合；入口改为按用户的话直接写稿、改稿、辅导。想要更通用的原始配方，用 [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1)。两版建议都试试。
 
 An **Agent Skill** for AI coding assistants (Claude Code / Codex / Cursor, etc.). Since v1.4, it does three things directly from your own words: give it a topic and it writes a script you can read aloud; paste an old draft and it rewrites; ask how to think and it explains the thinking order for that topic.
 
