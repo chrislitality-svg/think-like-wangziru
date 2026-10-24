@@ -6,7 +6,7 @@
 
 **구조를 배우고 억양을 흉내내지 않습니다. 그의 사고가 어떻게 굴러가는지를 연구합니다.**
 
-[![Version](https://img.shields.io/badge/version-v1.10-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.11-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/wangziru-analysis-skill-v2/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](tools/)

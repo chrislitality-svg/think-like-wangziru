@@ -6,7 +6,7 @@
 
 **Apprendre la structure, pas l'accent. Étudier comment fonctionne sa pensée, pas imiter ses tics de langage.**
 
-[![Version](https://img.shields.io/badge/version-v1.10-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.11-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/wangziru-analysis-skill-v2/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](tools/)

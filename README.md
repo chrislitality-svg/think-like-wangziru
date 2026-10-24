@@ -6,7 +6,7 @@
 
 **学结构，不学腔调。研究他的思维怎么运转，不模仿他的口头禅。**
 
-[![Version](https://img.shields.io/badge/version-v1.10-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.11-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/wangziru-analysis-skill-v2/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](tools/)
@@ -529,7 +529,7 @@ python tools/bili_fingerprint.py BV1xxxx BV1yyyy ...    # 或 -f bvids.txt，读
 ## 目录结构
 
 ```
-SKILL.md                              产品层入口：形态路由（含导览型）、即兴四步、13 道质量门（0 = 逻辑链）、红线
+SKILL.md                              产品层入口：形态路由（含导览型）、即兴短答（机制必给，其余按需）、装置检验、红线
 METHODOLOGY.md                        研究思路与方法论：采样、采集与转写命令、编码规则、量化口径、复现指南、证据分级总表（§九）
 corpus/                               32 条完整转写（开源，带时间戳）
   official/                           官方号 7 条长片（2026-04 至 10，含 2 条全新视频）
