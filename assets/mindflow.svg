@@ -1,80 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-label="Hypothesis under test — 待检验的假说：同一个头脑，两种输出顺序">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" aria-label="直播里被问到问题，他常见的说话顺序：先给答案，讲原因，有例外才让步，能收就收一句">
   <defs>
     <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0b1220"/>
       <stop offset="1" stop-color="#141f36"/>
     </linearGradient>
-    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#818cf8"/>
-      <stop offset="1" stop-color="#6366f1"/>
-    </linearGradient>
     <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#22d3ee"/>
       <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#334155"/>
+      <stop offset="1" stop-color="#1e293b"/>
     </linearGradient>
     <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0 0 L10 5 L0 10 z" fill="#64748b"/>
     </marker>
   </defs>
-  <rect width="1200" height="380" rx="24" fill="url(#bg2)"/>
-  <text x="48" y="64" font-family="ui-sans-serif, -apple-system, 'Noto Sans SC', 'PingFang SC', sans-serif" font-size="30" font-weight="700" fill="#e2e8f0">待检验的假说：同一个头脑，两种输出顺序</text>
-  <text x="48" y="98" font-family="ui-sans-serif, -apple-system, sans-serif" font-size="20" fill="#94a3b8">Hypothesis, not finding: clip cuts, question type and topic can produce the same pattern.</text>
+  <rect width="1200" height="260" rx="24" fill="url(#bg2)"/>
+  <text x="48" y="64" font-family="ui-sans-serif, -apple-system, 'Noto Sans SC', 'PingFang SC', sans-serif" font-size="30" font-weight="700" fill="#e2e8f0">直播里被问到问题，他常见的说话顺序</text>
+  <text x="48" y="100" font-family="ui-sans-serif, -apple-system, 'Noto Sans SC', 'PingFang SC', sans-serif" font-size="20" fill="#94a3b8">前两步多数时候都有，后两步看情况。数字是 72 段回答里出现的比例。</text>
 
-  <text x="48" y="152" font-family="ui-sans-serif, -apple-system, 'Noto Sans SC', sans-serif" font-size="21" fill="#a5b4fc">有脚本 · 正片（最初的归纳；iPhone18、Cybercab 等先给判断，是反例）</text>
-  <g font-family="ui-sans-serif, -apple-system, 'Noto Sans SC', sans-serif" text-anchor="middle">
+  <g font-family="ui-sans-serif, -apple-system, 'Noto Sans SC', 'PingFang SC', sans-serif" text-anchor="middle">
     <g>
-      <rect x="48" y="168" width="230" height="58" rx="14" fill="url(#g1)"/>
-      <text x="163" y="194" font-size="21" font-weight="700" fill="#ffffff">立尺子</text>
-      <text x="163" y="216" font-size="15" fill="#e0e7ff">set the ruler</text>
+      <rect x="48" y="140" width="230" height="74" rx="14" fill="url(#g2)"/>
+      <text x="163" y="172" font-size="22" font-weight="700" fill="#04283a">先给答案</text>
+      <text x="163" y="199" font-size="16" fill="#0e5e70">约七成</text>
     </g>
     <g>
-      <rect x="330" y="168" width="230" height="58" rx="14" fill="url(#g1)"/>
-      <text x="445" y="194" font-size="21" font-weight="700" fill="#ffffff">摆证据</text>
-      <text x="445" y="216" font-size="15" fill="#e0e7ff">evidence</text>
+      <rect x="330" y="140" width="230" height="74" rx="14" fill="url(#g2)"/>
+      <text x="445" y="172" font-size="22" font-weight="700" fill="#04283a">讲原因</text>
+      <text x="445" y="199" font-size="16" fill="#0e5e70">约九成</text>
     </g>
     <g>
-      <rect x="612" y="168" width="230" height="58" rx="14" fill="url(#g1)"/>
-      <text x="727" y="194" font-size="21" font-weight="700" fill="#ffffff">下判断</text>
-      <text x="727" y="216" font-size="15" fill="#e0e7ff">judgment</text>
+      <rect x="612" y="140" width="230" height="74" rx="14" fill="url(#g3)" stroke="#475569" stroke-width="2" stroke-dasharray="6 5"/>
+      <text x="727" y="172" font-size="22" font-weight="700" fill="#e2e8f0">有例外才让步</text>
+      <text x="727" y="199" font-size="16" fill="#94a3b8">约七成</text>
     </g>
     <g>
-      <rect x="894" y="168" width="230" height="58" rx="14" fill="url(#g1)"/>
-      <text x="1009" y="194" font-size="21" font-weight="700" fill="#ffffff">收口</text>
-      <text x="1009" y="216" font-size="15" fill="#e0e7ff">closer line</text>
+      <rect x="894" y="140" width="230" height="74" rx="14" fill="url(#g3)" stroke="#475569" stroke-width="2" stroke-dasharray="6 5"/>
+      <text x="1009" y="172" font-size="22" font-weight="700" fill="#e2e8f0">能收就收一句</text>
+      <text x="1009" y="199" font-size="16" fill="#94a3b8">约一半</text>
     </g>
   </g>
   <g stroke="#64748b" stroke-width="3" marker-end="url(#ar)">
-    <line x1="282" y1="197" x2="324" y2="197"/>
-    <line x1="564" y1="197" x2="606" y2="197"/>
-    <line x1="846" y1="197" x2="888" y2="197"/>
-  </g>
-
-  <text x="48" y="272" font-family="ui-sans-serif, -apple-system, 'Noto Sans SC', sans-serif" font-size="21" fill="#67e8f9">无脚本 · 切片（首句即判断约 16/24；入点由剪辑者决定）</text>
-  <g font-family="ui-sans-serif, -apple-system, 'Noto Sans SC', sans-serif" text-anchor="middle">
-    <g>
-      <rect x="48" y="288" width="230" height="58" rx="14" fill="url(#g2)"/>
-      <text x="163" y="314" font-size="21" font-weight="700" fill="#04283a">一拍结论</text>
-      <text x="163" y="336" font-size="15" fill="#0e5e70">instant verdict</text>
-    </g>
-    <g>
-      <rect x="330" y="288" width="230" height="58" rx="14" fill="url(#g2)"/>
-      <text x="445" y="314" font-size="21" font-weight="700" fill="#04283a">机制补课</text>
-      <text x="445" y="336" font-size="15" fill="#0e5e70">mechanism</text>
-    </g>
-    <g>
-      <rect x="612" y="288" width="230" height="58" rx="14" fill="url(#g2)"/>
-      <text x="727" y="314" font-size="21" font-weight="700" fill="#04283a">让步分层</text>
-      <text x="727" y="336" font-size="15" fill="#0e5e70">concession</text>
-    </g>
-    <g>
-      <rect x="894" y="288" width="230" height="58" rx="14" fill="url(#g2)"/>
-      <text x="1009" y="314" font-size="21" font-weight="700" fill="#04283a">收口</text>
-      <text x="1009" y="336" font-size="15" fill="#0e5e70">closer line</text>
-    </g>
-  </g>
-  <g stroke="#64748b" stroke-width="3" marker-end="url(#ar)">
-    <line x1="282" y1="317" x2="324" y2="317"/>
-    <line x1="564" y1="317" x2="606" y2="317"/>
-    <line x1="846" y1="317" x2="888" y2="317"/>
+    <line x1="282" y1="177" x2="324" y2="177"/>
+    <line x1="564" y1="177" x2="606" y2="177"/>
+    <line x1="846" y1="177" x2="888" y2="177"/>
   </g>
 </svg>
