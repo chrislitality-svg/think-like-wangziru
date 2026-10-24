@@ -1,14 +1,32 @@
+<div align="center">
+
+<img src="assets/banner.svg" width="860" alt="wangziru-analysis — Wang Ziru-style expression deconstruction"/>
+
 # Wang Ziru-Style Expression Deconstruction (Edition 2) · wangziru-analysis · V2
 
-[简体中文](README.md) · **English**
+**Learn the structure, not the accent — study how his mind runs, not his catchphrases.**
 
-> Learn the structure, not the accent.
+[![Version](https://img.shields.io/badge/version-v1.7-blue)](CHANGELOG.md)
+[![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
+[![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/wangziru-analysis-skill-v2/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue)](tools/)
+[![Corpus](https://img.shields.io/badge/corpus-103%20videos%20%C2%B71.04M%20chars-8b5cf6)](corpus/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 
-![Version](https://img.shields.io/badge/Edition-2%20%EF%BD%9C%20v1.6-blue) ![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey) ![Agent Skill](https://img.shields.io/badge/Agent%20Skill-Claude%20Code%20%7C%20Codex%20%7C%20Cursor-blue) ![AI-flavor%20Check](https://img.shields.io/badge/AI--flavor%20check-zero--dependency-green)
+[![Stars](https://img.shields.io/github/stars/chrislitality-svg/wangziru-analysis-skill-v2?style=social)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/stargazers)
+[![Forks](https://img.shields.io/github/forks/chrislitality-svg/wangziru-analysis-skill-v2?style=social)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/network/members)
+[![Issues](https://img.shields.io/github/issues/chrislitality-svg/wangziru-analysis-skill-v2?style=social)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/chrislitality-svg/wangziru-analysis-skill-v2)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/commits/main)
 
-> **This is Edition 2 (V2, v1.4 of the original repo) — the data-enhanced edition**: iterated on top of Edition 1 (the original recipe) with more video data — closer to the man himself, but possibly overfitted to the original sample. The entry now works **directly from your own words** — give a topic and it writes a readable script; paste an old draft and it rewrites; ask how to think and it walks the order. For the more general-purpose original recipe, use [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1). Try both.
->
-> **这是第二版（V2，对应原仓库 v1.4）——数据加强版**：在第一版（原始配方）的基础上用更多视频数据迭代而成，更像本人，但对原样本可能过拟合；入口改为按用户的话直接写稿、改稿、辅导。想要更通用的原始配方，用 [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1)。两版建议都试试。
+[简体中文](README.md) · **English** · [한국어](README.ko.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
+
+</div>
+
+> **This is Edition 2 (V2) — the data-enhanced edition**: iterated on top of Edition 1 (the original recipe) with more video data — closer to the man himself, but possibly overfitted to the original sample. For the more general-purpose original recipe (blueprint-first workflow: deconstruct → 13 quality gates → write), use [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1). Try both.
+
+---
+
+## What This Is
 
 **This repo is first a research project: how Wang Ziru's thinking actually operates, and what his real expression habits are.** The Agent Skill for AI coding assistants (`SKILL.md` — write / rewrite / coach) is the executable digest of that research — the product layer. Read the two layers separately: the research entry is [`references/thinking-思维运转.md`](references/thinking-思维运转.md) (every claim cited to corpus file + timestamp), the product entry is `SKILL.md`; which conclusions are measured facts and which are translated writing gates is graded in [`METHODOLOGY.md`](METHODOLOGY.md) §9.
 
@@ -20,7 +38,9 @@
 4. **Closers are the storage format.** Every reasoning chain ends with the judgment cast into a single quotable line ("No company ever drowned in saliva").
 5. **Verbal tics are fading.** "对吧" dropped from 20.8 per 10k chars in the 71-video base to 3.7 in the 2026 corpus — imitating his catchphrases means imitating parts he is discarding. His continuity lies in the operating order, not in any single word.
 
-An **Agent Skill** for AI coding assistants (Claude Code / Codex / Cursor, etc.). Since v1.4, it does three things directly from your own words: give it a topic and it writes a script you can read aloud; paste an old draft and it rewrites; ask how to think and it explains the thinking order for that topic.
+<div align="center">
+<img src="assets/mindflow.svg" width="820" alt="One mind, two orders — scripted videos run evidence→judgment; improvised answers run judgment→mechanism"/>
+</div>
 
 ### Recommended Models · 推荐模型
 
@@ -31,6 +51,33 @@ An **Agent Skill** for AI coding assistants (Claude Code / Codex / Cursor, etc.)
 
 > The skill is a manual; the model you plug in executes it. After switching models, re-run the same topic and audit the output with the five logic questions and `tools/ai_flavor_check.py`.
 
+## Quick Start (30 seconds)
+
+Zero dependencies — feel the AI-flavor checker on his real speech first. It's the only executable entry in the repo; everything else is Markdown:
+
+```bash
+git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git
+cd wangziru-analysis-skill-v2
+
+# Run the checker on his real speech (Sep 2026 livestream clip): expect AI-flavor ≈ 11 (human-grade)
+python tools/ai_flavor_check.py "corpus/clips-jachzhu/2026-09-22-聊西贝事件的根源-1m11s.txt"
+
+# Then feed it an AI-generated draft — the score jumps to 70+. That gap is what this research explains.
+python tools/ai_flavor_check.py draft.txt --json
+```
+
+Install the skill for AI coding assistants (Claude Code / Codex / Cursor, etc.):
+
+```bash
+git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git ~/.claude/skills/wangziru-analysis
+```
+
+Windows PowerShell: `git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git "$env:USERPROFILE\.claude\skills\wangziru-analysis"`. Other tools (Codex, Cursor, ZCode, etc.): drop the repo into a project and tell the agent "read `wangziru-analysis/SKILL.md` first".
+
+> **Unofficial** · This is an expression-method study, unrelated to Wang Ziru and his team; it does not use his voice or likeness, and scripts it produces must not be signed with his name or pass as his own.
+
+---
+
 Full research methodology (sampling, collection & transcription commands, coding rules, quantitative audit, reproduction guide): see [`METHODOLOGY.md`](METHODOLOGY.md) · 完整研究方法论见 [METHODOLOGY.md](METHODOLOGY.md)
 
 Argumentative devices are not quotas. If framing, half-step concession, elimination, or metaphor reclaim don't fit this topic, write "none" — never invent targets or numbers just to sound like him. See `SKILL.md` and `references/logic-checks.md`.
@@ -38,11 +85,8 @@ Argumentative devices are not quotas. If framing, half-step concession, eliminat
 The frequency base remains the "Wang Ziru AI" Bilibili corpus of **71 videos** (~**50 hours** of speech). Body text after stripping titles is **864,937 characters**, with "对吧" appearing **1,660 times**. Ignore the earlier figures (796,821 chars, 732k chars, "对吧 1491, 那么 973"). v1.4 additionally read 32 unscripted short monologues, used only to patch social topics and improvised phrasings — not merged into the frequency base.
 
 **Since v1.5 the corpus is open**: the `corpus/` directory ships **32 full transcripts** (with timestamps) — 7 long-form videos from the official channel (Apr–Oct 2026, incl. two brand-new ones) + 25 unscripted improvised shorts from the clip channel JACHZHU (Sep–Oct 2026). The discourse-logic sample grew from 4 videos to 11 long-form + 25 clips. **Anyone can reproduce this repo's numbers or run new quantitative analyses on them**; copyright and usage bounds are in `corpus/README.md` (research/analysis only; no commercial use; no persona mimicry).
-**v1.5 起语料开源**：`corpus/` 发布 32 条完整转写（官方号 7 条长片 + JACHZHU 切片 25 条即兴短讲，带时间戳），篇章逻辑样本扩到 11 条正片 + 25 条切片，任何人可复现本仓库的量化分析；版权与使用边界见 `corpus/README.md`。
 
 From [2. Expression Logic](#2-expression-logic) onward, this is the research write-up (v1.3, expanded in v1.5) — still valid. For the research conclusions on "how he thinks", start at [`references/thinking-思维运转.md`](references/thinking-思维运转.md); to write scripts with it, the entry is `SKILL.md`.
-
-> **Unofficial** · This is an expression-method study, unrelated to Wang Ziru and his team; it does not use his voice or likeness, and scripts it produces must not be signed with his name or pass as his own.
 
 ```mermaid
 flowchart LR
@@ -56,7 +100,7 @@ flowchart LR
     L --> OUT([Deliver])
 ```
 
-**Contents** · [Core Findings](#core-findings-how-his-mind-runs-full-version-in-thinking-思维运转md) · [1. Usage](#1-usage) · [2. Expression Logic](#2-expression-logic) · [3. Content Quality](#3-content-quality) · [4. Content Dimensions](#4-content-dimensions) · [5. De-AI-ification](#5-de-ai-ification) · [6. Data Retrospective](#6-data-retrospective) · [Examples](#examples) · [Repo Layout](#repo-layout) · [Methodology](METHODOLOGY.md) · [How His Mind Runs](references/thinking-思维运转.md)
+**Contents** · [What This Is](#what-this-is) · [Quick Start](#quick-start-30-seconds) · [1. Usage](#1-usage) · [2. Expression Logic](#2-expression-logic) · [3. Content Quality](#3-content-quality) · [4. Content Dimensions](#4-content-dimensions) · [5. De-AI-ification](#5-de-ai-ification) · [6. Data Retrospective](#6-data-retrospective) · [Examples](#examples) · [Repo Layout](#repo-layout) · [Community](#community) · [Changelog](CHANGELOG.md) · [Methodology](METHODOLOGY.md) · [How His Mind Runs](references/thinking-思维运转.md)
 
 ---
 
@@ -462,6 +506,20 @@ tools/
 examples/                             Four full cases (deconstruction / de-AI / final script / three-draft logic comparison)
 CHANGELOG.md                          Release notes
 ```
+
+## Community
+
+- **Contributing**: reproduce/challenge conclusions, annotate new corpus, verify the improv-layer sampling bias (highest-priority open problem), add translations — see the [Contributing Guide](CONTRIBUTING.md); code of conduct in [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+- **CI**: tool compilation + detector corpus regression (real human speech must stay under AI-flavor 20) runs on every push
+- **Sister repo**: [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1) (Edition 1 · original recipe · blueprint-first workflow)
+
+<div align="center">
+
+[![Star History Chart](https://api.star-history.com/svg?repos=chrislitality-svg/wangziru-analysis-skill-v2&type=Date)](https://star-history.com/#chrislitality-svg/wangziru-analysis-skill-v2&Date)
+
+If this research helps you, a star is appreciated ⭐
+
+</div>
 
 ## About Quotations
 

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-label="One mind, two orders — 同一个头脑，两种输出顺序">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#141f36"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="380" rx="24" fill="url(#bg2)"/>
+  <text x="48" y="64" font-family="ui-sans-serif, -apple-system, 'Noto Sans SC', 'PingFang SC', sans-serif" font-size="30" font-weight="700" fill="#e2e8f0">同一个头脑，两种输出顺序</text>
+  <text x="48" y="98" font-family="ui-sans-serif, -apple-system, sans-serif" font-size="20" fill="#94a3b8">One mind, two orders — the judgments are pre-built, not reasoned on the spot.</text>
+
+  <text x="48" y="152" font-family="ui-sans-serif, -apple-system, 'Noto Sans SC', sans-serif" font-size="21" fill="#a5b4fc">有脚本 · 正片（先证据后判断）</text>
+  <g font-family="ui-sans-serif, -apple-system, 'Noto Sans SC', sans-serif" text-anchor="middle">
+    <g>
+      <rect x="48" y="168" width="230" height="58" rx="14" fill="url(#g1)"/>
+      <text x="163" y="194" font-size="21" font-weight="700" fill="#ffffff">立尺子</text>
+      <text x="163" y="216" font-size="15" fill="#e0e7ff">set the ruler</text>
+    </g>
+    <g>
+      <rect x="330" y="168" width="230" height="58" rx="14" fill="url(#g1)"/>
+      <text x="445" y="194" font-size="21" font-weight="700" fill="#ffffff">摆证据</text>
+      <text x="445" y="216" font-size="15" fill="#e0e7ff">evidence</text>
+    </g>
+    <g>
+      <rect x="612" y="168" width="230" height="58" rx="14" fill="url(#g1)"/>
+      <text x="727" y="194" font-size="21" font-weight="700" fill="#ffffff">下判断</text>
+      <text x="727" y="216" font-size="15" fill="#e0e7ff">judgment</text>
+    </g>
+    <g>
+      <rect x="894" y="168" width="230" height="58" rx="14" fill="url(#g1)"/>
+      <text x="1009" y="194" font-size="21" font-weight="700" fill="#ffffff">收口</text>
+      <text x="1009" y="216" font-size="15" fill="#e0e7ff">closer line</text>
+    </g>
+  </g>
+  <g stroke="#64748b" stroke-width="3" marker-end="url(#ar)">
+    <line x1="282" y1="197" x2="324" y2="197"/>
+    <line x1="564" y1="197" x2="606" y2="197"/>
+    <line x1="846" y1="197" x2="888" y2="197"/>
+  </g>
+
+  <text x="48" y="272" font-family="ui-sans-serif, -apple-system, 'Noto Sans SC', sans-serif" font-size="21" fill="#67e8f9">无脚本 · 即兴（先判断后补证据）</text>
+  <g font-family="ui-sans-serif, -apple-system, 'Noto Sans SC', sans-serif" text-anchor="middle">
+    <g>
+      <rect x="48" y="288" width="230" height="58" rx="14" fill="url(#g2)"/>
+      <text x="163" y="314" font-size="21" font-weight="700" fill="#04283a">一拍结论</text>
+      <text x="163" y="336" font-size="15" fill="#0e5e70">instant verdict</text>
+    </g>
+    <g>
+      <rect x="330" y="288" width="230" height="58" rx="14" fill="url(#g2)"/>
+      <text x="445" y="314" font-size="21" font-weight="700" fill="#04283a">机制补课</text>
+      <text x="445" y="336" font-size="15" fill="#0e5e70">mechanism</text>
+    </g>
+    <g>
+      <rect x="612" y="288" width="230" height="58" rx="14" fill="url(#g2)"/>
+      <text x="727" y="314" font-size="21" font-weight="700" fill="#04283a">让步分层</text>
+      <text x="727" y="336" font-size="15" fill="#0e5e70">concession</text>
+    </g>
+    <g>
+      <rect x="894" y="288" width="230" height="58" rx="14" fill="url(#g2)"/>
+      <text x="1009" y="314" font-size="21" font-weight="700" fill="#04283a">收口</text>
+      <text x="1009" y="336" font-size="15" fill="#0e5e70">closer line</text>
+    </g>
+  </g>
+  <g stroke="#64748b" stroke-width="3" marker-end="url(#ar)">
+    <line x1="282" y1="317" x2="324" y2="317"/>
+    <line x1="564" y1="317" x2="606" y2="317"/>
+    <line x1="846" y1="317" x2="888" y2="317"/>
+  </g>
+</svg>

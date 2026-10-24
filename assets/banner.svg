@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="wangziru-analysis — 王自如式表达拆解">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#182848"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="320" rx="28" fill="url(#bg)"/>
+  <g opacity="0.14" stroke="#38bdf8" stroke-width="1">
+    <circle cx="1150" cy="60" r="120" fill="none"/>
+    <circle cx="1150" cy="60" r="180" fill="none"/>
+    <circle cx="1150" cy="60" r="240" fill="none"/>
+    <path d="M0 250 H1280" />
+    <path d="M0 285 H1280" />
+  </g>
+  <g>
+    <rect x="88" y="86" width="118" height="92" rx="24" fill="none" stroke="url(#acc)" stroke-width="5"/>
+    <path d="M118 178 l-14 26 34-26 z" fill="url(#acc)"/>
+    <circle cx="118" cy="122" r="7" fill="#22d3ee"/>
+    <circle cx="147" cy="122" r="7" fill="#818cf8"/>
+    <circle cx="176" cy="122" r="7" fill="#22d3ee"/>
+    <line x1="118" y1="152" x2="176" y2="152" stroke="#e2e8f0" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <text x="248" y="126" font-family="ui-sans-serif, -apple-system, 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="58" font-weight="800" fill="#f1f5f9">wangziru-analysis</text>
+  <text x="252" y="170" font-family="ui-sans-serif, -apple-system, 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="30" fill="#7dd3fc">王自如式表达拆解 · 他的思维怎么运转 · 表达习惯的真实底色</text>
+  <text x="252" y="212" font-family="ui-sans-serif, -apple-system, 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="24" fill="#94a3b8">学结构，不学腔调 — Learn the structure, not the accent.</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" fill="#a5b4fc">
+    <rect x="252" y="240" width="236" height="38" rx="19" fill="#1e293b" opacity="0.9"/>
+    <text x="270" y="265">103 videos corpus</text>
+    <rect x="502" y="240" width="200" height="38" rx="19" fill="#1e293b" opacity="0.9"/>
+    <text x="520" y="265">1M+ chars</text>
+    <rect x="716" y="240" width="220" height="38" rx="19" fill="#1e293b" opacity="0.9"/>
+    <text x="734" y="265">open research</text>
+    <rect x="950" y="240" width="230" height="38" rx="19" fill="#1e293b" opacity="0.9"/>
+    <text x="968" y="265">zero-dep tools</text>
+  </g>
+</svg>
