@@ -2,11 +2,11 @@
 
 <img src="assets/banner.svg" width="860" alt="wangziru-analysis"/>
 
-# Analyse des Ausdrucks von Wang Ziru, 2. Ausgabe · wangziru-analysis · V2
+# Denken wie Wang Ziru, 2. Ausgabe · wangziru-analysis
 
-**Die Struktur lernen, nicht den Slang. Erforschen, wie sein Denken abläuft, statt seine Sprachfloskeln nachzuahmen.**
+**Erst die Antwort, dann klar der Grund, und es hält auch Nachfragen stand. Ein Satz an deine KI genügt: Sie analysiert eine Frage, schreibt ein Skript, überarbeitet deinen Text oder spricht ein Thema mit dir gründlich durch.**
 
-[![Version](https://img.shields.io/badge/version-v1.11-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.12-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/wangziru-analysis-skill-v2/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](tools/)
@@ -19,26 +19,45 @@
 
 </div>
 
-> **Dies ist die 2. Ausgabe, die datenverstärkte Edition.** Sie wurde auf der 1. Ausgabe mit mehr Videodaten weiterentwickelt. Sie kommt dem Menschen selbst näher, läuft dafür aber Gefahr, auf die Originalstichprobe überangepasst zu sein. Wer das allgemeinere Originalrezept möchte, also den Workflow, der ein Thema erst zerlegt und durch Qualitäts Gates schickt, bevor geschrieben wird, nutzt [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1). Probiere beide aus.
+> **Dies ist die 2. Ausgabe.** Sie wurde mit mehr Videomaterial verfeinert und folgt seiner Art zu erklären deshalb enger, hängt aber womöglich auch stärker an den ursprünglichen Stichproben. Wer eine allgemeinere Version will, die zuerst eine Gliederung erstellt und dann schreibt, nimmt die 1. Ausgabe, [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1). Beide sind einen Versuch wert.
 
 ---
 
 ## Was ist dieses Repository?
 
-**Dieses Repository ist zuerst ein Forschungsprojekt. Es untersucht, wie Wang Zirus Denken tatsächlich funktioniert und was seine echten Ausdrucksgewohnheiten sind.** Der Agent Skill für KI-Coding-Assistenten ist die ausführbare Zusammenfassung dieser Forschung und gehört zur Produktebene. Lies die beiden Ebenen getrennt. Der Forschungseinstieg ist [`references/thinking-思维运转.md`](references/thinking-思维运转.md), dort lässt sich jede Aussage auf Korpusdatei und Zeitstempel zurückverfolgen. Der Produkteinstieg ist `SKILL.md`. Welche Aussagen gemessene Fakten sind und welche abgeleitete Schreibregeln, steht in der Nachweistabelle in [`METHODOLOGY.md`](METHODOLOGY.md) §9.
+Ein Skill, den du in KI-Werkzeuge wie Claude Code, Codex oder Cursor installierst. Danach musst du keine Befehle lernen: Ein Satz an die KI genügt.
 
-### Kernbefunde: wie sein Kopf arbeitet
+Der Skill bringt der KI bei, Inhalte so zu erstellen, wie Wang Ziru eine Sache klar macht: zuerst die Antwort, dann der Grund, erklären, wie die Sache tatsächlich funktioniert, und Ausnahmen und Kosten von vornherein nennen. Leser müssen Wang Ziru nicht kennen, um den Text zu verstehen, zu behalten und weiterzugeben.
 
-Das vollständige Dokument steht in [thinking-思维运转.md](references/thinking-思维运转.md). Das Wichtigste in fünf Punkten.
+Die Methode beruht nicht auf Eindrücken. Wir haben 32 seiner Videos Wort für Wort transkribiert und Absatz für Absatz gelesen. Jedes Vorgehen im Skill zitiert seine eigenen Worte mit einem Zeitstempel, den du nachprüfen kannst.
 
-1. **Beim Improvisieren kommt das Urteil oft vor den Gründen.** Von 72 Antwort-Einheiten aus 25 Clips beginnen 72 % mit einem Urteil (90 % bei Ja/Nein-Fragen, 65 % bei offenen Fragen), und 89 % liefern danach einen Mechanismus. „Hat die Smartphone-Branche noch Zukunft? Nein." Danach folgt meist ein Mechanismus, keine Adjektive. Früher schlossen wir daraus: „Skript-Videos gehen von den Belegen zum Urteil, Improvisation kehrt das um, also sind seine Urteile vorgefertigt." v1.9 zieht das zurück: Auch Skript-Videos nennen das Urteil oft zuerst (iPhone 18 [00:58]), der Clip-Ersteller bestimmt den Einstiegspunkt, und die meisten Fragen sind Ja/Nein-Fragen. „Vorgefertigt" ist nur noch eine zu prüfende Hypothese.
-2. **Maßstäbe sind Inventar.** Urteile schöpfen aus einer langfristigen Bibliothek von Standards, die videoübergreifend aufgerufen wird. Das Huawei-Video recycelt direkt den Drei-Kaster-Maßstab des iPhone18-Videos. Ein Standard erscheint oft als rhetorische Frage.
-3. **Zugeständnisse sind explizit.** Die Zweige des Zögerns werden laut ausgesprochen, einer wird gewählt und als eigenes Urteil markiert. „我觉得" kommt 6,5-mal pro 10.000 Zeichen vor, und Absicherungs-Wörter übertreffen Gewissheits-Wörter etwa 2,7 zu 1. Seine Sicherheit kommt aus Definitionen und Nummerierung, nie aus „absolut".
-4. **Der Schlusssatz ist das Speicherformat.** Jede Denkkette endet damit, dass das Urteil in ein einzeln zitierbares Urteil gegossen wird, etwa „Kein Unternehmen ist jemals im Spucke ertrunken".
-5. **Sprachtics schwanken stark von Video zu Video.** In sechs Solo-Langvideos von 2026 liegt „对吧" zwischen 2,4 und 20,0 pro 10.000 Zeichen, und die beiden September-Videos liegen über dem Langvideo-Durchschnitt der 71-Video-Basis (etwa 15). Die frühere Aussage „Tics verblassen, 20,8 → 3,7" beruhte an beiden Enden auf falschen Nennern und überlappenden Stichproben und ist in v1.9 zurückgezogen. Sicher ist: Über seine Tics erfasst man ihn nicht, dieselbe Person schwankt im selben Jahr um den Faktor acht.
+## So benutzt du es: Sag einfach einen Satz
+
+Die Anweisungen des Skills sind auf Chinesisch; am besten funktioniert er, wenn du auf Chinesisch fragst. Du kannst der KI auch sagen, in welcher Sprache sie antworten soll.
+
+| Sag das | Du bekommst | Beispiel |
+|---|---|---|
+| 用王自如 skill 分析一下：现在给孩子报编程班还值不值？ (Analysiere: Lohnt sich ein Programmierkurs für mein Kind noch?) | Einen kurzen Text zum direkten Teilen: die Antwort im ersten Absatz, danach Maßstab, Gründe, Ausnahmen und Rat | [Beispiel 05](examples/05-分析-孩子要不要学编程.md) |
+| 用王自如的方式写一篇 2 分钟口播：为什么收藏了那么多干货还是没进步 (Ein 2-Minuten-Skript: Warum so viele gespeicherte Tipps dich nicht besser gemacht haben) | Ein Skript zum Vorlesen, dazu drei Zeilen (Frage, Antwort, Begründung), mit denen du die Logik prüfen kannst | [Beispiel 06](examples/06-写稿-收藏了那么多干货为什么没进步.md) |
+| 我想和王自如聊聊要不要辞职创业，你来当王自如 (Sprich mit mir darüber, ob ich kündigen und gründen soll; spiel Wang Ziru) | Ein Hin und Her, in dem jede Antwort ein Urteil und einen Grund enthält. Die KI sagt, dass sie auf seine Art denkt, gibt sich nicht als er aus und erfindet keine Erlebnisse von ihm | [Beispiel 07](examples/07-对谈-30岁要不要辞职创业.md) |
+| 这是我的逐字稿，王自如帮我改一下：（贴上稿子） (Hier ist mein Transkript, bitte überarbeite es) | Die ein bis zwei wichtigsten Probleme, den vollständig überarbeiteten Text und eine Erklärung der Änderungen. Deine Ausdrucksweise und deine Fakten bleiben erhalten | [Beispiel 08](examples/08-改稿-年轻人要不要考公.md) |
+
+Die Installation ist eine Zeile: `git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git ~/.claude/skills/wangziru-analysis`
+
+## Woher die Methode kommt: wie sein Kopf arbeitet
+
+Die fünf Punkte unten sind eine Zusammenfassung. Quellen, Gegenbeispiele und offene Fragen stehen in [thinking-思维运转.md](references/thinking-思维运转.md).
+
+1. **Erst die Antwort, dann die Gründe.** Wird er im Livestream gefragt, gibt er die Antwort meist schon im ersten Satz: „Hat die Smartphone-Branche noch Zukunft? Nein." Dann erklärt er, warum. Am deutlichsten ist das bei Ja/Nein-Fragen, aber auch die meisten offenen Fragen laufen so.
+2. **Er nennt fast immer den Grund.** Ein nacktes Urteil kommt selten. Der Grund ist meist eine Rechnung, ein Widerspruch in dem, was der Nutzer will, eine physikalische Grenze oder ein Zeitfenster, das schon zu ist, selten ein Adjektiv.
+3. **Er nutzt eigene Maßstäbe und holt sie wieder hervor.** Im Huawei-Video griff er auf die drei Kriterien zurück, die er zwei Wochen zuvor für das iPhone aufgestellt hatte: Spürt man es, nutzt man es oft, ist es das Geld wert. Solche Wiederverwendung haben wir erst zweimal gesehen, eine Gewohnheit kann man daraus noch nicht ableiten.
+4. **Er spricht sein Zögern aus und entscheidet sich dann.** Zur Xibei-Kontroverse: „Würden die Probleme begraben, verzögert, oder gar nicht passieren? Nur verzögert." Er legt die Möglichkeiten offen und sagt, welche seine Sicht ist. In Videos mit Skript sagt er selten „bestimmt" oder „absolut", im Livestream häufiger.
+5. **Sprachtics sind nicht sein Markenzeichen.** Im selben Jahr kommt „对吧" (oder?) in einem Video 2-mal pro 10.000 Zeichen vor, in einem anderen 20-mal. Wer seine Tics nachahmt, klingt deshalb noch nicht wie er.
+
+Wir dachten einmal, seine Urteile seien alle vorab fertig und würden nur im Moment abgerufen. Die Belege reichen dafür nicht, deshalb behandeln wir das als Vermutung, die noch geprüft werden muss.
 
 <div align="center">
-<img src="assets/mindflow.svg" width="820" alt="Zu prüfende Hypothese: Skript-Videos Belege→Urteil, Improvisation Urteil→Mechanismus. Die erste Hälfte hat Gegenbeispiele, die zweite kann von Schnitt, Frageform und Thema herrühren."/>
+<img src="assets/mindflow.svg" width="820" alt="Seine übliche Reihenfolge, wenn er im Livestream gefragt wird: erst die Antwort, dann der Grund, ein Zugeständnis nur bei einer echten Ausnahme, ein Schlusssatz, wenn er einen hat"/>
 </div>
 
 ### Empfohlene Modelle
@@ -63,7 +82,7 @@ python tools/ai_flavor_check.py "corpus/clips-jachzhu/2026-09-22-聊西贝事件
 python tools/ai_flavor_check.py entwurf.txt --json
 ```
 
-Installiere den Skill auf Claude Code, Codex, Cursor oder einem anderen KI-Coding-Assistenten und schreibe, schreibe um oder lass dich coachen. Die Installation ist eine Zeile: `git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git ~/.claude/skills/wangziru-analysis`
+Installiere den Skill auf Claude Code, Codex, Cursor oder einem anderen KI-Coding-Assistenten und lass dir Fragen analysieren, Skripte schreiben, Themen durchsprechen oder Texte überarbeiten. Die Installation ist eine Zeile: `git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git ~/.claude/skills/wangziru-analysis`
 
 > **Inoffiziell** · Dies ist eine Untersuchung der Ausdrucksmethode und hat nichts mit Wang Ziru oder seinem Team zu tun. Sie nutzt weder seine Stimme noch sein Abbild, und erzeugte Texte dürfen weder seinen Namen tragen noch als er ausgegeben werden.
 

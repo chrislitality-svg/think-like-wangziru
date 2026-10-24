@@ -2,11 +2,11 @@
 
 <img src="assets/banner.svg" width="860" alt="wangziru-analysis — Wang Ziru-style expression deconstruction"/>
 
-# Wang Ziru-Style Expression Deconstruction (Edition 2) · wangziru-analysis · V2
+# Wang Ziru-Style Thinking (Edition 2) · wangziru-analysis
 
-**Learn the structure, not the accent. Study how his mind runs, not his catchphrases.**
+**Answer first, explain why, hold up under questions. Say one sentence to your AI and it analyzes a question, writes a script, fixes your draft, or talks a problem through with you.**
 
-[![Version](https://img.shields.io/badge/version-v1.11-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.12-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/wangziru-analysis-skill-v2/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](tools/)
@@ -19,79 +19,63 @@
 
 </div>
 
-> **This is Edition 2, the data-enhanced edition.** It was iterated on top of Edition 1 with more video data, so it comes closer to the man himself, with the risk of overfitting to the original sample. If you want the more general-purpose original recipe, the blueprint-first workflow that deconstructs a topic and passes it through quality gates before writing, use [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1). Try both.
+> **This is Edition 2.** It was refined with more video data, so it follows his way of explaining more closely, but it may also stick closer to the original samples. If you want the general version that drafts an outline before writing, use Edition 1, [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1). Both are worth trying.
 
 ---
 
 ## What This Is
 
-**This repo is first a research project. It studies how Wang Ziru's thinking actually operates and what his real expression habits are.** The Agent Skill for AI coding assistants is the executable digest of that research, and it belongs to the product layer. Read the two layers separately. The research entry is [`references/thinking-思维运转.md`](references/thinking-思维运转.md), where every claim is cited back to the corpus with file names and timestamps. The product entry is `SKILL.md`. Which conclusions are measured facts and which are translated writing gates is laid out in the evidence-grading table of [`METHODOLOGY.md`](METHODOLOGY.md) §9.
+A skill you install into AI tools such as Claude Code, Codex or Cursor. Once installed there is no command to learn: you say one sentence to the AI.
 
-### Core Findings: how his mind runs
+It teaches the AI to produce content the way Wang Ziru makes a point clear: give the answer first, then the reason, explain how the thing actually works, and state the exceptions and costs up front. Readers don't need to know who Wang Ziru is to understand it, remember it and pass it on.
 
-The full write-up is in [thinking-思维运转.md](references/thinking-思维运转.md). The five headlines:
+The method is not built on impressions. We transcribed 32 of his videos word for word and read them paragraph by paragraph. Every move in the skill cites his original words with a timestamp you can check.
 
-1. **When improvising, judgment often comes before reasons.** Across 72 answer units in 25 clips, 72% open with a verdict (90% for yes/no questions, 65% for open ones), and 89% go on to explain the mechanism. "Is there still room in the phone industry? No more." What follows is mostly mechanism, not adjectives. We once inferred "scripted videos go evidence first, improvised answers flip it, so his judgments are pre-built". v1.9 withdraws that: scripted videos often lead with the verdict too (iPhone 18 [00:58] "you'd better not upgrade"), the clipper chooses where each clip starts, and most clip questions are yes/no. "Pre-built" is now a hypothesis to test; see [the thinking document](references/thinking-思维运转.md) §1.
-2. **Rulers are inventory.** Judgments draw on a long-held library of standards invoked across videos. The Huawei video directly reuses the iPhone18 three-cell ruler. A standard often appears as a rhetorical question.
-3. **Concessions are explicit.** Hesitation branches are spoken out loud, one is picked, and ownership is marked. "我觉得" runs 6.5 per 10k chars, and hedging words outnumber certainty words about 2.7 to 1. His certainty comes from definitions and numbering, never from "definitely" or "absolutely".
-4. **Closers are the storage format.** Every reasoning chain ends with the judgment cast into a single quotable line, such as "No company ever drowned in saliva".
-5. **Verbal tics swing widely from video to video.** Across six solo long videos from 2026, "对吧" ranges from 2.4 to 20.0 per 10k characters, and the two September videos exceed the 71-video base's long-video average of about 15. The earlier claim "tics are fading, 20.8 → 3.7" used wrong denominators at both ends and overlapping samples, so v1.9 withdraws it. What holds: catchphrases won't capture him, since the same person in the same year varies eightfold.
+## How to Use: Just Say One Sentence
+
+The skill's instructions are in Chinese, so it works best when you ask in Chinese; you can also tell the AI which language you want the output in.
+
+| Say this | You get | Example |
+|---|---|---|
+| 用王自如 skill 分析一下：现在给孩子报编程班还值不值？ (Analyze: is a coding class for my kid still worth it?) | A short piece ready to share: the answer in the first paragraph, then the standard, the reasons, the exceptions and advice | [Example 05](examples/05-分析-孩子要不要学编程.md) |
+| 用王自如的方式写一篇 2 分钟口播：为什么收藏了那么多干货还是没进步 (Write a 2-minute script: why saving so many tips hasn't made you better) | A script you can read aloud, plus three lines (question, answer, grounds) so you can check the logic | [Example 06](examples/06-写稿-收藏了那么多干货为什么没进步.md) |
+| 我想和王自如聊聊要不要辞职创业，你来当王自如 (Talk with me about quitting to start a business; you play Wang Ziru) | A back-and-forth where every turn has a judgment and a reason. The AI says it is reasoning his way, does not claim to be him, and does not invent his past | [Example 07](examples/07-对谈-30岁要不要辞职创业.md) |
+| 这是我的逐字稿，王自如帮我改一下：（贴上稿子） (Here's my transcript, please fix it) | The one or two biggest problems, the full revised text, and notes on what changed. Your voice and facts are kept | [Example 08](examples/08-改稿-年轻人要不要考公.md) |
+
+Install in one line: `git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git ~/.claude/skills/wangziru-analysis`. Details are under [Usage](#1-usage).
+
+## Where the Method Comes From: How His Mind Runs
+
+The five points below are a summary. Sources, counterexamples and open questions are in [the thinking document](references/thinking-思维运转.md).
+
+1. **Answer first, reasons after.** Asked a question on a livestream, he usually gives the answer in the first sentence: "Is there still a future in the phone industry? No." Then he explains why. It is clearest with yes/no questions, but most open questions go the same way.
+2. **He almost always gives the reason.** He rarely drops a bare verdict. The reason is usually a calculation, a contradiction in what the user wants, a physical limit, or a window that has already closed, rarely an adjective.
+3. **He uses his own yardsticks, and reuses them.** In his Huawei video he brought back the three standards he had laid out for the iPhone two weeks earlier: is it noticeable, is it used often, is it worth the money. We have seen such reuse only twice, so it is not yet a habit we can claim.
+4. **He says his hesitation out loud, then picks a side.** On the Xibei controversy: "Its problems would be buried, or delayed, or never happen? Just delayed." He lays out the possibilities and marks which one is his view. In scripted videos he rarely says "definitely" or "absolutely"; on livestreams he says it more.
+5. **Catchphrases are not his signature.** In the same year, "对吧" (right?) appears 2 times per 10,000 characters in one video and 20 in another. Copying his catchphrases won't make you sound like him.
+
+We once thought his judgments were all worked out in advance and simply retrieved on the spot. The evidence is not strong enough, so we treat that as a guess to be tested.
 
 <div align="center">
-<img src="assets/mindflow.svg" width="820" alt="Hypothesis under test: scripted videos evidence→judgment, improvised answers judgment→mechanism. The first half has counterexamples; the second may come from clip cuts, question type and topic"/>
+<img src="assets/mindflow.svg" width="820" alt="His usual order when asked a question on a livestream: answer first, give the reason, concede only when there is a real exception, close with one line when there is one"/>
 </div>
 
-## What It Gives You
+## What It Is Not
 
-This section was written with the skill stored in this very repo. The six-line pre-check comes first, then the prose. The prose scores **0** on the repo's own AI-flavor checker, human-grade. Watch it swap the ruler, eliminate the alternatives and land the closer. That is the skill in use.
+- **Not a catchphrase imitator.** Learning "对吧" and "所谓的" won't make you sound like him; his own use of them varies eightfold within a year.
+- **Not an automatic script machine.** The skill is a set of instructions; the model you connect does the writing. His words carry weight because he has visited thousands of stores and followed products for over a decade. That cannot be copied.
+- **Not a word-counting toy.** The conclusions come from reading his words paragraph by paragraph and marking what each one answers; word counts are only used to check.
 
-| Six-line pre-check | Filled in for this topic |
-|---|---|
-| Type | Set a rule: is this repo worth your time |
-| Proposition | Catchphrases are the shell, order is the mainboard |
-| Ruler swap | Don't measure bookmarks, measure timestamp-traceability and reproducibility |
-| Eliminated | Catchphrase imitator, auto ghostwriter, word-frequency toy, each with its cause of death |
-| Master metaphor | The teardown: he took phones apart for a decade, this time the man himself is the phone, reclaimed twice in the text |
-| Closer | The shell differs every video, the mainboard keeps showing up |
+Besides the skill, two things work on their own: a small checker for AI boilerplate, `tools/ai_flavor_check.py`, and 32 timestamped transcripts in `corpus/`. To see how he actually thinks, start with [`references/thinking-思维运转.md`](references/thinking-思维运转.md).
 
-Conclusion first: this repo will not turn you into Wang Ziru, and it does not intend to. What it hands you is the part of him that remains, the order he thinks problems in, plus a million characters of his own spoken words.
-
-You have probably heard him take phones apart. He has done it for over a decade. This repo takes the man himself apart as if he were one of those phones. The catchphrases are the shell, the operating order is the mainboard. The shell differs from video to video: across six 2026 long videos, "对吧" runs anywhere from 2.4 to 20 per 10k characters. The mainboard is far steadier. Ruler before judgment and paragraphs that answer each other keep showing up in the long videos we can check; counterexamples and open questions are listed in the review report.
-
-You probably hold a ruler of your own, the one that says "prompt templates you bookmark and never use". That ruler is half right, because most repos are exactly that. But worth is not measured in bookmarks. It is measured by two things: whether every claim traces back to a timestamp, and whether every number can be reproduced by you. This repo hands over both. A frequency base of 71 videos and 860k characters, 32 open transcripts with timestamps, and a zero-dependency checker that runs in 30 seconds.
-
-What is it not? Let me answer that for you.
-
-First, it is not a catchphrase imitator. The strongest version of that claim says learning "对吧" and "所谓的" makes you sound like him. The data kills it, because the syntactic devices are low-frequency inventory. "Not A but B" appears twice across the seven new long videos. What you copy is the least stable part of the shell.
-
-Second, it is not an auto ghostwriter. The strongest version says installing the skill produces scripts endlessly. That fails too, because the skill is a manual and the model you plug in does the work, while his credibility comes from visiting thousands of stores in person and a rulebook accumulated over a decade. The structure can be moved. The track record cannot.
-
-Third, it is not a word-frequency toy. Frequency counts in this repo verify, they never discover. The load-bearing work is paragraph-by-paragraph question-chain coding. We also ran multiple-comparison correction over 140 correlation tests, none survived, and numbers that fail testing do not get told as stories.
-
-So what does it give you? Four things, pick by what you want.
-
-The first is a ruler, the six logic-check questions. Before you write, ask what debt the opening owes, whether the ruler is up, which paragraph is load-bearing. Hollow paragraphs show up on the spot.
-
-The second is a scale, the AI-flavor checker. Run it for 30 seconds before you deliver. All 29 of his single-speaker transcripts score under 20, and a typical AI draft scores 73. It only checks a blacklist plus person, number and logic-word density, so reworded boilerplate can pass. Treat it as a distance gauge. The scale is transparent, every formula sits in the code.
-
-The third is a library, 32 timestamped transcripts with the full methodology. When you want to challenge a claim, the source opens at the minute and second.
-
-The fourth is a copilot, SKILL.md itself. Hook up Gemini 3.8 Flash or DeepSeek V4 Flash, give a topic and it writes, paste an old draft and it rewrites, ask how to think and it walks the order.
-
-The same scale is not the same thing to different people. For you it is a pre-delivery check, for a researcher it is a distance meter, for someone tuning a model it is a regression guard. Judgments are given in layers, not one-size-fits-all.
-
-To be fair, the personal mileage, the industry standing and the cross-video rulebook are three things no tool can hand you. Install a skill and gain his credibility? That does not happen.
-
-The shell differs every video. The mainboard keeps showing up. If you want the mainboard, start from [the thinking document](references/thinking-思维运转.md).
-
-### Recommended Models · 推荐模型
+## Recommended Models
 
 | Priority | Model | Notes |
 |---|---|---|
-| 🥇 **Primary** | **Gemini 3.8 Flash** | First choice: holds all reference files in one context, stable logic chains, faithful to your wording and facts when rewriting, best value / 首选：长上下文一次读完全部 references，逻辑链排得稳、改稿保留人称与事实 |
-| 🥈 **Secondary** | **DeepSeek V4 Flash** | Fallback: native-feel Chinese close to the spoken baseline, stable on 2–3 min shorts, solid with the `tools/` checkers / 次选：中文语感接近口播基准，短口播表现稳定 |
+| 🥇 **Primary** | **Gemini 3.8 Flash** | First choice: holds all reference files in one context, stable logic chains, faithful to your wording and facts when rewriting, best value |
+| 🥈 **Secondary** | **DeepSeek V4 Flash** | Fallback: native-feel Chinese close to the spoken baseline, stable on 2–3 min shorts, solid with the `tools/` checkers |
 
-> The skill is a manual; the model you plug in executes it. After switching models, re-run the same topic and audit the output with the five logic questions and `tools/ai_flavor_check.py`.
+> The skill is a manual; the model you plug in executes it. After switching models, re-run the same topic and check the output with the self-check questions and `tools/ai_flavor_check.py`.
 
 ## Quick Start (30 seconds)
 
@@ -142,7 +126,7 @@ flowchart LR
     L --> OUT([Deliver])
 ```
 
-**Contents** · [What This Is](#what-this-is) · [What It Gives You](#what-it-gives-you) · [Quick Start](#quick-start-30-seconds) · [1. Usage](#1-usage) · [2. Expression Logic](#2-expression-logic) · [3. Content Quality](#3-content-quality) · [4. Content Dimensions](#4-content-dimensions) · [5. De-AI-ification](#5-de-ai-ification) · [6. Data Retrospective](#6-data-retrospective) · [Examples](#examples) · [Repo Layout](#repo-layout) · [Community](#community) · [Changelog](CHANGELOG.md) · [Methodology](METHODOLOGY.md) · [How His Mind Runs](references/thinking-思维运转.md)
+**Contents** · [What This Is](#what-this-is) · [How to Use](#how-to-use-just-say-one-sentence) · [What It Is Not](#what-it-is-not) · [Quick Start](#quick-start-30-seconds) · [1. Usage](#1-usage) · [2. Expression Logic](#2-expression-logic) · [3. Content Quality](#3-content-quality) · [4. Content Dimensions](#4-content-dimensions) · [5. De-AI-ification](#5-de-ai-ification) · [6. Data Retrospective](#6-data-retrospective) · [Examples](#examples) · [Repo Layout](#repo-layout) · [Community](#community) · [Changelog](CHANGELOG.md) · [Methodology](METHODOLOGY.md) · [How His Mind Runs](references/thinking-思维运转.md)
 
 ---
 
@@ -164,32 +148,15 @@ git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git "$
 
 To use it in one project only, clone it into that project's `.claude/skills/wangziru-analysis/`. **Other tools** (Codex, Cursor, ZCode, etc.): drop the repo into the project and tell the agent "read `wangziru-analysis/SKILL.md` first" — the skill itself is plain Markdown and runtime-agnostic; only the AI-flavor checker needs Python 3.8+ (zero third-party dependencies).
 
-### Four Modes
-
-| Mode | You give it | It gives you | Example |
-|---|---|---|---|
-| **A Deconstruct** (default) | A topic / question / product / industry phenomenon | A *Deconstruction Blueprint*: definition, ruler-swap correction, elimination, framework, master metaphor, closer line, disclaimer, to-verify list + quality-gate self-check | [Example 01](examples/01-拆解蓝图-AI如何在企业落地.md) |
-| **B Write** | A confirmed blueprint, or "just write the script" | **Clean script** (read as-is) + **annotated script** (pauses / stress / intonation) + segment timing table + AI-flavor index | [Example 03](examples/03-成稿-宣传片口播稿.md) |
-| **C Audit** | Your existing draft | Draws the logic-chain table first, runs the five logic questions, then names the 1–2 most fatal problems with "old order → new order" and "old sentence → rewritten sentence" pairs | [Example 04](examples/04-成稿-给方法做体检.md) |
-| **D De-AI** | An AI-generated draft | Detection report + human-speech rewrite + before/after scores | [Example 02](examples/02-去AI味/README.md) |
-
 ### What to Say
 
-| You want | Say this |
-|---|---|
-| Deconstruct a topic | "用王自如 skill 拆解一下《XXX》，认知正片，10 分钟" (Use the Wang Ziru skill to deconstruct XXX, opinion piece, 10 minutes) |
-| Then write | "蓝图可以，接着成稿" (Blueprint approved, now write the script) |
-| Short video | "按王自如的方式写一条 90 秒竖屏口播，讲 XXX" (Write a 90-second vertical video script in Wang Ziru's style about XXX) |
-| Audit a draft | "帮我体检这篇口播稿：(paste)" (Audit this script for me) |
-| De-AI | "这稿子 AI 味太重，改成人话：(paste)" (This draft is too AI-flavored, rewrite it as human speech) |
-
-If you don't give a stance, it picks a **contestable** one for you and says so — no stance, no correction; no correction, no system.
+The four uses are listed at the top under [How to Use](#how-to-use-just-say-one-sentence). You don't pick a mode; the AI works it out from what you say. Without a length, scripts run about 2 minutes and analyses 600–900 Chinese characters. Without a stance, it still gives a clear, conditional answer instead of "it depends".
 
 ### Results Depend on Your Model
 
 The skill is a manual; the model you plug in executes it. With the same skill, swapping between GPT, Claude, Grok or their variants can change a lot: depth of deconstruction, whether the logic-chain table is right, whether it invents numbers just to sound "concrete".
 
-- **Recommended**: primary **Gemini 3.8 Flash**, secondary **DeepSeek V4 Flash** (see [Recommended Models](#recommended-models--推荐模型) at the top).
+- **Recommended**: primary **Gemini 3.8 Flash**, secondary **DeepSeek V4 Flash** (see [Recommended Models](#recommended-models) at the top).
 - The skill, examples, and the v1.3 logic-chain / long-sentence analysis in this repo were produced with **Claude Opus 5.5** in Claude Code. We have not systematically tested other models and won't judge them.
 - Prefer tools that can read files and run Python (Claude Code / Codex / Cursor, etc.): the skill reads a dozen-plus reference files on demand and runs checker scripts. Chat-only environments work too, but you must paste reference files manually and eyeball the checks.
 - After switching models, run the same topic as [Example 01](examples/01-拆解蓝图-AI如何在企业落地.md) for comparison, then audit the output with the [logic checklist](#logic-checklist) and `tools/ai_flavor_check.py`. Tell us your model and results in Issues.
