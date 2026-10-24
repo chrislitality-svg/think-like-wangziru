@@ -7,7 +7,7 @@
 - **六语 README**：新增 한국어（`README.ko.md`）、日本語（`README.ja.md`）、Français（`README.fr.md`）、Deutsch（`README.de.md`），与中英版本共用横幅、徽章与语言切换器；每个语言版本完整覆盖定位、核心发现、快速上手、推荐模型、语料方法、社区与许可
 - **视觉资产**（`assets/`，全 SVG）：`banner.svg` 横幅、`logo.svg` 标识（逻辑链气泡）、`mindflow.svg`「同一个头脑，两种输出顺序」流程图（正片先证据后判断 / 即兴先判断后补证据）
 - **徽章矩阵**：version / license / CI / python / 语料规模 / PRs welcome / stars / forks / issues / last commit
-- **CI**（`.github/workflows/ci.yml`）：Python 3.9 + 3.12 双版本，工具编译、检测器对正片与即兴切片的回归、真人语料 AI 味 < 20 的回归门槛
+- **CI**（`.github/workflows/ci.yml`）：Python 3.12 + 3.13 双版本，工具编译、检测器对正片与即兴切片的回归、真人语料 AI 味 < 20 的回归门槛
 - **社区文件**：`CONTRIBUTING.md`（复现/标注/翻译/即兴层偏差验证四类贡献 + PR 规则）、`CODE_OF_CONDUCT.md`（中英双语）
 - **README 顶部重排**：居中横幅 + 徽章 + 六语切换；新增「30 秒上手」（零依赖跑检测器，真语料 ≈ 11 分 vs AI 稿 70+）；底部新增「社区」区块与 Star History
 
