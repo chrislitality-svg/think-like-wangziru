@@ -1,27 +1,46 @@
 <div align="center">
 
-<img src="assets/banner.svg" width="860" alt="wangziru-analysis · 王自如式思考"/>
+<img src="assets/banner.svg" width="900" alt="像王自如一样思考：先给答案，讲清原因，经得起追问"/>
 
-# 王自如式思考（第二版）· wangziru-analysis
+# 像王自如一样思考
 
 **先给答案，讲清原因，经得起追问。一句话让 AI 帮你分析问题、写稿、改稿，或者陪你把一件事聊透。**
 
-[![Version](https://img.shields.io/badge/version-v1.12-blue)](CHANGELOG.md)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-d97757?logo=claude&logoColor=white)](#安装)
+[![Codex](https://img.shields.io/badge/Codex-可用-111827?logo=openai&logoColor=white)](#安装)
+[![Cursor](https://img.shields.io/badge/Cursor-可用-000000?logo=cursor&logoColor=white)](#安装)
+[![示例](https://img.shields.io/badge/示例-14%20篇-22d3ee)](#先看看它写出来的东西)
+[![Version](https://img.shields.io/badge/version-v1.13-blue)](CHANGELOG.md)
+[![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/think-like-wangziru/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
-[![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/wangziru-analysis-skill-v2/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
-[![Python](https://img.shields.io/badge/python-3.8%2B-blue)](tools/)
-[![Corpus](https://img.shields.io/badge/%E8%AF%AD%E6%96%99-103%E6%9D%A1%E8%A7%86%E9%A2%91%C2%B70.96M%20%E5%AD%97-8b5cf6)](corpus/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
-
-[![Last Commit](https://img.shields.io/github/last-commit/chrislitality-svg/wangziru-analysis-skill-v2)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/commits/main)
+[![Stars](https://img.shields.io/github/stars/chrislitality-svg/think-like-wangziru?style=social)](https://github.com/chrislitality-svg/think-like-wangziru/stargazers)
 
 **简体中文** · [English](README.en.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
 
 </div>
 
-> **这是第二版。** 它用更多视频数据迭代而成，更贴近他本人的讲法，但也可能更贴着原来的样本。想要先出拆解提纲、再成稿的通用版本，用第一版 [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1)。两版都可以试。
-
 ---
+
+## 先看看它写出来的东西
+
+每一篇都是跟 AI 说了一句话以后，它按这个 skill 交出来的完整内容。点开就能看全文，后面还附了这篇用了哪些做法。
+
+| 用法 | 你说了一句 | 它交出来的内容里，有这样一句 | 全文 |
+|---|---|---|---|
+| 🔍 分析 | 给孩子报编程班还值不值？ | 如果这门课主要教孩子背语法、照着老师敲代码，现在不值。如果它教的是把一个大问题拆成小步骤，那仍然值，而且 AI 越强越值。 | [示例 05](examples/05-分析-孩子要不要学编程.md) |
+| 🔍 分析 | 现在买折叠屏手机，值不值？ | 展开的次数，比折痕的深浅，更能决定这台折叠屏值不值。 | [示例 09](examples/09-分析-现在买折叠屏值不值.md) |
+| 🔍 分析 | 手里有闲钱，要不要提前还房贷？ | 先留住退路，再去省利息，顺序不能反。 | [示例 11](examples/11-分析-要不要提前还房贷.md) |
+| ✍️ 写稿 | 写 2 分钟口播：收藏了那么多干货，为什么还是没进步 | 收藏这个动作，替你把「我要去学」这件事提前奖励了。你没有学，但是你已经有了学过的感觉。 | [示例 06](examples/06-写稿-收藏了那么多干货为什么没进步.md) |
+| ✍️ 写稿 | 写 90 秒口播：奶茶店为什么开一家倒一家 | 在很多加盟店里，最稳赚的一方，是在你开店那一刻就把钱赚走的品牌方。 | [示例 10](examples/10-写稿-奶茶店为什么开一家倒一家.md) |
+| ✍️ 写稿 | 写 2 分钟口播：为什么越来越多人不爱接电话 | 电话让打的人省事，让接的人付代价。以前大家没得选，现在有了文字，代价就被看见了。 | [示例 12](examples/12-写稿-为什么越来越多人不爱接电话.md) |
+| 💬 对谈 | 我 30 岁，要不要辞职去创业？你来当王自如 | 现在先别辞。不是说这个方向不行，是你还没走到需要辞职的那一步。 | [示例 07](examples/07-对谈-30岁要不要辞职创业.md) |
+| 💬 对谈 | 我大三，身边都在考研，我要不要也考？ | 你想用考研来解决「不知道做什么」，可考研解决不了这个问题。 | [示例 13](examples/13-对谈-大三要不要考研.md) |
+| 🩺 改稿 | 这是我讲「年轻人要不要考公」的逐字稿，帮我改改 | 原稿只说「因人而异」。改后：最怕没保障，就去考；最怕一眼看到头，就别押上最好的几年。 | [示例 08](examples/08-改稿-年轻人要不要考公.md) |
+| 🩺 改稿 | 这是我的 399 元蓝牙耳机测评，帮我改改 | 原稿说「各方面都很均衡，非常推荐」。改后：通勤听歌的人值得买，经常在外面打电话的人不适合。 | [示例 14](examples/14-改稿-蓝牙耳机测评.md) |
+
+<div align="center">
+<img src="assets/before-after.svg" width="860" alt="改稿前后对比：原稿只说因人而异，改后先给带条件的答案，讲清交换关系"/>
+</div>
 
 ## 这是什么
 
@@ -31,24 +50,29 @@
 
 这套方法不是凭印象总结的。我们把他 32 条视频逐字转写、一段一段读过，skill 里的每一条做法都附了原话和时间点，你可以自己翻回去核对。
 
+<div align="center">
+<img src="assets/stats.svg" width="860" alt="32 条视频逐字转写，72 段回答逐段编码，13 个做法附原话，14 个示例"/>
+</div>
+
 ## 怎么用：直接说一句话
 
-| 你这样说 | 你会得到 | 看示例 |
-|---|---|---|
-| 用王自如 skill 分析一下：现在给孩子报编程班还值不值？ | 一篇能直接转发的分析短文：第一段给答案，后面讲判断标准、原因、例外和建议 | [示例 05](examples/05-分析-孩子要不要学编程.md) |
-| 用王自如的方式写一篇 2 分钟口播：为什么收藏了那么多干货还是没进步 | 能直接念的稿子，后面附三行「问题、答案、根据」，方便你检查逻辑 | [示例 06](examples/06-写稿-收藏了那么多干货为什么没进步.md) |
-| 我想和王自如聊聊要不要辞职创业，你来当王自如 | 一来一回的讨论，每轮都有判断和原因。AI 会说明自己是按他的思路在聊，不冒充本人、不编他的经历 | [示例 07](examples/07-对谈-30岁要不要辞职创业.md) |
-| 这是我的逐字稿，王自如帮我改一下：（贴上稿子） | 最要紧的一两个问题、改好的全文、改动说明。默认保留你的说话习惯和事实 | [示例 08](examples/08-改稿-年轻人要不要考公.md) |
+<div align="center">
+<img src="assets/uses.svg" width="860" alt="四种用法：分析、写稿、对谈、改稿"/>
+</div>
+
+不用指定模式，按你的原话来。上面示例墙里的每一句，都可以直接照着说，把题目换成你自己的。
 
 ## 安装
+
+**用什么工具装**：建议用 DeepSeek 的 harness 工具，或者 Claude 桌面版（Claude Desktop）。这两个都能直接读文件、跑检测脚本，装好就能用。
 
 Claude Code（所有项目都能用）：
 
 ```bash
-git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git ~/.claude/skills/wangziru-analysis
+git clone https://github.com/chrislitality-svg/think-like-wangziru.git ~/.claude/skills/think-like-wangziru
 ```
 
-Windows 下面这样装：`git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git "$env:USERPROFILE\.claude\skills\wangziru-analysis"`。Codex、Cursor、ZCode 这类工具，把仓库放进项目，对它说「先读 `wangziru-analysis/SKILL.md` 再干活」。skill 本身是纯文本，不依赖运行环境。
+Windows 下面这样装：`git clone https://github.com/chrislitality-svg/think-like-wangziru.git "$env:USERPROFILE\.claude\skills\think-like-wangziru"`。Codex、Cursor、ZCode 这类工具，把仓库放进项目，对它说「先读 `think-like-wangziru/SKILL.md` 再干活」。skill 本身是纯文本，不依赖运行环境。
 
 > **非官方** · 这是一份表达方法研究和写作工具，与王自如本人及其团队无关；不使用其声音与肖像，产出的内容不应署他的名或冒充本人。
 
@@ -90,8 +114,8 @@ Windows 下面这样装：`git clone https://github.com/chrislitality-svg/wangzi
 不需要任何依赖。这是全仓库唯一要运行的脚本，其余都是 Markdown。
 
 ```bash
-git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git
-cd wangziru-analysis-skill-v2
+git clone https://github.com/chrislitality-svg/think-like-wangziru.git
+cd think-like-wangziru
 
 # 他的真口播，2026 年 9 月的直播切片，预期 AI 味 0 分，人话级
 python tools/ai_flavor_check.py "corpus/clips-jachzhu/2026-09-22-聊西贝事件的根源-1m11s.txt"
@@ -124,7 +148,7 @@ flowchart LR
     L --> OUT([交付])
 ```
 
-**目录** · [这是什么](#这是什么) · [怎么用](#怎么用直接说一句话) · [安装](#安装) · [它不是什么](#它不是什么) · [方法从哪来](#方法从哪来他的思维怎么运转) · [30 秒试一下检测器](#30-秒试一下检测器) · [一、使用方式](#一使用方式) · [二、表达逻辑](#二表达逻辑) · [三、内容质量](#三内容质量) · [四、内容维度](#四内容维度) · [五、去 AI 化](#五去-ai-化) · [六、数据复盘](#六数据复盘) · [案例](#案例) · [目录结构](#目录结构) · [社区](#社区) · [更新记录](CHANGELOG.md) · **[研究方法论](METHODOLOGY.md)** · **[思维怎么运转](references/thinking-思维运转.md)**
+**目录** · [先看示例](#先看看它写出来的东西) · [这是什么](#这是什么) · [怎么用](#怎么用直接说一句话) · [安装](#安装) · [它不是什么](#它不是什么) · [方法从哪来](#方法从哪来他的思维怎么运转) · [30 秒试一下检测器](#30-秒试一下检测器) · [一、使用方式](#一使用方式) · [二、表达逻辑](#二表达逻辑) · [三、内容质量](#三内容质量) · [四、内容维度](#四内容维度) · [五、去 AI 化](#五去-ai-化) · [六、数据复盘](#六数据复盘) · [案例](#案例) · [目录结构](#目录结构) · [社区](#社区) · [更新记录](CHANGELOG.md) · **[研究方法论](METHODOLOGY.md)** · **[思维怎么运转](references/thinking-思维运转.md)**
 
 ---
 
@@ -132,7 +156,7 @@ flowchart LR
 
 四种用法见顶部的[怎么用](#怎么用直接说一句话)。不用指定模式，按你的原话判断；没给时长时，稿子按 2 分钟左右，分析 600 到 900 字。没给立场时，它会给出一个带条件的明确答案，不会只说「各有利弊」。
 
-只想在某个项目里用，就克隆到该项目的 `.claude/skills/wangziru-analysis/`。
+只想在某个项目里用，就克隆到该项目的 `.claude/skills/think-like-wangziru/`。
 
 ### 效果取决于你用的模型
 
@@ -460,6 +484,12 @@ python tools/bili_fingerprint.py BV1xxxx BV1yyyy ...    # 或 -f bvids.txt，读
 | [06 写稿：收藏了那么多干货，为什么没进步](examples/06-写稿-收藏了那么多干货为什么没进步.md) | 写稿 | 2 分钟口播，开头三句给问题和答案，原因讲到「一秒的安心 vs 几小时的难受」，检测器 0 分 |
 | [07 对谈：30 岁了，要不要辞职去创业？](examples/07-对谈-30岁要不要辞职创业.md) | 对谈 | 三轮对话，每轮有判断有原因；用户默认 AI 是王自如本人时如实说明，不编经历 |
 | [08 改稿：年轻人要不要考公](examples/08-改稿-年轻人要不要考公.md) | 改稿 | 把「因人而异」改成带条件的答案，把三张清单串成一条线，保留原作者的说法，42 分 → 0 分 |
+| [09 分析：现在买折叠屏手机，值不值？](examples/09-分析-现在买折叠屏值不值.md) | 分析 | 把「值不值」换成「你每天会展开几次」，三项代价分开算，给一个记一周的检验办法 |
+| [10 写稿：奶茶店为什么开一家倒一家](examples/10-写稿-奶茶店为什么开一家倒一家.md) | 写稿 | 90 秒口播，讲清「谁在开店那一步就赚完了钱」，金额全部标明是举例 |
+| [11 分析：要不要提前还房贷？](examples/11-分析-要不要提前还房贷.md) | 分析 | 比两个数（房贷利率 vs 稳定收益），先留退路，用假设数字演示怎么算 |
+| [12 写稿：为什么越来越多人不爱接电话](examples/12-写稿-为什么越来越多人不爱接电话.md) | 写稿 | 把「快不快」换成「对谁快、谁付代价」，最后落在一个能照做的动作上 |
+| [13 对谈：大三要不要考研？](examples/13-对谈-大三要不要考研.md) | 对谈 | 直接指出「用考研解决不知道做什么」的漏洞，给两段实习的办法 |
+| [14 改稿：一条蓝牙耳机测评](examples/14-改稿-蓝牙耳机测评.md) | 改稿 | 把一张优缺点清单改成按用法分人，只用原稿里的事实，37 分 → 0 分 |
 
 下面四个是 v1.x 旧流程（先出拆解蓝图、再成稿）留下的示例，方法细节仍可参考：
 
@@ -493,9 +523,9 @@ references/
 tools/
   ai_flavor_check.py                  AI 味检测器（零依赖，Python 3.8+）
   bili_fingerprint.py                 B 站投流 / 活动指纹检测（零依赖，读公开接口）
-examples/                             八个案例：05–08 是分析 / 写稿 / 对谈 / 改稿四种用法的示范，01–04 是旧流程示例
+examples/                             十四个案例：05–14 是分析 / 写稿 / 对谈 / 改稿四种用法的示范，01–04 是旧流程示例
 research/                             研究过程资料：逐条拆解原始笔记、采集元数据、转写与统计脚本
-assets/                               横幅 / Logo / 思维流程图（SVG）
+assets/                               横幅、Logo、四种用法图、改稿前后对比图、数字条、说话顺序图（SVG）
 README.en.md · ko · ja · fr · de      英 / 韩 / 日 / 法 / 德语 README
 CONTRIBUTING.md · CODE_OF_CONDUCT.md  贡献指南 · 行为准则
 .github/workflows/ci.yml              CI：工具编译 + 检测器语料回归
@@ -507,7 +537,7 @@ CHANGELOG.md                          更新记录
 - **贡献**：复现或质疑结论、标注新语料、验证即兴层的切片偏差，这是眼下最重要的开放问题。也欢迎新增语言翻译。见[贡献指南](CONTRIBUTING.md)，行为准则见 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 - **外部评审**：[同行评审与红队报告（2026-10-24）](reviews/2026-10-24-同行评审与红队报告.md)，逐条复算了词频、检测器和引证，列出待修问题；复算脚本 `python reviews/scripts/recheck.py`
 - **CI**：每次推送自动跑工具编译和检测器语料回归，真人语料的 AI 味指数必须低于 20
-- **姊妹仓库**：[wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1)，第一版，原始配方，蓝图工作流
+- **第一版**：本仓库是第二版，用更多视频数据迭代而成，更贴近他本人的讲法，但也可能更贴着原来的样本。想要先出拆解提纲、再成稿的通用版本，用第一版 [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1)
 
 ## 关于引用与语料
 

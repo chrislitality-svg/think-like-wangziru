@@ -240,8 +240,8 @@ Robot Phone（reaction，两人声音未分离）与 2 条韩路连麦切片：*
 pip install faster-whisper yt-dlp
 
 # 1) 取语料（或直接用 corpus/ 里现成的 32 条）
-git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git
-cd wangziru-analysis-skill-v2/corpus && ls official clips-jachzhu
+git clone https://github.com/chrislitality-svg/think-like-wangziru.git
+cd think-like-wangziru/corpus && ls official clips-jachzhu
 
 # 2) 复核 AI 味指数与分句统计（零依赖）
 python tools/ai_flavor_check.py "corpus/official/2026-10-10-华为PuraXView胖直板-22m51s.txt"

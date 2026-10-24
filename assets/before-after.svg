@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-label="改稿前后对比：原稿只说因人而异、套话 42 分；改后先给带条件的答案、讲清交换关系，0 分">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1020"/>
+      <stop offset="1" stop-color="#151d3a"/>
+    </linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="400" rx="24" fill="url(#bg)"/>
+  <text x="40" y="52" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif" font-size="26" font-weight="800" fill="#f1f5f9">改稿前后：同一份材料，换一个思考顺序</text>
+  <text x="40" y="84" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif" font-size="17" fill="#94a3b8">示例 08《年轻人要不要考公》，数字是仓库检测器给的 AI 腔分数（越低越像人话）</text>
+
+  <g font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+    <g transform="translate(40 110)">
+      <rect width="500" height="250" rx="18" fill="#1a1020" stroke="#9f1239" stroke-width="2"/>
+      <text x="24" y="40" font-size="20" font-weight="800" fill="#fecdd3">原稿</text>
+      <rect x="400" y="16" width="78" height="36" rx="18" fill="#9f1239"/>
+      <text x="439" y="41" font-size="18" font-weight="800" fill="#fff1f2" text-anchor="middle">42 分</text>
+      <text x="24" y="86" font-size="17" fill="#cbd5e1">在当今社会，考公已经成为……</text>
+      <text x="24" y="118" font-size="17" fill="#cbd5e1">首先……其次……最后……</text>
+      <text x="24" y="150" font-size="17" fill="#cbd5e1">另外，私企虽然不稳定……</text>
+      <text x="24" y="182" font-size="17" fill="#cbd5e1">要不要考公因人而异，有利有弊。</text>
+      <text x="24" y="226" font-size="16" fill="#fda4af">✕ 没给答案　✕ 三张清单接不上</text>
+    </g>
+    <path d="M556 235 H640" stroke="#94a3b8" stroke-width="4" marker-end="url(#ar)"/>
+    <g transform="translate(660 110)">
+      <rect width="500" height="250" rx="18" fill="#0b1f1a" stroke="#047857" stroke-width="2"/>
+      <text x="24" y="40" font-size="20" font-weight="800" fill="#bbf7d0">改后</text>
+      <rect x="400" y="16" width="78" height="36" rx="18" fill="#047857"/>
+      <text x="439" y="41" font-size="18" font-weight="800" fill="#ecfdf5" text-anchor="middle">0 分</text>
+      <text x="24" y="86" font-size="17" fill="#e2e8f0">我先说结论：最怕没保障，就去考；</text>
+      <text x="24" y="118" font-size="17" fill="#e2e8f0">最怕一眼看到头，就别押上最好的几年。</text>
+      <text x="24" y="150" font-size="17" fill="#e2e8f0">考公用往上走的空间，换一个有保障的底，</text>
+      <text x="24" y="182" font-size="17" fill="#e2e8f0">私企正好反过来。</text>
+      <text x="24" y="226" font-size="16" fill="#86efac">✓ 先给答案　✓ 讲清交换关系　✓ 没添事实</text>
+    </g>
+  </g>
+</svg>

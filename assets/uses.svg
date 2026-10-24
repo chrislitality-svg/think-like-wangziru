@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-label="四种用法：分析、写稿、对谈、改稿，各配一句示例说法">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1020"/>
+      <stop offset="1" stop-color="#151d3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="330" rx="24" fill="url(#bg)"/>
+  <text x="40" y="54" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif" font-size="26" font-weight="800" fill="#f1f5f9">四种用法，都只要一句话</text>
+
+  <g font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+    <!-- 分析 -->
+    <g transform="translate(40 82)">
+      <rect width="262" height="216" rx="18" fill="#0f172a" stroke="#0e7490" stroke-width="2"/>
+      <circle cx="46" cy="50" r="20" fill="none" stroke="#22d3ee" stroke-width="6"/>
+      <path d="M61 65 L76 80" stroke="#22d3ee" stroke-width="7" stroke-linecap="round"/>
+      <text x="96" y="60" font-size="26" font-weight="800" fill="#ecfeff">分析</text>
+      <text x="24" y="118" font-size="16" fill="#94a3b8">「用王自如 skill 分析一下：</text>
+      <text x="24" y="142" font-size="16" fill="#94a3b8">给孩子报编程班值不值？」</text>
+      <text x="24" y="186" font-size="16" fill="#67e8f9">→ 一篇能直接转发的短文</text>
+    </g>
+    <!-- 写稿 -->
+    <g transform="translate(326 82)">
+      <rect width="262" height="216" rx="18" fill="#0f172a" stroke="#4338ca" stroke-width="2"/>
+      <rect x="28" y="28" width="38" height="46" rx="6" fill="none" stroke="#818cf8" stroke-width="5"/>
+      <path d="M36 44 H58 M36 56 H58" stroke="#818cf8" stroke-width="4" stroke-linecap="round"/>
+      <path d="M62 74 L80 46" stroke="#e2e8f0" stroke-width="5" stroke-linecap="round"/>
+      <text x="96" y="60" font-size="26" font-weight="800" fill="#eef2ff">写稿</text>
+      <text x="24" y="118" font-size="16" fill="#94a3b8">「写一篇 2 分钟口播：为什么</text>
+      <text x="24" y="142" font-size="16" fill="#94a3b8">收藏了干货还是没进步」</text>
+      <text x="24" y="186" font-size="16" fill="#a5b4fc">→ 能直接念的稿子</text>
+    </g>
+    <!-- 对谈 -->
+    <g transform="translate(612 82)">
+      <rect width="262" height="216" rx="18" fill="#0f172a" stroke="#7e22ce" stroke-width="2"/>
+      <rect x="24" y="30" width="40" height="28" rx="9" fill="none" stroke="#c084fc" stroke-width="5"/>
+      <rect x="44" y="50" width="40" height="28" rx="9" fill="#0f172a" stroke="#e2e8f0" stroke-width="5"/>
+      <text x="100" y="60" font-size="26" font-weight="800" fill="#faf5ff">对谈</text>
+      <text x="24" y="118" font-size="16" fill="#94a3b8">「我想和王自如聊聊要不要</text>
+      <text x="24" y="142" font-size="16" fill="#94a3b8">辞职创业，你来当王自如」</text>
+      <text x="24" y="186" font-size="16" fill="#d8b4fe">→ 一来一回，每轮有判断</text>
+    </g>
+    <!-- 改稿 -->
+    <g transform="translate(898 82)">
+      <rect width="262" height="216" rx="18" fill="#0f172a" stroke="#be185d" stroke-width="2"/>
+      <rect x="28" y="28" width="38" height="46" rx="6" fill="none" stroke="#f472b6" stroke-width="5"/>
+      <path d="M34 42 L60 42" stroke="#f472b6" stroke-width="4" stroke-linecap="round"/>
+      <path d="M33 39 L61 47" stroke="#fb7185" stroke-width="3"/>
+      <path d="M36 60 l6 6 12 -14" fill="none" stroke="#4ade80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="96" y="60" font-size="26" font-weight="800" fill="#fdf2f8">改稿</text>
+      <text x="24" y="118" font-size="16" fill="#94a3b8">「这是我的逐字稿，</text>
+      <text x="24" y="142" font-size="16" fill="#94a3b8">王自如帮我改一下」</text>
+      <text x="24" y="186" font-size="16" fill="#f9a8d4">→ 诊断 + 改好的全文</text>
+    </g>
+  </g>
+</svg>

@@ -1,25 +1,48 @@
 <div align="center">
 
-<img src="assets/banner.svg" width="860" alt="wangziru-analysis"/>
+<img src="assets/banner.svg" width="900" alt="Penser comme Wang Ziru : la réponse d'abord, la raison clairement, et ça tient face aux objections"/>
 
-# La pensée à la Wang Ziru, 2ᵉ édition · wangziru-analysis
+# Penser comme Wang Ziru
 
 **La réponse d'abord, la raison clairement, et ça tient face aux objections. Une phrase à votre IA suffit pour qu'elle analyse une question, écrive un script, corrige votre texte ou discute un sujet à fond avec vous.**
 
-[![Version](https://img.shields.io/badge/version-v1.12-blue)](CHANGELOG.md)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-d97757?logo=claude&logoColor=white)](#)
+[![Codex](https://img.shields.io/badge/Codex-compatible-111827?logo=openai&logoColor=white)](#)
+[![Cursor](https://img.shields.io/badge/Cursor-compatible-000000?logo=cursor&logoColor=white)](#)
+[![Examples](https://img.shields.io/badge/exemples-14-22d3ee)](#voyez-dabord-ce-quil-écrit)
+[![Version](https://img.shields.io/badge/version-v1.13-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
-[![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/wangziru-analysis-skill-v2/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/think-like-wangziru/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](tools/)
 [![Corpus](https://img.shields.io/badge/corpus-103%20videos%20%C2%B70.96M%20chars-8b5cf6)](corpus/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 
-[![Last Commit](https://img.shields.io/github/last-commit/chrislitality-svg/wangziru-analysis-skill-v2)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/commits/main)
+[![Last Commit](https://img.shields.io/github/last-commit/chrislitality-svg/think-like-wangziru)](https://github.com/chrislitality-svg/think-like-wangziru/commits/main)
 
 [简体中文](README.md) · [English](README.en.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · **Français** · [Deutsch](README.de.md)
 
 </div>
 
-> **Voici la 2ᵉ édition.** Elle a été affinée avec davantage de vidéos ; elle suit donc de plus près sa façon d'expliquer, mais elle colle peut-être aussi davantage aux échantillons d'origine. Pour une version générale qui rédige d'abord un plan avant d'écrire, utilisez la 1ʳᵉ édition, [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1). Les deux valent la peine d'être essayées.
+## Voyez d'abord ce qu'il écrit
+
+Chaque texte ci-dessous est le résultat complet rendu par l'IA après une seule phrase, en suivant ce skill. Les exemples sont en chinois ; ouvrez-les pour lire le texte entier et les procédés utilisés.
+
+| Usage | Votre phrase | Une phrase de ce qu'il a rendu | Texte complet |
+|---|---|---|---|
+| 🔍 Analyser | Un cours de programmation pour mon enfant vaut-il encore le coup ? | Si le cours fait surtout apprendre la syntaxe par cœur et recopier le code du professeur, il ne vaut plus le coup. S'il apprend à découper un gros problème en petites étapes, il le vaut encore, et d'autant plus que l'IA progresse. | [Exemple 05](examples/05-分析-孩子要不要学编程.md) |
+| 🔍 Analyser | Acheter un smartphone pliable maintenant, ça vaut le coup ? | Le nombre de fois où vous le dépliez compte plus que la profondeur du pli. | [Exemple 09](examples/09-分析-现在买折叠屏值不值.md) |
+| 🔍 Analyser | J'ai de l'argent de côté : rembourser mon prêt immobilier par anticipation ? | D'abord garder une réserve, ensuite économiser des intérêts. Pas l'inverse. | [Exemple 11](examples/11-分析-要不要提前还房贷.md) |
+| ✍️ Écrire | Un script de 2 minutes : pourquoi tant d'astuces sauvegardées ne vous ont pas fait progresser | Sauvegarder vous récompense d'avance pour « je vais apprendre ça ». Vous n'avez rien appris, mais vous avez déjà l'impression de l'avoir fait. | [Exemple 06](examples/06-写稿-收藏了那么多干货为什么没进步.md) |
+| ✍️ Écrire | Un script de 90 secondes : pourquoi les bars à bubble tea ouvrent et ferment si vite | Dans beaucoup de franchises, celui qui gagne le plus sûrement, c'est la marque, payée dès l'ouverture. | [Exemple 10](examples/10-写稿-奶茶店为什么开一家倒一家.md) |
+| ✍️ Écrire | Un script de 2 minutes : pourquoi de plus en plus de gens n'aiment pas décrocher | L'appel fait gagner du temps à celui qui appelle et fait payer celui qui décroche. Avec les messages écrits, ce coût est devenu visible. | [Exemple 12](examples/12-写稿-为什么越来越多人不爱接电话.md) |
+| 💬 Discuter | J'ai 30 ans, dois-je démissionner pour créer une entreprise ? Joue Wang Ziru | Ne démissionnez pas encore. Ce n'est pas que l'idée est mauvaise ; vous n'en êtes simplement pas au stade où il faut quitter son poste. | [Exemple 07](examples/07-对谈-30岁要不要辞职创业.md) |
+| 💬 Discuter | Je suis en 3ᵉ année de licence, tout le monde prépare un master. Je m'y mets aussi ? | Vous voulez qu'un master règle « je ne sais pas quoi faire », mais un master ne règle pas ça. | [Exemple 13](examples/13-对谈-大三要不要考研.md) |
+| 🩺 Corriger | Voici ma transcription sur « les jeunes doivent-ils passer les concours de la fonction publique ». Corrige-la | L'original disait seulement « ça dépend ». Révisé : si ce que vous craignez le plus, c'est l'absence de sécurité, passez le concours ; si c'est une vie toute tracée, ne misez pas vos meilleures années dessus. | [Exemple 08](examples/08-改稿-年轻人要不要考公.md) |
+| 🩺 Corriger | Voici mon test d'écouteurs Bluetooth à 399 yuans. Corrige-le | L'original disait « équilibré, vivement recommandé ». Révisé : à acheter si vous écoutez surtout de la musique dans les transports, pas si vous téléphonez beaucoup dehors. | [Exemple 14](examples/14-改稿-蓝牙耳机测评.md) |
+
+<div align="center">
+<img src="assets/before-after.svg" width="860" alt="Avant et après : l'original disait seulement ça dépend ; la version révisée donne une réponse conditionnelle et explique le compromis"/>
+</div>
 
 ---
 
@@ -31,7 +54,16 @@ Il apprend à l'IA à produire du contenu comme Wang Ziru rend une idée claire 
 
 La méthode ne repose pas sur des impressions. Nous avons transcrit mot à mot 32 de ses vidéos et les avons lues paragraphe par paragraphe. Chaque procédé du skill cite ses propres mots avec un horodatage que vous pouvez vérifier.
 
+
+<div align="center">
+<img src="assets/stats.svg" width="860" alt="32 vidéos transcrites, 72 réponses codées, 13 procédés avec citations, 14 exemples"/>
+</div>
+
 ## Mode d'emploi : dites une seule phrase
+
+<div align="center">
+<img src="assets/uses.svg" width="860" alt="Quatre usages : analyser, écrire, discuter, corriger"/>
+</div>
 
 Les instructions du skill sont en chinois ; il fonctionne donc au mieux si vous demandez en chinois. Vous pouvez aussi indiquer à l'IA la langue de sortie souhaitée.
 
@@ -42,7 +74,9 @@ Les instructions du skill sont en chinois ; il fonctionne donc au mieux si vous 
 | 我想和王自如聊聊要不要辞职创业，你来当王自如 (Discutons de quitter mon emploi pour créer une entreprise ; joue Wang Ziru) | Un échange où chaque réponse contient un jugement et une raison. L'IA précise qu'elle raisonne à sa manière, ne se fait pas passer pour lui et n'invente pas son passé | [Exemple 07](examples/07-对谈-30岁要不要辞职创业.md) |
 | 这是我的逐字稿，王自如帮我改一下：（贴上稿子） (Voici ma transcription, corrige-la) | Les un ou deux problèmes principaux, le texte entier corrigé et l'explication des changements. Votre ton et vos faits sont conservés | [Exemple 08](examples/08-改稿-年轻人要不要考公.md) |
 
-L'installation tient en une ligne : `git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git ~/.claude/skills/wangziru-analysis`
+**Dans quel outil l'installer** : nous recommandons l'outil harness de DeepSeek ou Claude Desktop. Les deux lisent les fichiers et lancent le vérificateur directement, le skill marche dès l'installation.
+
+L'installation tient en une ligne : `git clone https://github.com/chrislitality-svg/think-like-wangziru.git ~/.claude/skills/think-like-wangziru`
 
 ## D'où vient la méthode : comment tourne son esprit
 
@@ -72,8 +106,8 @@ Nous avons cru que ses jugements étaient tous préparés à l'avance et simplem
 Aucune dépendance. Commencez par goûter le détecteur de saveur IA sur sa vraie parole. C'est la seule entrée exécutable du dépôt, tout le reste est du Markdown.
 
 ```bash
-git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git
-cd wangziru-analysis-skill-v2
+git clone https://github.com/chrislitality-svg/think-like-wangziru.git
+cd think-like-wangziru
 
 # Sa vraie parole, un clip de live de septembre 2026. Score attendu : 0, niveau humain
 python tools/ai_flavor_check.py "corpus/clips-jachzhu/2026-09-22-聊西贝事件的根源-1m11s.txt"
@@ -82,7 +116,7 @@ python tools/ai_flavor_check.py "corpus/clips-jachzhu/2026-09-22-聊西贝事件
 python tools/ai_flavor_check.py brouillon.txt --json
 ```
 
-Installez le skill sur Claude Code, Codex, Cursor ou un autre assistant de codage IA pour analyser, rédiger, discuter ou corriger un texte directement. L'installation tient en une ligne : `git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git ~/.claude/skills/wangziru-analysis`
+Installez le skill sur Claude Code, Codex, Cursor ou un autre assistant de codage IA pour analyser, rédiger, discuter ou corriger un texte directement. L'installation tient en une ligne : `git clone https://github.com/chrislitality-svg/think-like-wangziru.git ~/.claude/skills/think-like-wangziru`
 
 > **Non officiel** · Ce dépôt est une étude de méthode d'expression, sans lien avec Wang Ziru ni son équipe. Elle n'utilise ni sa voix ni son image, et les textes produits ne doivent être signés de son nom ni passer pour lui.
 

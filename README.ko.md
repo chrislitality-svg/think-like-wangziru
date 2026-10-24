@@ -1,25 +1,48 @@
 <div align="center">
 
-<img src="assets/banner.svg" width="860" alt="wangziru-analysis"/>
+<img src="assets/banner.svg" width="900" alt="왕쯔루처럼 생각하기: 답부터, 이유는 분명히, 반문에도 버틴다"/>
 
-# 왕쯔루(王自如)식 사고 제2판 · wangziru-analysis
+# 왕쯔루처럼 생각하기
 
 **답부터 말하고, 이유를 분명히 하고, 반문에도 버틴다. AI에게 한 문장만 말하면 문제를 분석하고, 원고를 쓰고, 원고를 고치고, 한 가지 주제를 끝까지 함께 이야기해 줍니다.**
 
-[![Version](https://img.shields.io/badge/version-v1.12-blue)](CHANGELOG.md)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-d97757?logo=claude&logoColor=white)](#)
+[![Codex](https://img.shields.io/badge/Codex-사용%20가능-111827?logo=openai&logoColor=white)](#)
+[![Cursor](https://img.shields.io/badge/Cursor-사용%20가능-000000?logo=cursor&logoColor=white)](#)
+[![Examples](https://img.shields.io/badge/예시-14-22d3ee)](#먼저-결과물부터-보세요)
+[![Version](https://img.shields.io/badge/version-v1.13-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
-[![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/wangziru-analysis-skill-v2/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/think-like-wangziru/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](tools/)
 [![Corpus](https://img.shields.io/badge/corpus-103%20videos%20%C2%B70.96M%20chars-8b5cf6)](corpus/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 
-[![Last Commit](https://img.shields.io/github/last-commit/chrislitality-svg/wangziru-analysis-skill-v2)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/commits/main)
+[![Last Commit](https://img.shields.io/github/last-commit/chrislitality-svg/think-like-wangziru)](https://github.com/chrislitality-svg/think-like-wangziru/commits/main)
 
 [简体中文](README.md) · [English](README.en.md) · **한국어** · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
 
 </div>
 
-> **제2판입니다.** 더 많은 영상 데이터로 다듬어서 그의 설명 방식에 더 가깝지만, 원래 표본에 더 붙어 있을 수도 있습니다. 개요를 먼저 만든 뒤 쓰는 범용 버전이 필요하면 제1판 [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1)을 쓰세요. 둘 다 써 볼 만합니다.
+## 먼저 결과물부터 보세요
+
+아래는 모두 AI에게 한 문장을 말한 뒤 이 스킬에 따라 받은 완성된 결과물입니다. 예시는 중국어로 되어 있으며, 열면 전문과 사용한 방법을 볼 수 있습니다.
+
+| 용도 | 한 문장으로 요청 | 받은 결과물 속 한 문장 | 전문 |
+|---|---|---|---|
+| 🔍 분석 | 아이 코딩 학원, 아직 보낼 만한가? | 문법을 외우고 선생님 코드를 따라 치게 하는 수업이라면 지금은 가치가 없습니다. 큰 문제를 작은 단계로 나누는 법을 가르친다면 여전히 가치가 있고, AI가 강해질수록 더 그렇습니다. | [예시 05](examples/05-分析-孩子要不要学编程.md) |
+| 🔍 분석 | 지금 폴더블폰을 살 만한가? | 몇 번 펼치느냐가 주름이 얼마나 깊으냐보다 이 폴더블폰의 가치를 더 크게 좌우합니다. | [예시 09](examples/09-分析-现在买折叠屏值不值.md) |
+| 🔍 분석 | 여윳돈이 있는데 주택담보대출을 미리 갚을까? | 먼저 퇴로를 남기고, 그다음에 이자를 아끼세요. 순서를 바꾸면 안 됩니다. | [예시 11](examples/11-分析-要不要提前还房贷.md) |
+| ✍️ 원고 작성 | 2분 원고: 꿀팁을 그렇게 저장했는데 왜 늘지 않을까 | 저장 버튼은 "공부해야지"라는 일에 미리 보상을 줍니다. 배우지 않았는데도 배운 느낌이 들게 하죠. | [예시 06](examples/06-写稿-收藏了那么多干货为什么没进步.md) |
+| ✍️ 원고 작성 | 90초 원고: 밀크티 가게는 왜 열자마자 망할까 | 많은 가맹점에서 가장 확실하게 돈을 버는 쪽은, 가게를 여는 순간 이미 돈을 챙긴 본사입니다. | [예시 10](examples/10-写稿-奶茶店为什么开一家倒一家.md) |
+| ✍️ 원고 작성 | 2분 원고: 왜 점점 더 많은 사람이 전화 받기를 싫어할까 | 전화는 거는 사람의 시간을 아껴 주고, 받는 사람에게 대가를 치르게 합니다. 문자가 생기면서 그 대가가 보이게 됐습니다. | [예시 12](examples/12-写稿-为什么越来越多人不爱接电话.md) |
+| 💬 대화 | 서른인데 퇴사하고 창업할까? 네가 왕쯔루 역을 해 줘 | 아직 그만두지 마세요. 방향이 나빠서가 아니라, 아직 퇴사가 필요한 단계에 이르지 않았기 때문입니다. | [예시 07](examples/07-对谈-30岁要不要辞职创业.md) |
+| 💬 대화 | 대학교 3학년인데 다들 대학원 준비한다. 나도 할까? | "뭘 해야 할지 모르겠다"를 대학원으로 해결하려 하지만, 대학원은 그 문제를 풀어 주지 않습니다. | [예시 13](examples/13-对谈-大三要不要考研.md) |
+| 🩺 원고 수정 | "청년은 공무원 시험을 봐야 하나" 원고야. 고쳐 줘 | 원고는 "사람마다 다르다"고만 했습니다. 수정본: 보장이 없는 게 가장 두렵다면 시험을 보고, 뻔히 보이는 인생이 가장 두렵다면 가장 좋은 몇 년을 걸지 마세요. | [예시 08](examples/08-改稿-年轻人要不要考公.md) |
+| 🩺 원고 수정 | 399위안 블루투스 이어폰 리뷰야. 고쳐 줘 | 원고는 "전반적으로 균형 잡혀 강력 추천"이라고 했습니다. 수정본: 출퇴근 길에 음악을 듣는 사람에게는 살 만하고, 밖에서 통화를 많이 하는 사람에게는 맞지 않습니다. | [예시 14](examples/14-改稿-蓝牙耳机测评.md) |
+
+<div align="center">
+<img src="assets/before-after.svg" width="860" alt="수정 전후 비교: 원고는 사람마다 다르다고만 했고, 수정본은 조건이 붙은 답과 교환 관계를 설명합니다"/>
+</div>
 
 ---
 
@@ -31,7 +54,16 @@ Claude Code, Codex, Cursor 같은 AI 도구에 설치하는 스킬입니다. 설
 
 이 방법은 인상에 기대지 않았습니다. 그의 영상 32편을 한 글자씩 받아 적고 단락마다 읽었습니다. 스킬 안의 모든 방법에는 그의 원래 말과 타임스탬프가 붙어 있어 직접 확인할 수 있습니다.
 
+
+<div align="center">
+<img src="assets/stats.svg" width="860" alt="영상 32편 전사, 답변 72개 코딩, 원문이 붙은 방법 13개, 예시 14편"/>
+</div>
+
 ## 사용법: 한 문장만 말하세요
+
+<div align="center">
+<img src="assets/uses.svg" width="860" alt="네 가지 용도: 분석, 원고 작성, 대화, 원고 수정"/>
+</div>
 
 스킬 지침은 중국어로 쓰여 있어 중국어로 요청할 때 가장 잘 작동합니다. 원하는 출력 언어를 AI에게 따로 말해도 됩니다.
 
@@ -42,7 +74,9 @@ Claude Code, Codex, Cursor 같은 AI 도구에 설치하는 스킬입니다. 설
 | 我想和王自如聊聊要不要辞职创业，你来当王自如 (퇴사하고 창업할지 왕쯔루와 이야기하고 싶어, 네가 왕쯔루 역을 해 줘) | 주고받는 대화. 매 턴에 판단과 이유가 있습니다. AI는 그의 방식으로 생각하고 있다고 밝히며, 본인을 사칭하거나 그의 경험을 지어내지 않습니다 | [예시 07](examples/07-对谈-30岁要不要辞职创业.md) |
 | 这是我的逐字稿，王自如帮我改一下：（贴上稿子） (내 원고를 고쳐 줘) | 가장 중요한 문제 한두 개, 고친 전문, 수정 설명. 당신의 말투와 사실은 그대로 둡니다 | [예시 08](examples/08-改稿-年轻人要不要考公.md) |
 
-설치는 한 줄입니다: `git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git ~/.claude/skills/wangziru-analysis`
+**어떤 도구에 설치할까**: DeepSeek의 harness 도구나 Claude 데스크톱(Claude Desktop)을 권장합니다. 둘 다 파일을 바로 읽고 검사 스크립트를 실행할 수 있어 설치 후 바로 쓸 수 있습니다.
+
+설치는 한 줄입니다: `git clone https://github.com/chrislitality-svg/think-like-wangziru.git ~/.claude/skills/think-like-wangziru`
 
 ## 방법은 어디서 왔나: 그의 사고는 어떻게 굴러가는가
 
@@ -72,8 +106,8 @@ Claude Code, Codex, Cursor 같은 AI 도구에 설치하는 스킬입니다. 설
 의존성이 없습니다. 먼저 그의 실제 발화로 AI맛 검사기를 체험해 보세요. 이것이 저장소 전체에서 유일한 실행 가능한 입구이고 나머지는 전부 Markdown입니다.
 
 ```bash
-git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git
-cd wangziru-analysis-skill-v2
+git clone https://github.com/chrislitality-svg/think-like-wangziru.git
+cd think-like-wangziru
 
 # 그의 실제 구술, 2026년 9월 라이브 클립입니다. AI맛 0점, 사람 말 등급이 나옵니다
 python tools/ai_flavor_check.py "corpus/clips-jachzhu/2026-09-22-聊西贝事件的根源-1m11s.txt"
@@ -82,7 +116,7 @@ python tools/ai_flavor_check.py "corpus/clips-jachzhu/2026-09-22-聊西贝事件
 python tools/ai_flavor_check.py draft.txt --json
 ```
 
-Claude Code, Codex, Cursor 같은 AI 코딩 어시스턴트에 스킬을 설치하면 분석, 원고 작성, 대화, 원고 수정을 바로 쓸 수 있습니다. 설치는 `git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git ~/.claude/skills/wangziru-analysis` 한 줄입니다.
+Claude Code, Codex, Cursor 같은 AI 코딩 어시스턴트에 스킬을 설치하면 분석, 원고 작성, 대화, 원고 수정을 바로 쓸 수 있습니다. 설치는 `git clone https://github.com/chrislitality-svg/think-like-wangziru.git ~/.claude/skills/think-like-wangziru` 한 줄입니다.
 
 > **비공식** · 본 저장소는 표현 방법 연구로 왕쯔루 본인 및 그 팀과 무관합니다. 그의 목소리나 초상을 사용하지 않으며, 산출물에 그의 이름을 서명하거나 본인을 사칭해서는 안 됩니다.
 

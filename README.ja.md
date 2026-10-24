@@ -1,25 +1,48 @@
 <div align="center">
 
-<img src="assets/banner.svg" width="860" alt="wangziru-analysis"/>
+<img src="assets/banner.svg" width="900" alt="王自如のように考える：答えを先に、理由をはっきり、突っ込まれても崩れない"/>
 
-# 王自如（ワン・ズールー）式思考 第2版 · wangziru-analysis
+# 王自如のように考える
 
 **答えを先に、理由をはっきり、突っ込まれても崩れない。AIに一言伝えるだけで、問題の分析、台本の作成、原稿の手直し、一つのテーマをとことん話し合う相手までこなします。**
 
-[![Version](https://img.shields.io/badge/version-v1.12-blue)](CHANGELOG.md)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-d97757?logo=claude&logoColor=white)](#)
+[![Codex](https://img.shields.io/badge/Codex-対応-111827?logo=openai&logoColor=white)](#)
+[![Cursor](https://img.shields.io/badge/Cursor-対応-000000?logo=cursor&logoColor=white)](#)
+[![Examples](https://img.shields.io/badge/例-14-22d3ee)](#まずは出来上がりを見てください)
+[![Version](https://img.shields.io/badge/version-v1.13-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
-[![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/wangziru-analysis-skill-v2/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/think-like-wangziru/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](tools/)
 [![Corpus](https://img.shields.io/badge/corpus-103%20videos%20%C2%B70.96M%20chars-8b5cf6)](corpus/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 
-[![Last Commit](https://img.shields.io/github/last-commit/chrislitality-svg/wangziru-analysis-skill-v2)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/commits/main)
+[![Last Commit](https://img.shields.io/github/last-commit/chrislitality-svg/think-like-wangziru)](https://github.com/chrislitality-svg/think-like-wangziru/commits/main)
 
 [简体中文](README.md) · [English](README.en.md) · [한국어](README.ko.md) · **日本語** · [Français](README.fr.md) · [Deutsch](README.de.md)
 
 </div>
 
-> **第2版です。** より多くの動画データで磨いたため彼の説明の仕方に近づきましたが、元のサンプルに寄りすぎている可能性もあります。先に構成案を作ってから書く汎用版が欲しい場合は第1版 [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1) をどうぞ。両方試す価値があります。
+## まずは出来上がりを見てください
+
+以下はどれも、AI に一言伝えたあと、このスキルに沿って返ってきた完成品です。例は中国語で書かれています。開くと全文と、使ったやり方が読めます。
+
+| 使い方 | 一言で頼んだこと | 返ってきた内容の一文 | 全文 |
+|---|---|---|---|
+| 🔍 分析 | 子どものプログラミング教室、まだ通わせる価値はある？ | 文法を暗記させ、先生のコードを写させるだけの教室なら、今は価値がありません。大きな問題を小さなステップに分ける力を教えるなら今も価値があり、AI が強くなるほど価値は増します。 | [例 05](examples/05-分析-孩子要不要学编程.md) |
+| 🔍 分析 | 今、折りたたみスマホを買う価値はある？ | 何回開くかのほうが、折り目の深さより、この折りたたみスマホの価値を決めます。 | [例 09](examples/09-分析-现在买折叠屏值不值.md) |
+| 🔍 分析 | 余裕資金がある。住宅ローンを繰り上げ返済すべき？ | 先に逃げ道を残し、それから利息を減らす。順番を逆にしてはいけません。 | [例 11](examples/11-分析-要不要提前还房贷.md) |
+| ✍️ 台本作成 | 2分の台本：ノウハウをあれだけ保存したのに、なぜ上達しないのか | 保存ボタンは「いつか勉強する」に先回りしてご褒美をくれます。学んでいないのに、学んだ気分になってしまうのです。 | [例 06](examples/06-写稿-收藏了那么多干货为什么没进步.md) |
+| ✍️ 台本作成 | 90秒の台本：タピオカ店はなぜ開いてはすぐ潰れるのか | 多くのフランチャイズ店で一番確実に稼いでいるのは、開店した瞬間にもうお金を受け取った本部です。 | [例 10](examples/10-写稿-奶茶店为什么开一家倒一家.md) |
+| ✍️ 台本作成 | 2分の台本：電話に出たがらない人が増えているのはなぜか | 電話はかける側の時間を節約し、受ける側に代償を払わせます。文字という選択肢ができて、その代償が見えるようになりました。 | [例 12](examples/12-写稿-为什么越来越多人不爱接电话.md) |
+| 💬 対話 | 30歳、会社を辞めて起業すべき？王自如役をやって | まだ辞めないでください。方向が悪いのではなく、辞める必要がある段階にまだ来ていないからです。 | [例 07](examples/07-对谈-30岁要不要辞职创业.md) |
+| 💬 対話 | 大学3年、周りはみんな院試の準備。自分も受けるべき？ | 「何をしたいかわからない」を院進学で解決しようとしていますが、院進学ではそれは解決しません。 | [例 13](examples/13-对谈-大三要不要考研.md) |
+| 🩺 原稿の手直し | 「若者は公務員試験を受けるべきか」の原稿です。直して | 原稿は「人それぞれ」と言うだけでした。修正版：保障がないのが一番怖いなら受ける。先が見える人生が一番怖いなら、一番いい数年を賭けない。 | [例 08](examples/08-改稿-年轻人要不要考公.md) |
+| 🩺 原稿の手直し | 399元のワイヤレスイヤホンのレビューです。直して | 原稿は「バランスがよく、とてもおすすめ」。修正版：通勤で音楽を聴く人には買う価値があり、外で通話が多い人には向きません。 | [例 14](examples/14-改稿-蓝牙耳机测评.md) |
+
+<div align="center">
+<img src="assets/before-after.svg" width="860" alt="手直しの前後：原稿は人それぞれと言うだけ、修正版は条件付きの答えと交換関係を説明"/>
+</div>
 
 ---
 
@@ -31,7 +54,16 @@ Claude Code、Codex、Cursor などの AI ツールに入れるスキルです�
 
 この方法は印象で作ったものではありません。彼の動画 32 本を一字ずつ書き起こし、段落ごとに読みました。スキルの中のやり方にはすべて彼の元の言葉とタイムスタンプが付いていて、自分で確かめられます。
 
+
+<div align="center">
+<img src="assets/stats.svg" width="860" alt="動画32本を書き起こし、回答72件をコーディング、原文付きのやり方13個、例14本"/>
+</div>
+
 ## 使い方：一言伝えるだけ
+
+<div align="center">
+<img src="assets/uses.svg" width="860" alt="四つの使い方：分析、台本作成、対話、原稿の手直し"/>
+</div>
 
 スキルの指示は中国語で書かれているため、中国語で頼むと一番よく動きます。出力の言語を AI に指定することもできます。
 
@@ -42,7 +74,9 @@ Claude Code、Codex、Cursor などの AI ツールに入れるスキルです�
 | 我想和王自如聊聊要不要辞职创业，你来当王自如（退職して起業すべきか王自如と話したい、王自如役をやって） | やり取りの対話。毎回、判断と理由があります。AI は彼のやり方で考えていると明言し、本人を名乗らず、彼の経験を作り上げません | [例 07](examples/07-对谈-30岁要不要辞职创业.md) |
 | 这是我的逐字稿，王自如帮我改一下：（贴上稿子）（私の原稿を直して） | 一番大事な問題を一つか二つ、直した全文、変更の説明。あなたの話し方と事実はそのまま残します | [例 08](examples/08-改稿-年轻人要不要考公.md) |
 
-インストールは一行です：`git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git ~/.claude/skills/wangziru-analysis`
+**どのツールに入れるか**：DeepSeek の harness ツールか、Claude デスクトップ版（Claude Desktop）をおすすめします。どちらもファイルを直接読み、チェック用スクリプトを動かせるので、入れてすぐ使えます。
+
+インストールは一行です：`git clone https://github.com/chrislitality-svg/think-like-wangziru.git ~/.claude/skills/think-like-wangziru`
 
 ## 方法はどこから来たか：彼の頭はどう回っているか
 
@@ -72,8 +106,8 @@ Claude Code、Codex、Cursor などの AI ツールに入れるスキルです�
 依存関係はありません。まず彼の実際の発話で AI臭チェッカーを体験してください。これがリポジトリ全体で唯一の実行可能な入口で、残りはすべて Markdownです。
 
 ```bash
-git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git
-cd wangziru-analysis-skill-v2
+git clone https://github.com/chrislitality-svg/think-like-wangziru.git
+cd think-like-wangziru
 
 # 彼の実際の話し言葉、2026年9月の配信クリップです。AI臭は0点、人間の言葉グレードになります
 python tools/ai_flavor_check.py "corpus/clips-jachzhu/2026-09-22-聊西贝事件的根源-1m11s.txt"
@@ -82,7 +116,7 @@ python tools/ai_flavor_check.py "corpus/clips-jachzhu/2026-09-22-聊西贝事件
 python tools/ai_flavor_check.py draft.txt --json
 ```
 
-Claude Code、Codex、Cursor などの AIコーディングアシスタントにスキルを入れると、分析、台本作成、対話、原稿の手直しをすぐ使えます。インストールは `git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git ~/.claude/skills/wangziru-analysis` の一行です。
+Claude Code、Codex、Cursor などの AIコーディングアシスタントにスキルを入れると、分析、台本作成、対話、原稿の手直しをすぐ使えます。インストールは `git clone https://github.com/chrislitality-svg/think-like-wangziru.git ~/.claude/skills/think-like-wangziru` の一行です。
 
 > **非公式** · 本リポジトリは表現方法の研究であり、王自如本人およびそのチームとは無関係です。彼の声や肖像を使わず、成果物を彼の名で署名したり本人を装ったりしないでください。
 

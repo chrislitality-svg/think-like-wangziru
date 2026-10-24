@@ -1,41 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="wangziru-analysis — 王自如式表达拆解">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="380" viewBox="0 0 1280 380" role="img" aria-label="像王自如一样思考：先给答案，讲清原因，经得起追问">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0b1220"/>
-      <stop offset="1" stop-color="#182848"/>
+      <stop offset="0" stop-color="#0a1020"/>
+      <stop offset="0.55" stop-color="#121c38"/>
+      <stop offset="1" stop-color="#1b1640"/>
     </linearGradient>
     <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#22d3ee"/>
-      <stop offset="1" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#a78bfa"/>
     </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.3" r="0.55">
+      <stop offset="0" stop-color="#6366f1" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0 H0 V32" fill="none" stroke="#334155" stroke-width="0.6"/>
+    </pattern>
   </defs>
-  <rect width="1280" height="320" rx="28" fill="url(#bg)"/>
-  <g opacity="0.14" stroke="#38bdf8" stroke-width="1">
-    <circle cx="1150" cy="60" r="120" fill="none"/>
-    <circle cx="1150" cy="60" r="180" fill="none"/>
-    <circle cx="1150" cy="60" r="240" fill="none"/>
-    <path d="M0 250 H1280" />
-    <path d="M0 285 H1280" />
+  <rect width="1280" height="380" rx="28" fill="url(#bg)"/>
+  <rect width="1280" height="380" rx="28" fill="url(#grid)" opacity="0.35"/>
+  <rect width="1280" height="380" rx="28" fill="url(#glow)"/>
+
+  <!-- 标志：对话气泡里一条从「答案」走到「原因」的路径 -->
+  <g transform="translate(86 92)">
+    <path d="M0 22 a22 22 0 0 1 22 -22 h124 a22 22 0 0 1 22 22 v84 a22 22 0 0 1 -22 22 h-88 l-38 32 v-32 h-0 a22 22 0 0 1 -20 -22 z" fill="#0f172a" stroke="url(#acc)" stroke-width="5"/>
+    <circle cx="36" cy="64" r="13" fill="#22d3ee"/>
+    <path d="M52 64 H86" stroke="#e2e8f0" stroke-width="5" stroke-linecap="round"/>
+    <path d="M80 54 l12 10 -12 10" fill="none" stroke="#e2e8f0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="102" y="50" width="40" height="28" rx="7" fill="none" stroke="#a78bfa" stroke-width="5"/>
   </g>
-  <g>
-    <rect x="88" y="86" width="118" height="92" rx="24" fill="none" stroke="url(#acc)" stroke-width="5"/>
-    <path d="M118 178 l-14 26 34-26 z" fill="url(#acc)"/>
-    <circle cx="118" cy="122" r="7" fill="#22d3ee"/>
-    <circle cx="147" cy="122" r="7" fill="#818cf8"/>
-    <circle cx="176" cy="122" r="7" fill="#22d3ee"/>
-    <line x1="118" y1="152" x2="176" y2="152" stroke="#e2e8f0" stroke-width="4" stroke-linecap="round"/>
+
+  <text x="300" y="138" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',ui-sans-serif,sans-serif" font-size="66" font-weight="800" fill="#f8fafc">像王自如一样思考</text>
+  <text x="304" y="190" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',ui-sans-serif,sans-serif" font-size="30" fill="#7dd3fc">先给答案 · 讲清原因 · 经得起追问</text>
+  <text x="304" y="232" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',ui-sans-serif,sans-serif" font-size="22" fill="#94a3b8">一句话，让 AI 帮你分析问题、写稿、改稿，或者陪你把一件事聊透</text>
+
+  <g font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',ui-sans-serif,sans-serif" font-size="20" font-weight="700">
+    <rect x="304" y="268" width="104" height="44" rx="22" fill="#0e7490"/>
+    <text x="356" y="297" text-anchor="middle" fill="#ecfeff">分析</text>
+    <rect x="420" y="268" width="104" height="44" rx="22" fill="#4338ca"/>
+    <text x="472" y="297" text-anchor="middle" fill="#eef2ff">写稿</text>
+    <rect x="536" y="268" width="104" height="44" rx="22" fill="#7e22ce"/>
+    <text x="588" y="297" text-anchor="middle" fill="#faf5ff">对谈</text>
+    <rect x="652" y="268" width="104" height="44" rx="22" fill="#be185d"/>
+    <text x="704" y="297" text-anchor="middle" fill="#fdf2f8">改稿</text>
   </g>
-  <text x="248" y="126" font-family="ui-sans-serif, -apple-system, 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="58" font-weight="800" fill="#f1f5f9">wangziru-analysis</text>
-  <text x="252" y="170" font-family="ui-sans-serif, -apple-system, 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="30" fill="#7dd3fc">王自如式表达拆解 · 他的思维怎么运转 · 表达习惯的真实底色</text>
-  <text x="252" y="212" font-family="ui-sans-serif, -apple-system, 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="24" fill="#94a3b8">学结构，不学腔调 — Learn the structure, not the accent.</text>
-  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" fill="#a5b4fc">
-    <rect x="252" y="240" width="236" height="38" rx="19" fill="#1e293b" opacity="0.9"/>
-    <text x="270" y="265">103 videos corpus</text>
-    <rect x="502" y="240" width="200" height="38" rx="19" fill="#1e293b" opacity="0.9"/>
-    <text x="520" y="265">1M+ chars</text>
-    <rect x="716" y="240" width="220" height="38" rx="19" fill="#1e293b" opacity="0.9"/>
-    <text x="734" y="265">open research</text>
-    <rect x="950" y="240" width="230" height="38" rx="19" fill="#1e293b" opacity="0.9"/>
-    <text x="968" y="265">zero-dep tools</text>
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="17" fill="#cbd5e1">
+    <rect x="780" y="268" width="414" height="44" rx="22" fill="#1e293b" stroke="#334155"/>
+    <text x="987" y="296" text-anchor="middle">Claude Code · Codex · Cursor</text>
   </g>
 </svg>

@@ -1,25 +1,48 @@
 <div align="center">
 
-<img src="assets/banner.svg" width="860" alt="wangziru-analysis — Wang Ziru-style expression deconstruction"/>
+<img src="assets/banner.svg" width="900" alt="Think Like Wang Ziru: answer first, explain why, hold up under questions"/>
 
-# Wang Ziru-Style Thinking (Edition 2) · wangziru-analysis
+# Think Like Wang Ziru
 
 **Answer first, explain why, hold up under questions. Say one sentence to your AI and it analyzes a question, writes a script, fixes your draft, or talks a problem through with you.**
 
-[![Version](https://img.shields.io/badge/version-v1.12-blue)](CHANGELOG.md)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-d97757?logo=claude&logoColor=white)](#)
+[![Codex](https://img.shields.io/badge/Codex-ready-111827?logo=openai&logoColor=white)](#)
+[![Cursor](https://img.shields.io/badge/Cursor-ready-000000?logo=cursor&logoColor=white)](#)
+[![Examples](https://img.shields.io/badge/examples-14-22d3ee)](#see-what-it-writes-first)
+[![Version](https://img.shields.io/badge/version-v1.13-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
-[![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/wangziru-analysis-skill-v2/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/think-like-wangziru/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](tools/)
 [![Corpus](https://img.shields.io/badge/corpus-103%20videos%20%C2%B70.96M%20chars-8b5cf6)](corpus/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 
-[![Last Commit](https://img.shields.io/github/last-commit/chrislitality-svg/wangziru-analysis-skill-v2)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/commits/main)
+[![Last Commit](https://img.shields.io/github/last-commit/chrislitality-svg/think-like-wangziru)](https://github.com/chrislitality-svg/think-like-wangziru/commits/main)
 
 [简体中文](README.md) · **English** · [한국어](README.ko.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
 
 </div>
 
-> **This is Edition 2.** It was refined with more video data, so it follows his way of explaining more closely, but it may also stick closer to the original samples. If you want the general version that drafts an outline before writing, use Edition 1, [wangziru-analysis-skill-v1](https://github.com/chrislitality-svg/wangziru-analysis-skill-v1). Both are worth trying.
+## See What It Writes First
+
+Each piece below is the complete output the AI gave after one sentence, following this skill. The examples are in Chinese; open any of them to read the full text and the moves it used.
+
+| Use | What you said | One line from what it gave back | Full text |
+|---|---|---|---|
+| 🔍 Analyze | Is a coding class for my kid still worth it? | If the class mostly has kids memorize syntax and copy the teacher's code, it isn't worth it now. If it teaches breaking a big problem into small steps, it still is, and the stronger AI gets, the more it's worth. | [Example 05](examples/05-分析-孩子要不要学编程.md) |
+| 🔍 Analyze | Is a foldable phone worth buying now? | How often you unfold it matters more than how deep the crease is. | [Example 09](examples/09-分析-现在买折叠屏值不值.md) |
+| 🔍 Analyze | I have spare cash. Should I pay off my mortgage early? | Keep your safety net first, then save on interest. Not the other way around. | [Example 11](examples/11-分析-要不要提前还房贷.md) |
+| ✍️ Write | A 2-minute script: why saving so many tips hasn't made you better | Hitting "save" rewards you in advance for "I'll learn this." You haven't learned it, but you already feel as if you have. | [Example 06](examples/06-写稿-收藏了那么多干货为什么没进步.md) |
+| ✍️ Write | A 90-second script: why bubble-tea shops open and close so fast | In many franchise shops, the party that earns most reliably is the brand that took its money the moment you opened. | [Example 10](examples/10-写稿-奶茶店为什么开一家倒一家.md) |
+| ✍️ Write | A 2-minute script: why more and more people don't like taking calls | A call saves time for the caller and charges the person who picks up. Now that we have text, that cost has become visible. | [Example 12](examples/12-写稿-为什么越来越多人不爱接电话.md) |
+| 💬 Talk | I'm 30. Should I quit to start a business? You play Wang Ziru | Don't quit yet. It's not that the idea is bad; you just haven't reached the point where quitting is needed. | [Example 07](examples/07-对谈-30岁要不要辞职创业.md) |
+| 💬 Talk | I'm a junior and everyone's prepping for grad school. Should I? | You want grad school to solve "I don't know what to do," but grad school can't solve that. | [Example 13](examples/13-对谈-大三要不要考研.md) |
+| 🩺 Fix | Here's my transcript on whether young people should take the civil-service exam. Fix it | The original only said "it depends." Revised: if you fear having no safety net most, take the exam; if you fear a life you can see to the end, don't bet your best years on it. | [Example 08](examples/08-改稿-年轻人要不要考公.md) |
+| 🩺 Fix | Here's my review of a 399-yuan Bluetooth earbud. Fix it | The original said "well-balanced, highly recommended." Revised: worth it if you mostly listen on the commute, not if you take a lot of calls outside. | [Example 14](examples/14-改稿-蓝牙耳机测评.md) |
+
+<div align="center">
+<img src="assets/before-after.svg" width="860" alt="Before and after: the original only said it depends; the revision gives a conditional answer and explains the trade-off"/>
+</div>
 
 ---
 
@@ -31,7 +54,16 @@ It teaches the AI to produce content the way Wang Ziru makes a point clear: give
 
 The method is not built on impressions. We transcribed 32 of his videos word for word and read them paragraph by paragraph. Every move in the skill cites his original words with a timestamp you can check.
 
+
+<div align="center">
+<img src="assets/stats.svg" width="860" alt="32 videos transcribed, 72 answers coded, 13 moves with quotes, 14 examples"/>
+</div>
+
 ## How to Use: Just Say One Sentence
+
+<div align="center">
+<img src="assets/uses.svg" width="860" alt="Four uses: analyze, write, talk, fix"/>
+</div>
 
 The skill's instructions are in Chinese, so it works best when you ask in Chinese; you can also tell the AI which language you want the output in.
 
@@ -42,7 +74,7 @@ The skill's instructions are in Chinese, so it works best when you ask in Chines
 | 我想和王自如聊聊要不要辞职创业，你来当王自如 (Talk with me about quitting to start a business; you play Wang Ziru) | A back-and-forth where every turn has a judgment and a reason. The AI says it is reasoning his way, does not claim to be him, and does not invent his past | [Example 07](examples/07-对谈-30岁要不要辞职创业.md) |
 | 这是我的逐字稿，王自如帮我改一下：（贴上稿子） (Here's my transcript, please fix it) | The one or two biggest problems, the full revised text, and notes on what changed. Your voice and facts are kept | [Example 08](examples/08-改稿-年轻人要不要考公.md) |
 
-Install in one line: `git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git ~/.claude/skills/wangziru-analysis`. Details are under [Usage](#1-usage).
+Install in one line: `git clone https://github.com/chrislitality-svg/think-like-wangziru.git ~/.claude/skills/think-like-wangziru`. Details are under [Usage](#1-usage).
 
 ## Where the Method Comes From: How His Mind Runs
 
@@ -68,6 +100,8 @@ We once thought his judgments were all worked out in advance and simply retrieve
 
 Besides the skill, two things work on their own: a small checker for AI boilerplate, `tools/ai_flavor_check.py`, and 32 timestamped transcripts in `corpus/`. To see how he actually thinks, start with [`references/thinking-思维运转.md`](references/thinking-思维运转.md).
 
+**Which tool to install it in**: we recommend DeepSeek's harness tool or Claude Desktop. Both can read files and run the checker directly, so the skill works right after installing.
+
 ## Recommended Models
 
 | Priority | Model | Notes |
@@ -82,8 +116,8 @@ Besides the skill, two things work on their own: a small checker for AI boilerpl
 Zero dependencies. Feel the AI-flavor checker on his real speech first. It is the only executable entry in the repo, everything else is Markdown.
 
 ```bash
-git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git
-cd wangziru-analysis-skill-v2
+git clone https://github.com/chrislitality-svg/think-like-wangziru.git
+cd think-like-wangziru
 
 # His real speech, a livestream clip from Sep 2026. Expect an AI-flavor score of 0, human-grade
 python tools/ai_flavor_check.py "corpus/clips-jachzhu/2026-09-22-聊西贝事件的根源-1m11s.txt"
@@ -95,10 +129,10 @@ python tools/ai_flavor_check.py draft.txt --json
 Install the skill for Claude Code, Codex, Cursor and other AI coding assistants to write, rewrite or coach directly:
 
 ```bash
-git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git ~/.claude/skills/wangziru-analysis
+git clone https://github.com/chrislitality-svg/think-like-wangziru.git ~/.claude/skills/think-like-wangziru
 ```
 
-Windows PowerShell: `git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git "$env:USERPROFILE\.claude\skills\wangziru-analysis"`. Other tools (Codex, Cursor, ZCode, etc.): drop the repo into a project and tell the agent "read `wangziru-analysis/SKILL.md` first".
+Windows PowerShell: `git clone https://github.com/chrislitality-svg/think-like-wangziru.git "$env:USERPROFILE\.claude\skills\think-like-wangziru"`. Other tools (Codex, Cursor, ZCode, etc.): drop the repo into a project and tell the agent "read `think-like-wangziru/SKILL.md` first".
 
 > **Unofficial** · This is an expression-method study, unrelated to Wang Ziru and his team; it does not use his voice or likeness, and scripts it produces must not be signed with his name or pass as his own.
 
@@ -137,16 +171,16 @@ flowchart LR
 **Claude Code** (user-level, available in all projects):
 
 ```bash
-git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git ~/.claude/skills/wangziru-analysis
+git clone https://github.com/chrislitality-svg/think-like-wangziru.git ~/.claude/skills/think-like-wangziru
 ```
 
 Windows PowerShell:
 
 ```powershell
-git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git "$env:USERPROFILE\.claude\skills\wangziru-analysis"
+git clone https://github.com/chrislitality-svg/think-like-wangziru.git "$env:USERPROFILE\.claude\skills\think-like-wangziru"
 ```
 
-To use it in one project only, clone it into that project's `.claude/skills/wangziru-analysis/`. **Other tools** (Codex, Cursor, ZCode, etc.): drop the repo into the project and tell the agent "read `wangziru-analysis/SKILL.md` first" — the skill itself is plain Markdown and runtime-agnostic; only the AI-flavor checker needs Python 3.8+ (zero third-party dependencies).
+To use it in one project only, clone it into that project's `.claude/skills/think-like-wangziru/`. **Other tools** (Codex, Cursor, ZCode, etc.): drop the repo into the project and tell the agent "read `think-like-wangziru/SKILL.md` first" — the skill itself is plain Markdown and runtime-agnostic; only the AI-flavor checker needs Python 3.8+ (zero third-party dependencies).
 
 ### What to Say
 
