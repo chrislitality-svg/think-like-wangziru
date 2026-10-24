@@ -9,6 +9,8 @@
 | `data/jachzhu_videos.json` | JACHZHU 账号全部 32 条视频的 DOM 提取清单（BV 号+卡片原文，含播放数） |
 | `scripts/fetch_list.py` | B 站空间列表抓取脚本（wbi 签名实现；裸跑会被 -352 风控拦，需先在浏览器上下文种设备 cookie，见 METHODOLOGY.md §2.1） |
 | `scripts/transcribe.py` | 批量转写脚本（faster-whisper large-v3 / cuda / float16 / VAD / beam_size=1，产出带时间戳文本，即 `corpus/` 里文稿的生成器） |
+| `编码-切片应答单元.md` | v1.10 补做：25 条切片按 METHODOLOGY §4.2 四列编码，72 个应答单元，四步原型实际覆盖率 22%。编码规则写在表前 |
+| `scripts/clip_units.py` | 上面那张编码表的数据与统计脚本（零依赖） |
 | `scripts/stats.py` | 词频统计口径（逻辑词/确定词/模糊词/不是A而是B/编号路标/OK），与 METHODOLOGY.md §6.1 的正则一致 |
 
 ## 如何用这批资料

@@ -6,7 +6,7 @@
 
 **Learn the structure, not the accent. Study how his mind runs, not his catchphrases.**
 
-[![Version](https://img.shields.io/badge/version-v1.9-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.10-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/wangziru-analysis-skill-v2/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](tools/)
@@ -31,7 +31,7 @@
 
 The full write-up is in [thinking-思维运转.md](references/thinking-思维运转.md). The five headlines:
 
-1. **When improvising, judgment often comes before reasons.** In 25 clips, about 16 of 24 answers open with a verdict. "Is there still room in the phone industry? No more." What follows is mostly mechanism, not adjectives. We once inferred "scripted videos go evidence first, improvised answers flip it, so his judgments are pre-built". v1.9 withdraws that: scripted videos often lead with the verdict too (iPhone 18 [00:58] "you'd better not upgrade"), the clipper chooses where each clip starts, and most clip questions are yes/no. "Pre-built" is now a hypothesis to test; see [the thinking document](references/thinking-思维运转.md) §1.
+1. **When improvising, judgment often comes before reasons.** Across 72 answer units in 25 clips, 72% open with a verdict (90% for yes/no questions, 65% for open ones), and 89% go on to explain the mechanism. "Is there still room in the phone industry? No more." What follows is mostly mechanism, not adjectives. We once inferred "scripted videos go evidence first, improvised answers flip it, so his judgments are pre-built". v1.9 withdraws that: scripted videos often lead with the verdict too (iPhone 18 [00:58] "you'd better not upgrade"), the clipper chooses where each clip starts, and most clip questions are yes/no. "Pre-built" is now a hypothesis to test; see [the thinking document](references/thinking-思维运转.md) §1.
 2. **Rulers are inventory.** Judgments draw on a long-held library of standards invoked across videos. The Huawei video directly reuses the iPhone18 three-cell ruler. A standard often appears as a rhetorical question.
 3. **Concessions are explicit.** Hesitation branches are spoken out loud, one is picked, and ownership is marked. "我觉得" runs 6.5 per 10k chars, and hedging words outnumber certainty words about 2.7 to 1. His certainty comes from definitions and numbering, never from "definitely" or "absolutely".
 4. **Closers are the storage format.** Every reasoning chain ends with the judgment cast into a single quotable line, such as "No company ever drowned in saliva".

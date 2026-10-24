@@ -6,7 +6,7 @@
 
 **Die Struktur lernen, nicht den Slang. Erforschen, wie sein Denken abläuft, statt seine Sprachfloskeln nachzuahmen.**
 
-[![Version](https://img.shields.io/badge/version-v1.9-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.10-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/wangziru-analysis-skill-v2/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](tools/)
@@ -31,7 +31,7 @@
 
 Das vollständige Dokument steht in [thinking-思维运转.md](references/thinking-思维运转.md). Das Wichtigste in fünf Punkten.
 
-1. **Beim Improvisieren kommt das Urteil oft vor den Gründen.** In 25 Clips beginnen etwa 16 von 24 Antworten mit einem Urteil. „Hat die Smartphone-Branche noch Zukunft? Nein." Danach folgt meist ein Mechanismus, keine Adjektive. Früher schlossen wir daraus: „Skript-Videos gehen von den Belegen zum Urteil, Improvisation kehrt das um, also sind seine Urteile vorgefertigt." v1.9 zieht das zurück: Auch Skript-Videos nennen das Urteil oft zuerst (iPhone 18 [00:58]), der Clip-Ersteller bestimmt den Einstiegspunkt, und die meisten Fragen sind Ja/Nein-Fragen. „Vorgefertigt" ist nur noch eine zu prüfende Hypothese.
+1. **Beim Improvisieren kommt das Urteil oft vor den Gründen.** Von 72 Antwort-Einheiten aus 25 Clips beginnen 72 % mit einem Urteil (90 % bei Ja/Nein-Fragen, 65 % bei offenen Fragen), und 89 % liefern danach einen Mechanismus. „Hat die Smartphone-Branche noch Zukunft? Nein." Danach folgt meist ein Mechanismus, keine Adjektive. Früher schlossen wir daraus: „Skript-Videos gehen von den Belegen zum Urteil, Improvisation kehrt das um, also sind seine Urteile vorgefertigt." v1.9 zieht das zurück: Auch Skript-Videos nennen das Urteil oft zuerst (iPhone 18 [00:58]), der Clip-Ersteller bestimmt den Einstiegspunkt, und die meisten Fragen sind Ja/Nein-Fragen. „Vorgefertigt" ist nur noch eine zu prüfende Hypothese.
 2. **Maßstäbe sind Inventar.** Urteile schöpfen aus einer langfristigen Bibliothek von Standards, die videoübergreifend aufgerufen wird. Das Huawei-Video recycelt direkt den Drei-Kaster-Maßstab des iPhone18-Videos. Ein Standard erscheint oft als rhetorische Frage.
 3. **Zugeständnisse sind explizit.** Die Zweige des Zögerns werden laut ausgesprochen, einer wird gewählt und als eigenes Urteil markiert. „我觉得" kommt 6,5-mal pro 10.000 Zeichen vor, und Absicherungs-Wörter übertreffen Gewissheits-Wörter etwa 2,7 zu 1. Seine Sicherheit kommt aus Definitionen und Nummerierung, nie aus „absolut".
 4. **Der Schlusssatz ist das Speicherformat.** Jede Denkkette endet damit, dass das Urteil in ein einzeln zitierbares Urteil gegossen wird, etwa „Kein Unternehmen ist jemals im Spucke ertrunken".

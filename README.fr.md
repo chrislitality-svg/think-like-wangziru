@@ -6,7 +6,7 @@
 
 **Apprendre la structure, pas l'accent. Étudier comment fonctionne sa pensée, pas imiter ses tics de langage.**
 
-[![Version](https://img.shields.io/badge/version-v1.9-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.10-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/wangziru-analysis-skill-v2/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](tools/)
@@ -31,7 +31,7 @@
 
 Le document complet est dans [thinking-思维运转.md](references/thinking-思维运转.md). L'essentiel tient en cinq points.
 
-1. **En improvisation, le jugement précède souvent les raisons.** Sur 25 extraits, environ 16 réponses sur 24 commencent par un verdict. « Y a-t-il encore un avenir dans l'industrie du smartphone ? Non. » Ce qui suit est surtout un mécanisme, pas des adjectifs. Nous en avions déduit : « les vidéos scénarisées vont des preuves au jugement, l'improvisation inverse l'ordre, donc ses jugements sont préfabriqués ». La v1.9 retire cette conclusion : les vidéos scénarisées donnent souvent le verdict d'abord (iPhone 18 [00:58]), le monteur choisit où commence chaque extrait, et la plupart des questions sont fermées. « Préfabriqué » n'est plus qu'une hypothèse à tester.
+1. **En improvisation, le jugement précède souvent les raisons.** Sur 72 unités de réponse tirées de 25 extraits, 72 % commencent par un verdict (90 % pour les questions fermées, 65 % pour les ouvertes), et 89 % expliquent ensuite le mécanisme. « Y a-t-il encore un avenir dans l'industrie du smartphone ? Non. » Ce qui suit est surtout un mécanisme, pas des adjectifs. Nous en avions déduit : « les vidéos scénarisées vont des preuves au jugement, l'improvisation inverse l'ordre, donc ses jugements sont préfabriqués ». La v1.9 retire cette conclusion : les vidéos scénarisées donnent souvent le verdict d'abord (iPhone 18 [00:58]), le monteur choisit où commence chaque extrait, et la plupart des questions sont fermées. « Préfabriqué » n'est plus qu'une hypothèse à tester.
 2. **Les règles de mesure sont un stock.** Les jugements puisent dans une bibliothèque de standards de long terme, appelée d'une vidéo à l'autre. La vidéo Huawei réutilise directement la grille à trois cases de la vidéo iPhone18. Un standard apparaît souvent sous forme de question rhétorique.
 3. **Les concessions sont explicites.** Les branches de l'hésitation sont dites à voix haute, une est choisie, et l'appartenance est marquée. « 我觉得 » apparaît 6,5 fois par 10 000 caractères, et les mots de prudence dépassent les mots de certitude dans un rapport d'environ 2,7 pour 1. Son assurance vient des définitions et de la numérotation, jamais de « absolument ».
 4. **La chute est le format de stockage.** Chaque chaîne de raisonnement se termine par le jugement coulé en une phrase citable, comme « Aucune entreprise ne s'est noyée dans la salive ».
