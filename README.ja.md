@@ -6,11 +6,11 @@
 
 **構造を学び、癖を真似ません。彼の思考がどう回っているかを研究します。**
 
-[![Version](https://img.shields.io/badge/version-v1.7-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.9-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/wangziru-analysis-skill-v2/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](tools/)
-[![Corpus](https://img.shields.io/badge/corpus-103%20videos%20%C2%B71.04M%20chars-8b5cf6)](corpus/)
+[![Corpus](https://img.shields.io/badge/corpus-103%20videos%20%C2%B70.96M%20chars-8b5cf6)](corpus/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 
 [![Last Commit](https://img.shields.io/github/last-commit/chrislitality-svg/wangziru-analysis-skill-v2)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/commits/main)
@@ -31,14 +31,14 @@
 
 全文は [thinking-思维运转.md](references/thinking-思维运转.md) にあります。要点は五つです。
 
-1. **判断が言語に先立つ。** 即興で問われると、判定は最初の一拍で遅延ゼロに落ちます。「スマホ業界に未来はある？ もうない。」その後に言葉が補うのは常にメカニズムであって形容詞ではありません。台本のある動画では順序が反転し、証拠が先に来ます。一つの頭脳に二つの出力モードがあり、判断はあらかじめ作られたものです。
+1. **即興では判断が理由より先に出ることが多い。** 切り抜き25本のうち、第一文が判定になっている回答は約16/24です。「スマホ業界に未来はある？ もうない。」その後に続くのは主にメカニズムで、形容詞ではありません。以前は「台本動画は証拠が先、即興は逆、だから判断はあらかじめ作られている」と推論しましたが、v1.9で撤回しました。台本動画でも判定を先に出すことが多く（iPhone18 [00:58]）、切り抜きの開始点は編集者が決め、質問の多くは「ある？ない？」型です。「判断の事前製作」は未検証の仮説です。
 2. **物差しは在庫。** 判断は動画を横断して呼び出される長期の基準ライブラリから来ます。ファーウェイ動画は iPhone18 動画の三格子物差しを直接再利用しています。基準は反語疑問文の形で現れることも多いです。
 3. **譲歩は明示的。** 迷いの分岐を声に出して言い、一つを選び、自分の判断だと印を付けます。「我觉得」は1万字あたり6.5回で、ヘッジ語が確信語の約2.7倍です。確信は定義とナンバリングから生まれ、「絶対に」からは生まれません。
 4. **締めの一文は保存形式。** すべての推論連鎖の終点で、判断を引用可能な一文に鋳ます。「口水で溺れ死んだ会社は一社もない」がその例です。
-5. **口癖は衰えている。** “对吧” は71動画ベースの1万字あたり20.8回から2026年コーパスの3.7回へ下がりました。彼の口癖を真似るのは、彼が捨てつつある部分を真似ることです。彼の連続性は作動の順序にあります。
+5. **口癖は動画ごとのばらつきが大きい。** 2026年の単独出演の長尺6本で、“对吧” は1万字あたり2.4回から20.0回まで幅があり、9月の2本は71動画ベースの長尺平均（約15回）より多いです。以前の「口癖は衰えている、20.8→3.7」は両端の分母が誤っていてサンプルも重なっていたため、v1.9で撤回しました。確かなのは、口癖では彼を捉えられないことです。同じ人が同じ年で8倍違います。
 
 <div align="center">
-<img src="assets/mindflow.svg" width="820" alt="一つの頭脳に二つの順序。台本動画は証拠から判断へ、即興は判断からメカニズムへ進みます。"/>
+<img src="assets/mindflow.svg" width="820" alt="検証中の仮説：台本動画は証拠→判断、即興は判断→メカニズム。前半には反例があり、後半は切り抜き・質問形式・題材によるものかもしれません。"/>
 </div>
 
 ### 推奨モデル
@@ -56,7 +56,7 @@
 git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git
 cd wangziru-analysis-skill-v2
 
-# 彼の実際の話し言葉、2026年9月の配信クリップです。AI臭は11点、人間の言葉グレードになります
+# 彼の実際の話し言葉、2026年9月の配信クリップです。AI臭は0点、人間の言葉グレードになります
 python tools/ai_flavor_check.py "corpus/clips-jachzhu/2026-09-22-聊西贝事件的根源-1m11s.txt"
 
 # AI生成の草稿を入れるとスコアは70を超えます。この差こそ本研究が説明するものです

@@ -6,11 +6,11 @@
 
 **Learn the structure, not the accent. Study how his mind runs, not his catchphrases.**
 
-[![Version](https://img.shields.io/badge/version-v1.7-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.9-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/wangziru-analysis-skill-v2/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](tools/)
-[![Corpus](https://img.shields.io/badge/corpus-103%20videos%20%C2%B71.04M%20chars-8b5cf6)](corpus/)
+[![Corpus](https://img.shields.io/badge/corpus-103%20videos%20%C2%B70.96M%20chars-8b5cf6)](corpus/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 
 [![Last Commit](https://img.shields.io/github/last-commit/chrislitality-svg/wangziru-analysis-skill-v2)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/commits/main)
@@ -31,14 +31,14 @@
 
 The full write-up is in [thinking-思维运转.md](references/thinking-思维运转.md). The five headlines:
 
-1. **Judgment precedes language.** Asked improvised, the verdict lands on beat one with zero delay. "Is there still room in the phone industry? No more." What language adds afterward is always a mechanism, never adjectives. In scripted videos the order flips to evidence first, judgment after. One mind, two output modes. The judgments are pre-built, not reasoned on the spot.
+1. **When improvising, judgment often comes before reasons.** In 25 clips, about 16 of 24 answers open with a verdict. "Is there still room in the phone industry? No more." What follows is mostly mechanism, not adjectives. We once inferred "scripted videos go evidence first, improvised answers flip it, so his judgments are pre-built". v1.9 withdraws that: scripted videos often lead with the verdict too (iPhone 18 [00:58] "you'd better not upgrade"), the clipper chooses where each clip starts, and most clip questions are yes/no. "Pre-built" is now a hypothesis to test; see [the thinking document](references/thinking-思维运转.md) §1.
 2. **Rulers are inventory.** Judgments draw on a long-held library of standards invoked across videos. The Huawei video directly reuses the iPhone18 three-cell ruler. A standard often appears as a rhetorical question.
 3. **Concessions are explicit.** Hesitation branches are spoken out loud, one is picked, and ownership is marked. "我觉得" runs 6.5 per 10k chars, and hedging words outnumber certainty words about 2.7 to 1. His certainty comes from definitions and numbering, never from "definitely" or "absolutely".
 4. **Closers are the storage format.** Every reasoning chain ends with the judgment cast into a single quotable line, such as "No company ever drowned in saliva".
-5. **Verbal tics are fading.** "对吧" dropped from 20.8 per 10k chars in the 71-video base to 3.7 in the 2026 corpus. Imitating his catchphrases means imitating parts he is discarding. His continuity lies in the operating order, not in any single word.
+5. **Verbal tics swing widely from video to video.** Across six solo long videos from 2026, "对吧" ranges from 2.4 to 20.0 per 10k characters, and the two September videos exceed the 71-video base's long-video average of about 15. The earlier claim "tics are fading, 20.8 → 3.7" used wrong denominators at both ends and overlapping samples, so v1.9 withdraws it. What holds: catchphrases won't capture him, since the same person in the same year varies eightfold.
 
 <div align="center">
-<img src="assets/mindflow.svg" width="820" alt="One mind, two orders — scripted videos run evidence→judgment; improvised answers run judgment→mechanism"/>
+<img src="assets/mindflow.svg" width="820" alt="Hypothesis under test: scripted videos evidence→judgment, improvised answers judgment→mechanism. The first half has counterexamples; the second may come from clip cuts, question type and topic"/>
 </div>
 
 ## What It Gives You
@@ -52,17 +52,17 @@ This section was written with the skill stored in this very repo. The six-line p
 | Ruler swap | Don't measure bookmarks, measure timestamp-traceability and reproducibility |
 | Eliminated | Catchphrase imitator, auto ghostwriter, word-frequency toy, each with its cause of death |
 | Master metaphor | The teardown: he took phones apart for a decade, this time the man himself is the phone, reclaimed twice in the text |
-| Closer | The shell changes yearly, the mainboard never moves |
+| Closer | The shell differs every video, the mainboard keeps showing up |
 
 Conclusion first: this repo will not turn you into Wang Ziru, and it does not intend to. What it hands you is the part of him that remains, the order he thinks problems in, plus a million characters of his own spoken words.
 
-You have probably heard him take phones apart. He has done it for over a decade. This repo takes the man himself apart as if he were one of those phones. The catchphrases are the shell, the operating order is the mainboard. The shell gets a new color every year, because "对吧" fell from 20.8 to 3.7 per 10k characters and he is deleting it himself. The mainboard never moves, because judgment before language and ruler before judgment have been present from the four signature videos all the way to the 32 transcripts.
+You have probably heard him take phones apart. He has done it for over a decade. This repo takes the man himself apart as if he were one of those phones. The catchphrases are the shell, the operating order is the mainboard. The shell differs from video to video: across six 2026 long videos, "对吧" runs anywhere from 2.4 to 20 per 10k characters. The mainboard is far steadier. Ruler before judgment and paragraphs that answer each other keep showing up in the long videos we can check; counterexamples and open questions are listed in the review report.
 
 You probably hold a ruler of your own, the one that says "prompt templates you bookmark and never use". That ruler is half right, because most repos are exactly that. But worth is not measured in bookmarks. It is measured by two things: whether every claim traces back to a timestamp, and whether every number can be reproduced by you. This repo hands over both. A frequency base of 71 videos and 860k characters, 32 open transcripts with timestamps, and a zero-dependency checker that runs in 30 seconds.
 
 What is it not? Let me answer that for you.
 
-First, it is not a catchphrase imitator. The strongest version of that claim says learning "对吧" and "所谓的" makes you sound like him. The data kills it, because the syntactic devices are low-frequency inventory. "Not A but B" appears twice across the seven new long videos. What you copy is the shell he is deleting.
+First, it is not a catchphrase imitator. The strongest version of that claim says learning "对吧" and "所谓的" makes you sound like him. The data kills it, because the syntactic devices are low-frequency inventory. "Not A but B" appears twice across the seven new long videos. What you copy is the least stable part of the shell.
 
 Second, it is not an auto ghostwriter. The strongest version says installing the skill produces scripts endlessly. That fails too, because the skill is a manual and the model you plug in does the work, while his credibility comes from visiting thousands of stores in person and a rulebook accumulated over a decade. The structure can be moved. The track record cannot.
 
@@ -72,7 +72,7 @@ So what does it give you? Four things, pick by what you want.
 
 The first is a ruler, the six logic-check questions. Before you write, ask what debt the opening owes, whether the ruler is up, which paragraph is load-bearing. Hollow paragraphs show up on the spot.
 
-The second is a scale, the AI-flavor checker. Run it for 30 seconds before you deliver. His real speech scores 11, AI drafts start at 70. The scale is transparent, every formula sits in the code.
+The second is a scale, the AI-flavor checker. Run it for 30 seconds before you deliver. All 29 of his single-speaker transcripts score under 20, and a typical AI draft scores 73. It only checks a blacklist plus person, number and logic-word density, so reworded boilerplate can pass. Treat it as a distance gauge. The scale is transparent, every formula sits in the code.
 
 The third is a library, 32 timestamped transcripts with the full methodology. When you want to challenge a claim, the source opens at the minute and second.
 
@@ -82,7 +82,7 @@ The same scale is not the same thing to different people. For you it is a pre-de
 
 To be fair, the personal mileage, the industry standing and the cross-video rulebook are three things no tool can hand you. Install a skill and gain his credibility? That does not happen.
 
-The shell changes every year. The mainboard never moves. If you want the mainboard, start from [the thinking document](references/thinking-思维运转.md).
+The shell differs every video. The mainboard keeps showing up. If you want the mainboard, start from [the thinking document](references/thinking-思维运转.md).
 
 ### Recommended Models · 推荐模型
 
@@ -101,7 +101,7 @@ Zero dependencies. Feel the AI-flavor checker on his real speech first. It is th
 git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git
 cd wangziru-analysis-skill-v2
 
-# His real speech, a livestream clip from Sep 2026. Expect an AI-flavor score of 11, human-grade
+# His real speech, a livestream clip from Sep 2026. Expect an AI-flavor score of 0, human-grade
 python tools/ai_flavor_check.py "corpus/clips-jachzhu/2026-09-22-聊西贝事件的根源-1m11s.txt"
 
 # Feed it an AI-generated draft and the score jumps above 70. That gap is what this research explains
@@ -388,7 +388,7 @@ Conversely, high-frequency human signals in the speech (per 10k chars):
 吗 + 呢         █████████                          41.9
 其实 (actually) ███████                            31.6
 我觉得 (I think) █████                              22.9
-对吧 (right?)   ████                               20.8
+对吧 (right?)   ████                               19.2
 那么 (so)       ███                                15.7
 ```
 
@@ -423,7 +423,7 @@ Conversely, high-frequency human signals in the speech (per 10k chars):
 
 | Metric | AI draft | Rewrite | Speech baseline |
 |---|---|---|---|
-| AI-flavor index | **73** | **0** | original median 10 |
+| AI-flavor index | **73** | **0** | solo transcripts median 5 (29) |
 | Boilerplate / empty-word hits | 19 | 0 | — |
 | "not-A-but-B" | 3 | 0 | 0.6 per 10k |
 | Logic words (per 1k chars) | 11.6 | 31.5 | long videos 24.9 |
@@ -447,7 +447,7 @@ Full walkthrough (audit → patch blueprint → rewrite → sentence-by-sentence
 | 9 | AI-tone openers/closers | 在当今 / 希望对你有所帮助 | Hook opening, closer ending |
 | 10 | No specifics | 0 numbers 0 cases | One number or scene per claim; none → mark `[用户补充]` |
 
-**The checker is transparent**: zero dependencies, formulas fully written in the code and [`de-ai-去AI味.md`](references/de-ai-去AI味.md). Calibrated on 71 original transcripts: **median human speech 10 points, 92% below 20**.
+**The checker is transparent**: zero dependencies, formulas fully written in the code and [`de-ai-去AI味.md`](references/de-ai-去AI味.md). Since v1.9 it strips transcript timestamps and metadata before scoring. On the 29 single-speaker transcripts in `corpus/` the **median is 5 and every one is below 20**, checked file by file in CI. The old "71 transcripts, median 10, 92% below 20" was computed before stripping and cannot be reproduced. Reworded boilerplate can still score 0, so a low score does not prove a text is free of AI flavor.
 
 **Don't overcorrect**: stuffing "对吧" "其实" into a draft isn't human flavor, it's an accent — exactly what this skill opposes.
 

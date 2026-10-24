@@ -52,7 +52,7 @@ for k, p in HAB.items():
     c = len(re.findall(p, B_all))
     print(f"{k:<6}{c:>6}{c / raw_len * 1e4:>10.1f}{c / speech * 1e4:>10.1f}")
 for label, sel in (("官方 7 条", lambda f: "official" in f), ("切片 25 条", lambda f: "clips" in f),
-                   ("剔除双人 3 条", lambda f: "RobotPhone" not in f and "韩路" not in f)):
+                   ("剔除双人 3 条", lambda f: "RobotPhone跨时代" not in f and "韩路" not in f)):
     b = "".join(body(f, False) for f in FILES if sel(f))
     print(f"  {label}: 对吧 {b.count('对吧') / len(b) * 1e4:.1f}/万字，字数 {len(b)}")
 print(f"71 篇底座：1660/796821 = {1660 / 796821 * 1e4:.2f}/万字；1660/864937 = {1660 / 864937 * 1e4:.2f}/万字")
@@ -95,6 +95,7 @@ s_raw, s_clean = [], []
 for f in FILES:
     s_raw.append(A.score(A.analyse(raw(f)))[0])
     s_clean.append(A.score(A.analyse(body(f)))[0])
+# v1.9 起检测器在 analyse() 里自己剥离时间戳和元信息，两行结果应相同；8ebcbac 及之前两行不同
 for lab, s in (("原文件（README 的用法）", s_raw), ("去时间戳+元信息", s_clean)):
     print(f"{lab}: 中位 {statistics.median(s)}，范围 {min(s)}–{max(s)}，<20 的 {sum(x < 20 for x in s)}/{len(s)}")
 xb = "corpus/clips-jachzhu/2026-09-22-聊西贝事件的根源-1m11s.txt"
@@ -113,7 +114,7 @@ print("纯套话 AI 稿:", A.score(ra)[0], A.score(ra)[1], ra["human_per_k"])
 head("7. README『它能带来什么』")
 lines = raw("README.md").split("\n")
 start = next(i for i, l in enumerate(lines) if l.startswith("先给结论"))
-end = next(i for i, l in enumerate(lines) if l.startswith("外壳年年换"))
+end = next(i for i, l in enumerate(lines) if l.startswith(("外壳年年换", "外壳条条不同")))  # v1.9 改了收口句
 sec_start = next(i for i, l in enumerate(lines) if l.startswith("## 它能带来什么"))
 for lab, txt in (("正文，不含末句链接行", "\n".join(lines[start:end])),
                  ("正文，含末句链接行", "\n".join(lines[start:end + 1])),

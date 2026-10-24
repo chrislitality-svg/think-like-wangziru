@@ -23,13 +23,26 @@ jobs:
       - name: Compile tools & scripts (syntax check)
         run: python -m py_compile tools/*.py research/scripts/*.py
 
-      - name: Detector on scripted video (official channel)
+      - name: Detector smoke test on a corpus file
         run: python tools/ai_flavor_check.py "corpus/official/2026-10-10-华为PuraXView胖直板-22m51s.txt" --json
 
-      - name: Detector on improvised clip (JACHZHU)
-        run: python tools/ai_flavor_check.py "corpus/clips-jachzhu/2026-09-22-聊西贝事件的根源-1m11s.txt" --json
-
-      - name: Regression guard — real speech must stay under the AI-flavor threshold (< 20)
+      - name: Regression guard — every single-speaker corpus transcript < 20, typical AI draft ≥ 60
+        # 双人语料（Robot Phone reaction、两条韩路连麦）按 METHODOLOGY §6.3 不进词频，也不进这道门
         run: |
-          python tools/ai_flavor_check.py "corpus/clips-jachzhu/2026-09-22-聊西贝事件的根源-1m11s.txt" --json \
-            | python -c "import json,sys; d=json.load(sys.stdin); assert d['score'] < 20, f\"expected <20, got {d['score']}\""
+          python - <<'PY'
+          import glob, sys
+          sys.path.insert(0, "tools")
+          import ai_flavor_check as A
+
+          def score(path):
+              return A.score(A.analyse(open(path, encoding="utf-8").read()))[0]
+
+          files = [f for f in sorted(glob.glob("corpus/*/*.txt"))
+                   if "RobotPhone跨时代" not in f and "韩路" not in f]
+          assert len(files) == 29, f"expected 29 single-speaker transcripts, got {len(files)}"
+          bad = {f: s for f in files if (s := score(f)) >= 20}
+          assert not bad, f"real speech scored >= 20: {bad}"
+          ai = score("examples/02-去AI味/原稿-典型AI稿.txt")
+          assert ai >= 60, f"typical AI draft should score >= 60, got {ai}"
+          print(f"{len(files)} transcripts all < 20; AI draft = {ai}")
+          PY

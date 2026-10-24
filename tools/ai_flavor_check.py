@@ -61,6 +61,16 @@ LOGIC = re.compile(r"因为|所以|但|如果|那么|的话|也就是说|换句�
 NUM = re.compile(r"\d+(?:\.\d+)?%?|[一二两三四五六七八九十百千万亿]+(?=[个次年天岁倍字小时分钟秒万亿元块条件位家款种步样遍])")
 
 
+# corpus/ 转写的格式痕迹：行首 [mm:ss] 时间戳、# 标题行、> BV号 元信息行。
+# 不剥掉的话，时间戳数字会把字数撑大一倍、稀释人称密度，元信息行会被当成超长分句（v1.9 修）
+TIMESTAMP = re.compile(r"^\[\d{1,2}:\d{2}(?::\d{2})?\]\s*", re.M)
+META_LINE = re.compile(r"^(#.*|>\s*BV号.*)$", re.M)
+
+
+def strip_transcript(text):
+    return META_LINE.sub("", TIMESTAMP.sub("", text))
+
+
 def sentences(text):
     parts = re.split(r"[。！？!?\n]+", text)
     return [p.strip() for p in parts if re.search(r"[一-鿿A-Za-z0-9]", p or "")]
@@ -82,6 +92,7 @@ def snippet(text, i, w):
 
 
 def analyse(text):
+    text = strip_transcript(text)
     n = max(1, cjk_len(text))
     k = n / 1000
     hits = {}

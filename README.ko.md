@@ -6,11 +6,11 @@
 
 **구조를 배우고 억양을 흉내내지 않습니다. 그의 사고가 어떻게 굴러가는지를 연구합니다.**
 
-[![Version](https://img.shields.io/badge/version-v1.7-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.9-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/wangziru-analysis-skill-v2/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](tools/)
-[![Corpus](https://img.shields.io/badge/corpus-103%20videos%20%C2%B71.04M%20chars-8b5cf6)](corpus/)
+[![Corpus](https://img.shields.io/badge/corpus-103%20videos%20%C2%B70.96M%20chars-8b5cf6)](corpus/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 
 [![Last Commit](https://img.shields.io/github/last-commit/chrislitality-svg/wangziru-analysis-skill-v2)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/commits/main)
@@ -31,14 +31,14 @@
 
 전체 문서는 [thinking-思维运转.md](references/thinking-思维运转.md)에 있습니다. 요약은 다섯 줄입니다.
 
-1. **판단이 언어에 앞선다.** 즉흥 질문을 받으면 판정이 첫 박자에 지연 없이 떨어집니다. "휴대폰 업계에 미래가 있나? 없어." 언어가 그 뒤에 보태는 것은 언제나 메커니즘이지 형용사가 아닙니다. 대본 있는 영상에서는 순서가 뒤집혀 증거가 먼저 나옵니다. 하나의 두뇌에 두 가지 출력이 존재하며, 판단은 미리 만들어진 것입니다.
+1. **즉흥에서는 판단이 이유보다 먼저 나오는 경우가 많다.** 클립 25개에서 첫 문장이 판정인 답은 약 16/24입니다. "휴대폰 업계에 미래가 있나? 없어." 뒤따르는 것은 주로 메커니즘이지 형용사가 아닙니다. 예전에는 "대본 영상은 증거가 먼저, 즉흥은 반대이니 판단은 미리 만들어진 것"이라고 추론했지만 v1.9에서 철회했습니다. 대본 영상도 판정을 먼저 내놓는 경우가 많고(iPhone18 [00:58]), 클립의 시작점은 편집자가 정하며, 클립 속 질문은 대부분 예/아니오 질문입니다. "미리 만들어진 판단"은 검증 전의 가설입니다.
 2. **자는 재고다.** 판단은 영상을 가로질러 호출되는 장기 기준 라이브러리에서 나옵니다. 화웨이 영상은 아이폰18 영상의 3격자 자를 직접 재사용합니다. 기준은 수사의문문 형태로 나타나기도 합니다.
 3. **양보는 명시적이다.** 망설임의 분기를 소리 내어 말하고, 하나를 고르고, 자기 판단임을 표시합니다. "我觉得"는 만자당 6.5회이고 헤지 단어가 확신 단어의 약 2.7배입니다. 확신은 정의와 번호 매기기에서 나오지 "분명히"나 "절대적으로"에서 나오지 않습니다.
 4. **마무리 문장은 저장 형식이다.** 모든 추론 사슬의 끝에서 판단을 인용 가능한 한 문장으로 주조합니다. 예를 들어 "침에 빠져 죽은 회사는 없다"가 그렇습니다.
-5. **입버릇은 사라지고 있다.** "对吧"는 71영상 기반의 만자당 20.8회에서 2026년 코퍼스의 3.7회로 떨어졌습니다. 그의 입버릇을 흉내내는 것은 그가 버리고 있는 부분을 흉내내는 셈입니다. 그의 연속성은 작동 순서에 있습니다.
+5. **입버릇은 영상마다 편차가 크다.** 2026년 단독 장편 6개에서 "对吧"는 만자당 2.4회에서 20.0회까지 오가며, 9월 두 편은 71영상 기반 장편 평균(약 15회)보다 높습니다. 이전의 "입버릇이 사라지고 있다, 20.8 → 3.7"은 양쪽 분모가 모두 틀렸고 표본도 겹쳐 v1.9에서 철회했습니다. 확실한 것은 입버릇으로는 그를 잡을 수 없다는 점입니다. 같은 사람이 같은 해에 8배까지 차이 납니다.
 
 <div align="center">
-<img src="assets/mindflow.svg" width="820" alt="하나의 두뇌, 두 가지 순서. 대본 영상은 증거에서 판단으로, 즉흥 대답은 판단에서 메커니즘으로 갑니다."/>
+<img src="assets/mindflow.svg" width="820" alt="검증 중인 가설: 대본 영상은 증거→판단, 즉흥 대답은 판단→메커니즘. 앞부분에는 반례가 있고, 뒷부분은 편집·질문 형식·주제 때문일 수 있습니다."/>
 </div>
 
 ### 추천 모델
@@ -56,7 +56,7 @@
 git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git
 cd wangziru-analysis-skill-v2
 
-# 그의 실제 구술, 2026년 9월 라이브 클립입니다. AI맛 11점, 사람 말 등급이 나옵니다
+# 그의 실제 구술, 2026년 9월 라이브 클립입니다. AI맛 0점, 사람 말 등급이 나옵니다
 python tools/ai_flavor_check.py "corpus/clips-jachzhu/2026-09-22-聊西贝事件的根源-1m11s.txt"
 
 # AI 생성 초안을 넣으면 점수가 70을 넘습니다. 이 격차가 연구가 설명하는 대상입니다

@@ -6,11 +6,11 @@
 
 **Die Struktur lernen, nicht den Slang. Erforschen, wie sein Denken abläuft, statt seine Sprachfloskeln nachzuahmen.**
 
-[![Version](https://img.shields.io/badge/version-v1.7-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.9-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/wangziru-analysis-skill-v2/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](tools/)
-[![Corpus](https://img.shields.io/badge/corpus-103%20videos%20%C2%B71.04M%20chars-8b5cf6)](corpus/)
+[![Corpus](https://img.shields.io/badge/corpus-103%20videos%20%C2%B70.96M%20chars-8b5cf6)](corpus/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 
 [![Last Commit](https://img.shields.io/github/last-commit/chrislitality-svg/wangziru-analysis-skill-v2)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/commits/main)
@@ -31,14 +31,14 @@
 
 Das vollständige Dokument steht in [thinking-思维运转.md](references/thinking-思维运转.md). Das Wichtigste in fünf Punkten.
 
-1. **Das Urteil geht der Sprache voraus.** Improvisiert gefragt, fällt das Urteil im ersten Schlag ohne Verzögerung. „Hat die Smartphone-Branche noch Zukunft? Nein." Was die Sprache danach nachliefert, ist immer ein Mechanismus, nie Adjektive. In Videos mit Skript kehrt sich die Reihenfolge um, dann kommen die Belege zuerst. Ein Kopf, zwei Ausgabemodi: Die Urteile sind vorgefertigt.
+1. **Beim Improvisieren kommt das Urteil oft vor den Gründen.** In 25 Clips beginnen etwa 16 von 24 Antworten mit einem Urteil. „Hat die Smartphone-Branche noch Zukunft? Nein." Danach folgt meist ein Mechanismus, keine Adjektive. Früher schlossen wir daraus: „Skript-Videos gehen von den Belegen zum Urteil, Improvisation kehrt das um, also sind seine Urteile vorgefertigt." v1.9 zieht das zurück: Auch Skript-Videos nennen das Urteil oft zuerst (iPhone 18 [00:58]), der Clip-Ersteller bestimmt den Einstiegspunkt, und die meisten Fragen sind Ja/Nein-Fragen. „Vorgefertigt" ist nur noch eine zu prüfende Hypothese.
 2. **Maßstäbe sind Inventar.** Urteile schöpfen aus einer langfristigen Bibliothek von Standards, die videoübergreifend aufgerufen wird. Das Huawei-Video recycelt direkt den Drei-Kaster-Maßstab des iPhone18-Videos. Ein Standard erscheint oft als rhetorische Frage.
 3. **Zugeständnisse sind explizit.** Die Zweige des Zögerns werden laut ausgesprochen, einer wird gewählt und als eigenes Urteil markiert. „我觉得" kommt 6,5-mal pro 10.000 Zeichen vor, und Absicherungs-Wörter übertreffen Gewissheits-Wörter etwa 2,7 zu 1. Seine Sicherheit kommt aus Definitionen und Nummerierung, nie aus „absolut".
 4. **Der Schlusssatz ist das Speicherformat.** Jede Denkkette endet damit, dass das Urteil in ein einzeln zitierbares Urteil gegossen wird, etwa „Kein Unternehmen ist jemals im Spucke ertrunken".
-5. **Sprachtics verblassen.** „对吧" fiel von 20,8 pro 10.000 Zeichen in der 71-Video-Basis auf 3,7 im Korpus 2026. Wer seine Tics nachahmt, ahmt nach, was er gerade ablegt. Seine Kontinuität liegt in der Ablaufsordnung.
+5. **Sprachtics schwanken stark von Video zu Video.** In sechs Solo-Langvideos von 2026 liegt „对吧" zwischen 2,4 und 20,0 pro 10.000 Zeichen, und die beiden September-Videos liegen über dem Langvideo-Durchschnitt der 71-Video-Basis (etwa 15). Die frühere Aussage „Tics verblassen, 20,8 → 3,7" beruhte an beiden Enden auf falschen Nennern und überlappenden Stichproben und ist in v1.9 zurückgezogen. Sicher ist: Über seine Tics erfasst man ihn nicht, dieselbe Person schwankt im selben Jahr um den Faktor acht.
 
 <div align="center">
-<img src="assets/mindflow.svg" width="820" alt="Ein Kopf, zwei Reihenfolgen. Skript-Videos gehen von den Belegen zum Urteil, Improvisation geht vom Urteil zum Mechanismus."/>
+<img src="assets/mindflow.svg" width="820" alt="Zu prüfende Hypothese: Skript-Videos Belege→Urteil, Improvisation Urteil→Mechanismus. Die erste Hälfte hat Gegenbeispiele, die zweite kann von Schnitt, Frageform und Thema herrühren."/>
 </div>
 
 ### Empfohlene Modelle
@@ -56,7 +56,7 @@ Keine Abhängigkeiten. Probiere zuerst den KI-Geschmack-Detektor auf seiner echt
 git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git
 cd wangziru-analysis-skill-v2
 
-# Seine echte Rede, ein Live-Clip von September 2026. Erwartet: KI-Geschmack 11, menschliches Niveau
+# Seine echte Rede, ein Live-Clip von September 2026. Erwartet: KI-Geschmack 0, menschliches Niveau
 python tools/ai_flavor_check.py "corpus/clips-jachzhu/2026-09-22-聊西贝事件的根源-1m11s.txt"
 
 # Ein KI-generierter Entwurf springt über 70. Diese Lücke ist es, die die Forschung erklärt

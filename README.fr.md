@@ -6,11 +6,11 @@
 
 **Apprendre la structure, pas l'accent. Étudier comment fonctionne sa pensée, pas imiter ses tics de langage.**
 
-[![Version](https://img.shields.io/badge/version-v1.7-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.9-blue)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/chrislitality-svg/wangziru-analysis-skill-v2/ci.yml?branch=main&label=CI)](.github/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](tools/)
-[![Corpus](https://img.shields.io/badge/corpus-103%20videos%20%C2%B71.04M%20chars-8b5cf6)](corpus/)
+[![Corpus](https://img.shields.io/badge/corpus-103%20videos%20%C2%B70.96M%20chars-8b5cf6)](corpus/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 
 [![Last Commit](https://img.shields.io/github/last-commit/chrislitality-svg/wangziru-analysis-skill-v2)](https://github.com/chrislitality-svg/wangziru-analysis-skill-v2/commits/main)
@@ -31,14 +31,14 @@
 
 Le document complet est dans [thinking-思维运转.md](references/thinking-思维运转.md). L'essentiel tient en cinq points.
 
-1. **Le jugement précède le langage.** Interrogé en improvisation, le verdict tombe au premier temps sans délai. « Y a-t-il encore un avenir dans l'industrie du smartphone ? Non. » Ce que le langage ajoute ensuite est toujours un mécanisme, jamais des adjectifs. Dans les vidéos scénarisées, l'ordre s'inverse et les preuves viennent d'abord. Un seul esprit, deux modes de sortie : les jugements sont préfabriqués.
+1. **En improvisation, le jugement précède souvent les raisons.** Sur 25 extraits, environ 16 réponses sur 24 commencent par un verdict. « Y a-t-il encore un avenir dans l'industrie du smartphone ? Non. » Ce qui suit est surtout un mécanisme, pas des adjectifs. Nous en avions déduit : « les vidéos scénarisées vont des preuves au jugement, l'improvisation inverse l'ordre, donc ses jugements sont préfabriqués ». La v1.9 retire cette conclusion : les vidéos scénarisées donnent souvent le verdict d'abord (iPhone 18 [00:58]), le monteur choisit où commence chaque extrait, et la plupart des questions sont fermées. « Préfabriqué » n'est plus qu'une hypothèse à tester.
 2. **Les règles de mesure sont un stock.** Les jugements puisent dans une bibliothèque de standards de long terme, appelée d'une vidéo à l'autre. La vidéo Huawei réutilise directement la grille à trois cases de la vidéo iPhone18. Un standard apparaît souvent sous forme de question rhétorique.
 3. **Les concessions sont explicites.** Les branches de l'hésitation sont dites à voix haute, une est choisie, et l'appartenance est marquée. « 我觉得 » apparaît 6,5 fois par 10 000 caractères, et les mots de prudence dépassent les mots de certitude dans un rapport d'environ 2,7 pour 1. Son assurance vient des définitions et de la numérotation, jamais de « absolument ».
 4. **La chute est le format de stockage.** Chaque chaîne de raisonnement se termine par le jugement coulé en une phrase citable, comme « Aucune entreprise ne s'est noyée dans la salive ».
-5. **Les tics verbaux s'estompent.** « 对吧 » est passé de 20,8 pour 10 000 caractères dans la base de 71 vidéos à 3,7 dans le corpus 2026. Imiter ses tics revient à imiter ce qu'il est en train d'abandonner. Sa continuité est dans l'ordre de fonctionnement.
+5. **Les tics verbaux varient beaucoup d'une vidéo à l'autre.** Dans six vidéos longues en solo de 2026, « 对吧 » va de 2,4 à 20,0 pour 10 000 caractères, et les deux vidéos de septembre dépassent la moyenne des vidéos longues de la base de 71 (environ 15). L'ancienne affirmation « les tics s'estompent, 20,8 → 3,7 » reposait sur de mauvais dénominateurs aux deux bouts et sur des échantillons qui se recoupent : elle est retirée en v1.9. Ce qui tient : ses tics ne suffisent pas à le saisir, puisque chez la même personne et la même année l'usage varie d'un facteur huit.
 
 <div align="center">
-<img src="assets/mindflow.svg" width="820" alt="Un esprit, deux ordres. Les vidéos scénarisées vont des preuves au jugement, les réponses improvisées vont du jugement au mécanisme."/>
+<img src="assets/mindflow.svg" width="820" alt="Hypothèse à tester : vidéos scénarisées preuves→jugement, réponses improvisées jugement→mécanisme. La première moitié a des contre-exemples ; la seconde peut venir du montage, du type de question et du sujet."/>
 </div>
 
 ### Modèles recommandés
@@ -56,7 +56,7 @@ Aucune dépendance. Commencez par goûter le détecteur de saveur IA sur sa vrai
 git clone https://github.com/chrislitality-svg/wangziru-analysis-skill-v2.git
 cd wangziru-analysis-skill-v2
 
-# Sa vraie parole, un clip de live de septembre 2026. Score attendu : 11, niveau humain
+# Sa vraie parole, un clip de live de septembre 2026. Score attendu : 0, niveau humain
 python tools/ai_flavor_check.py "corpus/clips-jachzhu/2026-09-22-聊西贝事件的根源-1m11s.txt"
 
 # Un brouillon généré par IA fait bondir le score au-delà de 70. Cet écart est ce que la recherche explique
