@@ -524,7 +524,6 @@ tools/
   ai_flavor_check.py                  AI 味检测器（零依赖，Python 3.8+）
   bili_fingerprint.py                 B 站投流 / 活动指纹检测（零依赖，读公开接口）
 examples/                             十四个案例：05–14 是分析 / 写稿 / 对谈 / 改稿四种用法的示范，01–04 是旧流程示例
-research/                             研究过程资料：逐条拆解原始笔记、采集元数据、转写与统计脚本
 assets/                               横幅、Logo、四种用法图、改稿前后对比图、数字条、说话顺序图（SVG）
 README.en.md · ko · ja · fr · de      英 / 韩 / 日 / 法 / 德语 README
 CONTRIBUTING.md · CODE_OF_CONDUCT.md  贡献指南 · 行为准则
